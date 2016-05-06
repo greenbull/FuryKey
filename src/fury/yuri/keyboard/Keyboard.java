@@ -9,7 +9,7 @@ import java.util.Map;
 
 import fury.yuri.keyboard.layout.ILayout;
 
-public class Keyboard {
+public class Keyboard implements Comparable<Keyboard> {
 	
 	private double cost;
 	// pozicije mapiramo od 1 !!!!
@@ -67,5 +67,33 @@ public class Keyboard {
 	
 	public double getCost() {
 		return cost;
+	}
+	
+	public Map<Integer, Character> getPositionKeyMap() {
+		return positionKeyMap;
+	}
+	
+	public void swapKeys(int pos1, int pos2) {
+		
+		if(pos1 == pos2) {
+			return;
+		}
+		
+		char key1 = positionKeyMap.get(pos1);
+		char key2 = positionKeyMap.get(pos2);
+		positionKeyMap.put(pos1, key2);
+		positionKeyMap.put(pos2, key1);
+	}
+
+	@Override
+	public int compareTo(Keyboard o) {
+		
+		if(this.cost < o.getCost()) {
+			return -1;
+		} else if(this.cost > o.getCost()) {
+			return 1;
+		} else {
+			return 0;
+		}
 	}
 }

@@ -4,5 +4,5 @@ import fury.yuri.keyboard.Keyboard;
 
 public interface IMutation {
 
-	Keyboard mutate(Keyboard k);
+	void mutate(Keyboard k);
 }

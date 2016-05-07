@@ -7,7 +7,7 @@ import fury.yuri.keyboard.Keyboard;
 public class TournamentSelection implements ISelection {
 
 	@Override
-	public Keyboard select(List<Keyboard> keyboards) {
+	public List<Keyboard> select(List<Keyboard> keyboards, int n) {
 		// TODO Auto-generated method stub
 		return null;
 	}

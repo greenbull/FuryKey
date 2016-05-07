@@ -6,5 +6,5 @@ import fury.yuri.keyboard.Keyboard;
 
 public interface ISelection {
 
-	Keyboard select(List<Keyboard> keyboards);
+	List<Keyboard> select(List<Keyboard> keyboards, int n);
 }

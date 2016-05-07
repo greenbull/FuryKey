@@ -24,6 +24,18 @@ public class Keyboard implements Comparable<Keyboard> {
 		generateKeyboard();
 	}
 	
+	public ILayout getLayout() {
+		return layout;
+	}
+	
+	public IKeys getKeys() {
+		return keys;
+	}
+	
+	public int getPositionFor(char letter) {
+		//TODO ime sve govori
+	}
+	
 	private void generateKeyboard() {
 		
 		List<Integer> values = new ArrayList<>();

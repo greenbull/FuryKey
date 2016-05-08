@@ -43,14 +43,19 @@ public class GeneticAlgorithm {
 
 	public void run() {
 
-		List<Keyboard> currentGeneration = KeyboardUtility.generateStandardLayoutEN(generationSize);
+		List<Keyboard> currentGeneration = KeyboardUtility.generateRandomLayoutEN(generationSize);
+		evaluateGeneration(currentGeneration);
 		
 		for(int i=0; i<generationsNumber; i++) {
 			
-			evaluateGeneration(currentGeneration);
 			Collections.sort(currentGeneration);
 			
+			System.out.printf("Generation %d: %.3f\n", (i+1), currentGeneration.get(0).getFitness());
+			System.out.println(currentGeneration.get(0));
+			System.out.println("******************************************************************************");
+			
 			List<Keyboard> newGeneration = new ArrayList<>();
+			addNBest(12, newGeneration, currentGeneration);
 			
 			while(newGeneration.size() < generationSize) {
 				
@@ -59,25 +64,43 @@ public class GeneticAlgorithm {
 				if(chance < mutationChance) {
 					//do mutation
 					List<Keyboard> selected = selection.select(currentGeneration, 1);
-					mutation.mutate(selected.get(0));
-					newGeneration.add(selected.get(0));
+					Keyboard copy = selected.get(0).copy();
+					mutation.mutate(copy);
+					copy.calculateFitness();
+					newGeneration.add(copy);
 				} else if(chance >= mutationChance && chance < mutationChance+crossoverChance) {
 					//do crossover
 					List<Keyboard> parents = selection.select(currentGeneration, 2);
 					List<Keyboard> children = crossover.cross(parents.get(0), parents.get(1));
+					for(Keyboard k : children) {
+						k.calculateFitness();
+						if(Math.abs(k.getFitness()-parents.get(0).getFitness()) < 10E-9) {
+							k.setFitness(k.getFitness()*0.9);
+						} else if(Math.abs(k.getFitness()-parents.get(1).getFitness()) < 10E-9) {
+							k.setFitness(k.getFitness()*0.9);
+						}
+					}
 					newGeneration.addAll(children);
 				} else {
 					List<Keyboard> selected = selection.select(currentGeneration, 1);
 					newGeneration.addAll(selected);
 				}
 			}
+			currentGeneration = newGeneration;
+		}
+	}
+
+	private void addNBest(int n, List<Keyboard> newGeneration, List<Keyboard> currentGeneration) {
+		
+		for(int i=0; i<n; i++) {
+			newGeneration.add(currentGeneration.get(i));
 		}
 	}
 
 	private void evaluateGeneration(List<Keyboard> currentGeneration) {
 		
 		for(Keyboard keyboard : currentGeneration) {
-			keyboard.calculateCost();
+			keyboard.calculateFitness();
 		}
 	}
 }

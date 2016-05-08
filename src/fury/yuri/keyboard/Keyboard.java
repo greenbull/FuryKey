@@ -6,12 +6,13 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 
 import fury.yuri.keyboard.layout.ILayout;
 
 public class Keyboard implements Comparable<Keyboard> {
 	
-	private double cost;
+	private double fitness;
 	// pozicije mapiramo od 1 !!!!
 	private Map<Integer, Character> positionKeyMap;
 	private ILayout layout;
@@ -24,6 +25,24 @@ public class Keyboard implements Comparable<Keyboard> {
 		generateKeyboard();
 	}
 	
+	public Keyboard(ILayout layout, IKeys keys, Map<Integer, Character> positionKeyMap) {
+		this.layout = layout;
+		this.keys = keys;
+		this.positionKeyMap = positionKeyMap;
+	}
+	
+	public Keyboard copy() {
+		
+		Map<Integer, Character> copyMap = new HashMap<>(positionKeyMap);
+		Keyboard newKeyboard = new Keyboard(layout, keys);
+		newKeyboard.setPositionKeyMap(copyMap);
+		return newKeyboard;
+	}
+	
+	public void setPositionKeyMap(Map<Integer, Character> positionKeyMap) {
+		this.positionKeyMap = positionKeyMap;
+	}
+	
 	public ILayout getLayout() {
 		return layout;
 	}
@@ -33,7 +52,23 @@ public class Keyboard implements Comparable<Keyboard> {
 	}
 	
 	public int getPositionFor(char letter) {
-		//TODO ime sve govori
+		
+		for(Entry<Integer, Character> entry : positionKeyMap.entrySet()) {
+			if(entry.getValue() == letter) {
+				return entry.getKey();
+			}
+		}
+		
+		return -1;
+	}
+	
+	public char getKeyFor(int position) {
+		
+		return positionKeyMap.get(position);
+	}
+	
+	public Map<Integer, Character> getPositionKeyMap() {
+		return positionKeyMap;
 	}
 	
 	private void generateKeyboard() {
@@ -50,7 +85,7 @@ public class Keyboard implements Comparable<Keyboard> {
 		}
 	}
 	
-	public void calculateCost() {
+	public void calculateFitness() {
 		
 		double t = 0.0;
 		int N = layout.numberOfKeys();
@@ -64,11 +99,17 @@ public class Keyboard implements Comparable<Keyboard> {
 			}
 		}
 		
-		this.cost = t;
+		this.fitness = 1.0/t;
+	}
+	
+	public void setFitness(double fitness) {
+		this.fitness = fitness;
 	}
 	
 	@Override
 	public String toString() {
+		
+//		return Double.toString(fitness);
 		
 		return layout.keyboardToString(positionKeyMap);
 	}
@@ -77,12 +118,8 @@ public class Keyboard implements Comparable<Keyboard> {
 		// TODO zapisat tipkovnicu u nekom obliku u file
 	}
 	
-	public double getCost() {
-		return cost;
-	}
-	
-	public Map<Integer, Character> getPositionKeyMap() {
-		return positionKeyMap;
+	public double getFitness() {
+		return fitness;
 	}
 	
 	public void swapKeys(int pos1, int pos2) {
@@ -100,10 +137,10 @@ public class Keyboard implements Comparable<Keyboard> {
 	@Override
 	public int compareTo(Keyboard o) {
 		
-		if(this.cost < o.getCost()) {
-			return -1;
-		} else if(this.cost > o.getCost()) {
+		if(this.fitness < o.getFitness()) {
 			return 1;
+		} else if(this.fitness > o.getFitness()) {
+			return -1;
 		} else {
 			return 0;
 		}

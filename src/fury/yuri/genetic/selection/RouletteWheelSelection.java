@@ -27,7 +27,7 @@ public class RouletteWheelSelection implements ISelection {
 		
 		double sum = 0.0;
 		for(Keyboard keyboard : keyboards) {
-			sum += keyboard.getCost();
+			sum += keyboard.getFitness();
 		}
 		Random rand = new Random();
 		double pick = rand.nextDouble()*sum;
@@ -35,10 +35,10 @@ public class RouletteWheelSelection implements ISelection {
 		
 		for(Keyboard keyboard : keyboards) {
 			
-			if(pick >= min && pick < keyboard.getCost()+min) {
+			if(pick >= min && pick < keyboard.getFitness()+min) {
 				return keyboard;
 			}
-			min += keyboard.getCost();
+			min += keyboard.getFitness();
 		}
 		
 		return null;

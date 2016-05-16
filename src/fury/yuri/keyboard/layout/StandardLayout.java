@@ -88,4 +88,10 @@ public class StandardLayout implements ILayout {
 		
 		return sb.toString();
 	}
+	
+	@Override
+	public String language() {
+		// TODO Auto-generated method stub
+		return "EN";
+	}
 }

@@ -101,4 +101,10 @@ public class Rows4Layout implements ILayout {
 		
 		return sb.toString();
 	}
+	
+	@Override
+	public String language() {
+		// TODO Auto-generated method stub
+		return "EN";
+	}
 }

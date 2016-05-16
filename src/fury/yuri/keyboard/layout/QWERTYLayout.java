@@ -58,4 +58,10 @@ public class QWERTYLayout implements ILayout {
 		// TODO Auto-generated method stub
 		return null;
 	}
+	
+	@Override
+	public String language() {
+		// TODO Auto-generated method stub
+		return "EN";
+	}
 }

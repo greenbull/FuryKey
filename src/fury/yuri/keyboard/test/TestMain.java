@@ -1,5 +1,6 @@
 package fury.yuri.keyboard.test;
 
+import java.io.File;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -15,6 +16,7 @@ import fury.yuri.genetic.selection.TournamentSelection;
 import fury.yuri.keyboard.Keyboard;
 import fury.yuri.keyboard.KeysEN;
 import fury.yuri.keyboard.layout.ILayout;
+import fury.yuri.keyboard.layout.OneHandedLayout;
 import fury.yuri.keyboard.layout.QWERTYLayout;
 import fury.yuri.keyboard.layout.ReverseFitalyLayout;
 import fury.yuri.keyboard.layout.StandardLayout;
@@ -24,17 +26,47 @@ public class TestMain {
 
 	public static void main(String[] args) {
 		
-		IMutation mutation = new SwapMutation(0.3);
-		ISelection selection = new TournamentSelection(24);
+		Map<String, String> arguments = new HashMap<>();
+		arguments.put("layout", "layouts/standard.lay");
+		arguments.put("mutationRate", "0.3");
+		arguments.put("selectionConst", "24");
+		arguments.put("generationSize", "500");
+		arguments.put("generationsNum", "1000");
+		arguments.put("mutationChance", "0.14");
+		arguments.put("crossoverChance", "0.8");
+		
+		for(int i=0; i<args.length; i+=2) {
+			arguments.put(args[i].substring(1), args[i+1]);
+		}
+		
+		ILayout layout = new OneHandedLayout(arguments.get("layout"), new File(arguments.get("layout")));
+		IMutation mutation = new SwapMutation(Double.parseDouble(arguments.get("mutationRate")));
+		ISelection selection = new TournamentSelection(Integer.parseInt(arguments.get("selectionConst")));
 		ICrossover crossover = new StupidCrossover();
-		int generationSize = 500;
-		int generationsNumber = 1000;
-		double mutationChance = 0.14;
-		double crossoverChance = 0.8;
+		int generationSize = Integer.parseInt(arguments.get("generationSize"));
+		int generationsNumber = Integer.parseInt(arguments.get("generationsNum"));
+		double mutationChance = Double.parseDouble(arguments.get("mutationChance"));
+		double crossoverChance = Double.parseDouble(arguments.get("crossoverChance"));
 
-		GeneticAlgorithm alg = new GeneticAlgorithm(mutation, selection, crossover, generationSize, generationsNumber,
+		GeneticAlgorithm alg = new GeneticAlgorithm(layout, mutation, selection, crossover, generationSize, generationsNumber,
 				mutationChance, crossoverChance);
 		alg.run();
+		
+//		OneHandedLayout l = new OneHandedLayout("Reverse FITALY", new File("layouts/rows4.lay"));
+//		Keyboard k = new Keyboard(l, KeysEN.getInstance());
+//		System.out.println(k);
+		
+//		IMutation mutation = new SwapMutation(0.3);
+//		ISelection selection = new TournamentSelection(24);
+//		ICrossover crossover = new StupidCrossover();
+//		int generationSize = 500;
+//		int generationsNumber = 1000;
+//		double mutationChance = 0.14;
+//		double crossoverChance = 0.8;
+//
+//		GeneticAlgorithm alg = new GeneticAlgorithm(mutation, selection, crossover, generationSize, generationsNumber,
+//				mutationChance, crossoverChance);
+//		alg.run();
 		
 //		Map<Integer, Character> qwertyMap = new HashMap<>();
 //		qwertyMap.put(1, 'q');
@@ -64,7 +96,7 @@ public class TestMain {
 //		qwertyMap.put(25, 'n');
 //		qwertyMap.put(26, 'm');
 //		
-//		Keyboard qwerty = new Keyboard(new QWERTYLayout(), KeysEN.getInstance(), qwertyMap);
+//		Keyboard qwerty = new Keyboard(new OneHandedLayout("qwery", new File("layouts/qwerty.lay")), KeysEN.getInstance(), qwertyMap);
 //		qwerty.calculateFitness();
 //		System.out.println(qwerty.getFitness());
 		

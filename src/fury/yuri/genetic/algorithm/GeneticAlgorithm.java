@@ -8,7 +8,11 @@ import java.util.Random;
 import fury.yuri.genetic.crossover.ICrossover;
 import fury.yuri.genetic.mutation.IMutation;
 import fury.yuri.genetic.selection.ISelection;
+import fury.yuri.keyboard.IKeys;
 import fury.yuri.keyboard.Keyboard;
+import fury.yuri.keyboard.KeysEN;
+import fury.yuri.keyboard.KeysHR;
+import fury.yuri.keyboard.layout.ILayout;
 import fury.yuri.keyboard.util.KeyboardUtility;
 
 public class GeneticAlgorithm {
@@ -22,14 +26,17 @@ public class GeneticAlgorithm {
 	
 	private double mutationChance;
 	private double crossoverChance;
+	
+	private ILayout startLayout;
 
 	private List<IGAListener> listeners;
 	
 	private Random rand;
 
-	public GeneticAlgorithm(IMutation mutation, ISelection selection, ICrossover crossover, int generationSize,
+	public GeneticAlgorithm(ILayout startLayout, IMutation mutation, ISelection selection, ICrossover crossover, int generationSize,
 			int generationsNumber, double mutationChance, double crossoverChance) {
 
+		this.startLayout = startLayout;
 		this.mutation = mutation;
 		this.selection = selection;
 		this.crossover = crossover;
@@ -43,7 +50,7 @@ public class GeneticAlgorithm {
 
 	public void run() {
 
-		List<Keyboard> currentGeneration = KeyboardUtility.generateReverseFitalyLayoutEN(generationSize);
+		List<Keyboard> currentGeneration = initGeneration();
 		evaluateGeneration(currentGeneration);
 		
 		for(int i=0; i<generationsNumber; i++) {
@@ -89,6 +96,24 @@ public class GeneticAlgorithm {
 			}
 			currentGeneration = newGeneration;
 		}
+	}
+
+	private List<Keyboard> initGeneration() {
+		
+		IKeys keys = null;
+		if(startLayout.language().equals("EN")) {
+			keys = KeysEN.getInstance();
+		} else if(startLayout.language().equals("HR")) {
+			keys = KeysHR.getInstance();
+		}
+		
+		List<Keyboard> result = new ArrayList<>();
+		for(int i=0; i<generationSize; i++) {
+			Keyboard k = new Keyboard(startLayout, keys);
+			result.add(k);
+		}
+		
+		return result;
 	}
 
 	private void addNBest(int n, List<Keyboard> newGeneration, List<Keyboard> currentGeneration) {

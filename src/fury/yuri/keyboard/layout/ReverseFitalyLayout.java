@@ -4,6 +4,8 @@ import java.io.File;
 import java.util.Map;
 
 public class ReverseFitalyLayout implements ILayout {
+	
+	//2-handed, pa na taj način gleda udaljenost
 
 	@Override
 	public double getDistance(int pos1, int pos2) {
@@ -147,5 +149,11 @@ public class ReverseFitalyLayout implements ILayout {
 		sb.append("+---+---+---+---+---+---+---+---+").append("\n");
 		
 		return sb.toString();
+	}
+	
+	@Override
+	public String language() {
+		// TODO Auto-generated method stub
+		return "EN";
 	}
 }

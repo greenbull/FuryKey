@@ -13,11 +13,6 @@ import fury.yuri.keyboard.layout.StandardLayout;
 
 public class KeyboardUtility {
 	
-	public static List<Keyboard> generateStandardLayoutEN(int n) {
-		
-		return generateKeyboards(new StandardLayout(), KeysEN.getInstance(), n);
-	}
-	
 	public static List<Keyboard> generateReverseFitalyLayoutEN(int n) {
 		
 		return generateKeyboards(new ReverseFitalyLayout(), KeysEN.getInstance(), n);

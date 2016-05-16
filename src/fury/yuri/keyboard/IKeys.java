@@ -1,7 +1,5 @@
 package fury.yuri.keyboard;
 
-import java.io.File;
-
 public interface IKeys {
 
 	char[] getKeys();

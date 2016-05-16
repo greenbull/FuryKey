@@ -7,6 +7,7 @@ import fury.yuri.keyboard.IKeys;
 import fury.yuri.keyboard.Keyboard;
 import fury.yuri.keyboard.KeysEN;
 import fury.yuri.keyboard.layout.ILayout;
+import fury.yuri.keyboard.layout.ReverseFitalyLayout;
 import fury.yuri.keyboard.layout.Rows4Layout;
 import fury.yuri.keyboard.layout.StandardLayout;
 
@@ -15,6 +16,11 @@ public class KeyboardUtility {
 	public static List<Keyboard> generateStandardLayoutEN(int n) {
 		
 		return generateKeyboards(new StandardLayout(), KeysEN.getInstance(), n);
+	}
+	
+	public static List<Keyboard> generateReverseFitalyLayoutEN(int n) {
+		
+		return generateKeyboards(new ReverseFitalyLayout(), KeysEN.getInstance(), n);
 	}
 	
 	public static List<Keyboard> generateRandomLayoutEN(int n) {

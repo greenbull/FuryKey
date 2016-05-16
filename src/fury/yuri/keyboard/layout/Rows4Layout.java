@@ -101,5 +101,4 @@ public class Rows4Layout implements ILayout {
 		
 		return sb.toString();
 	}
-
 }

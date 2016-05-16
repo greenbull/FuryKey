@@ -9,6 +9,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import fury.yuri.keyboard.layout.ILayout;
+import fury.yuri.keyboard.layout.ReverseFitalyLayout;
 
 public class Keyboard implements Comparable<Keyboard> {
 	
@@ -101,15 +102,13 @@ public class Keyboard implements Comparable<Keyboard> {
 		
 		this.fitness = 1.0/t;
 	}
-	
+
 	public void setFitness(double fitness) {
 		this.fitness = fitness;
 	}
 	
 	@Override
 	public String toString() {
-		
-//		return Double.toString(fitness);
 		
 		return layout.keyboardToString(positionKeyMap);
 	}

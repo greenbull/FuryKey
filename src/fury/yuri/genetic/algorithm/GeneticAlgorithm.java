@@ -43,7 +43,7 @@ public class GeneticAlgorithm {
 
 	public void run() {
 
-		List<Keyboard> currentGeneration = KeyboardUtility.generateRandomLayoutEN(generationSize);
+		List<Keyboard> currentGeneration = KeyboardUtility.generateReverseFitalyLayoutEN(generationSize);
 		evaluateGeneration(currentGeneration);
 		
 		for(int i=0; i<generationsNumber; i++) {
@@ -55,7 +55,7 @@ public class GeneticAlgorithm {
 			System.out.println("******************************************************************************");
 			
 			List<Keyboard> newGeneration = new ArrayList<>();
-			addNBest(12, newGeneration, currentGeneration);
+//			addNBest(12, newGeneration, currentGeneration);
 			
 			while(newGeneration.size() < generationSize) {
 				
@@ -82,6 +82,7 @@ public class GeneticAlgorithm {
 					}
 					newGeneration.addAll(children);
 				} else {
+					//do reproduction
 					List<Keyboard> selected = selection.select(currentGeneration, 1);
 					newGeneration.addAll(selected);
 				}

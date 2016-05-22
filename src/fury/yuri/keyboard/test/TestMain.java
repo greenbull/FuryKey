@@ -20,18 +20,21 @@ import fury.yuri.keyboard.layout.OneHandedLayout;
 import fury.yuri.keyboard.layout.QWERTYLayout;
 import fury.yuri.keyboard.layout.ReverseFitalyLayout;
 import fury.yuri.keyboard.layout.StandardLayout;
+import fury.yuri.keyboard.layout.TwoHandedLayout;
 import fury.yuri.keyboard.util.KeyboardUtility;
 
 public class TestMain {
 
 	public static void main(String[] args) {
 		
+		//u argumente stavit layout1 za one-handed, layout2 za two handed
+		//ako se nešto krivo stavi dogodit će se exception
+		
 		Map<String, String> arguments = new HashMap<>();
-		arguments.put("layout", "layouts/standard.lay");
 		arguments.put("mutationRate", "0.3");
 		arguments.put("selectionConst", "24");
 		arguments.put("generationSize", "500");
-		arguments.put("generationsNum", "1000");
+		arguments.put("generationsNum", "200");
 		arguments.put("mutationChance", "0.14");
 		arguments.put("crossoverChance", "0.8");
 		
@@ -39,7 +42,15 @@ public class TestMain {
 			arguments.put(args[i].substring(1), args[i+1]);
 		}
 		
-		ILayout layout = new OneHandedLayout(arguments.get("layout"), new File(arguments.get("layout")));
+		ILayout layout = null;
+		if(arguments.containsKey("layout1")) {
+			layout = new OneHandedLayout(arguments.get("layout1"), new File(arguments.get("layout1")));
+		}
+		else if(arguments.containsKey("layout2")) {
+			layout = new TwoHandedLayout(arguments.get("layout2"), new File(arguments.get("layout2")));
+		} else {
+			layout = new OneHandedLayout("layouts/standard.lay", new File("layouts/standard.lay"));
+		}
 		IMutation mutation = new SwapMutation(Double.parseDouble(arguments.get("mutationRate")));
 		ISelection selection = new TournamentSelection(Integer.parseInt(arguments.get("selectionConst")));
 		ICrossover crossover = new StupidCrossover();
@@ -51,6 +62,42 @@ public class TestMain {
 		GeneticAlgorithm alg = new GeneticAlgorithm(layout, mutation, selection, crossover, generationSize, generationsNumber,
 				mutationChance, crossoverChance);
 		alg.run();
+
+		
+//		Map<Integer, Character> fitaly = new HashMap<>();
+//		fitaly.put(1, 'z');
+//		fitaly.put(2, 'v');
+//		fitaly.put(3, 'c');
+//		fitaly.put(4, 'h');
+//		fitaly.put(5, 'w');
+//		fitaly.put(6, 'k');
+//		fitaly.put(7, 'f');
+//		fitaly.put(8, 'i');
+//		fitaly.put(9, 't');
+//		fitaly.put(10, 'a');
+//		fitaly.put(11, 'l');
+//		fitaly.put(12, 'y');
+//		fitaly.put(13, 'n');
+//		fitaly.put(14, 'e');
+//		fitaly.put(15, 'g');
+//		fitaly.put(16, 'd');
+//		fitaly.put(17, 'o');
+//		fitaly.put(18, 'r');
+//		fitaly.put(19, 's');
+//		fitaly.put(20, 'b');
+//		fitaly.put(21, 'q');
+//		fitaly.put(22, 'j');
+//		fitaly.put(23, 'u');
+//		fitaly.put(24, 'm');
+//		fitaly.put(25, 'p');
+//		fitaly.put(26, 'x');
+//		ILayout l = new OneHandedLayout("FITALY", new File("layouts/fitaly.lay"));
+//		Keyboard k = new Keyboard(l, KeysEN.getInstance(), fitaly);
+//		System.out.println(k);
+//		k.calculateFitness();
+//		System.out.println(k.getFitness());
+		
+		
 		
 //		OneHandedLayout l = new OneHandedLayout("Reverse FITALY", new File("layouts/rows4.lay"));
 //		Keyboard k = new Keyboard(l, KeysEN.getInstance());

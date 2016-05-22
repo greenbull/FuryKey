@@ -19,7 +19,7 @@ public class OneHandedLayout implements ILayout {
 		parseFile(layoutFile);
 		if(numberOfKeys == 26) {
 			language = "EN";
-		} else if(numberOfKeys == 30){
+		} else {
 			language = "HR";
 		}
 	}

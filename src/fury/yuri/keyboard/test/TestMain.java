@@ -15,6 +15,7 @@ import fury.yuri.genetic.selection.RouletteWheelSelection;
 import fury.yuri.genetic.selection.TournamentSelection;
 import fury.yuri.keyboard.Keyboard;
 import fury.yuri.keyboard.KeysEN;
+import fury.yuri.keyboard.KeysHR;
 import fury.yuri.keyboard.layout.ILayout;
 import fury.yuri.keyboard.layout.OneHandedLayout;
 import fury.yuri.keyboard.layout.QWERTYLayout;

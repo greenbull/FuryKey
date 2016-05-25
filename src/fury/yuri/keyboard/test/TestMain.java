@@ -35,7 +35,7 @@ public class TestMain {
 		arguments.put("mutationRate", "0.3");
 		arguments.put("selectionConst", "24");
 		arguments.put("generationSize", "500");
-		arguments.put("generationsNum", "200");
+		arguments.put("generationsNum", "500");
 		arguments.put("mutationChance", "0.14");
 		arguments.put("crossoverChance", "0.8");
 		

@@ -57,7 +57,7 @@ public class GeneticAlgorithm {
 			
 			Collections.sort(currentGeneration);
 			
-			System.out.printf("Generation %d: %.3f\n", (i+1), currentGeneration.get(0).getFitness());
+			System.out.printf("Generation %d: %f\n", (i+1), currentGeneration.get(0).getFitness());
 			System.out.println(currentGeneration.get(0));
 			System.out.println("******************************************************************************");
 			

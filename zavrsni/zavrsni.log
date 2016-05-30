@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.5.9)  30 MAY 2016 14:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.5.9)  30 MAY 2016 21:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -734,27 +734,47 @@ File: img/qwerty.png Graphic file (type png)
 Package pdftex.def Info: img/qwerty.png used on input line 40.
 (pdftex.def)             Requested size: 341.43306pt x 164.5224pt.
  [2 <./img/qwerty.png>]
+<img/dvorak.png, id=32, 401.5pt x 133.49875pt>
+File: img/dvorak.png Graphic file (type png)
+ <use img/dvorak.png>
+Package pdftex.def Info: img/dvorak.png used on input line 59.
+(pdftex.def)             Requested size: 227.62204pt x 75.68561pt.
+
+<img/atomik.png, id=33, 321.2pt x 127.47626pt>
+File: img/atomik.png Graphic file (type png)
+ <use img/atomik.png>
+Package pdftex.def Info: img/atomik.png used on input line 66.
+(pdftex.def)             Requested size: 227.62204pt x 90.33954pt.
+
+<img/fitaly.jpg, id=34, 328.22626pt x 240.9pt>
+File: img/fitaly.jpg Graphic file (type jpg)
+ <use img/fitaly.jpg>
+Package pdftex.def Info: img/fitaly.jpg used on input line 73.
+(pdftex.def)             Requested size: 227.62204pt x 167.06293pt.
+ [3 <./img/dvorak.png> <./img/atomik.png> <./img/fitaly.jpg>] [4
+
+]
 Chapter 2.
-[3
+[5
 
 ]
 Chapter 3.
-[4
+[6
 
 ]
 Chapter 4.
 No file zavrsni.bbl.
-[5
+[7
 
-] [6] (./zavrsni.aux) ) 
+] [8] (./zavrsni.aux) ) 
 Here is how much of TeX's memory you used:
- 5953 strings out of 494910
- 81858 string characters out of 6179837
- 152813 words of memory out of 5000000
- 9099 multiletter control sequences out of 15000+600000
+ 5976 strings out of 494910
+ 82232 string characters out of 6179837
+ 152843 words of memory out of 5000000
+ 9119 multiletter control sequences out of 15000+600000
  66495 words of font info for 85 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 43i,8n,40p,1069b,352s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 43i,8n,40p,1105b,352s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.e
 nc}</usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/t
@@ -762,10 +782,10 @@ exmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/t
 imes/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on zavrsni.pdf (10 pages, 140684 bytes).
+Output written on zavrsni.pdf (12 pages, 188369 bytes).
 PDF statistics:
- 70 PDF objects out of 1000 (max. 8388607)
- 47 compressed objects within 1 object stream
+ 81 PDF objects out of 1000 (max. 8388607)
+ 51 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -80,7 +80,20 @@ Ovaj raspodijela je također napravljena za korištenje stilus-a ili jednog prst
 \section{Interakcija čovjeka i računala}
 Problematikom koju sam naveo u prethodna dva poglavlja bavi se područje zvano \emph{Interakcija čovjeka i računala (engl. Human-Computer Interaction)}, skraćeno \emph{HCI}. Istraživači u tom području bave se dizajnom i računalnom tehnologijom. Proučavaju se brojni načini na koje korisnik može imati interakciju s računalima te nastoji tu interakciju što više pojednostavniti, olakšati i ubrzati. Postoji mnogo načina za unos teksta, i mnogo će ih još nastati, pitanje je vremena koliko dugo će se još QWERTY koristiti. Zato je važno isprobati nove algoritme, metode i pristupe te ih eksperimentalno vrednovati kako bi se provjerila njihova učinkovitost i koliko su korisnici zadovoljni.
 
-\chapter{Opis i rješenje problema}
+\chapter{Dizajniranje alternativne tipkovnice}
+Ovo poglavlje obuhvaća opis samog problema te pristup njegovog rješavanja. TODO još 2-3 rečenice dodat, npr o soft keyboard, smartphonima bla bla
+\section{Opis problema}
+Cilj ovog rada jest osmisliti alternativnu tipkovnicu za zaslone osjetljive na dodir koristeći Fittsov zakon. Jednostavnije rečeno, radio sam na dizajniranju tipkovnice s određenim raspodijelom tipki koja bi korisniku omogućila brže unošenje teksta u odnosu na QWERTY tipkovnicu. Algoritam koji sam koristio temelji se na zasadama Fittsovog zakona (detaljnije opisan u poglavlju 2.1.1.). Taj zakon predviđa vrijeme potrebno da korisnik reagira i pomakne \emph{nešto} s jedne lokacije na drugu. To \emph{nešto} može biti npr. kursor miša, ruka, noga ili konkretno što se tiče ovog rada: prst. To vrijeme je funkcija udaljenosti do odredišne lokacije i širine te lokacije: $f(D,W)$. U okviru pronalaženja optimalne raspodijele znakova na tipkovnici, udaljenost predstavlja međusobnu udaljenost dvije tipke na tipkovnici koje planiramo uzastopno stisnuti, a širina jest širina same tipke. Kao što se već da naslutiti, cilj je minimizirati funkciju vremena što istovremeno znači i minimizirati vrijeme potrebno da se unese određeni tekst. Uzmimo kao primjer riječ PAS i da korisnik tekst unosi prstom jedne ruke. Kako bi izračunali vrijeme koje je potrebno da korisnik to unese trebamo izračunati udaljenost od P do A $d(P,A)$ i širinu od A $w(A)$, pa udaljenost od A do S $d(A,S)$ i širinu od S $w(S)$. Pretpostavlja se da je početni položaj korisnikova prsta iznad slova P, kada njega stisne potrebno je preći udaljenost $d(P,A)$ da bi se stisnula tipka A širine $w(A)$ pa udaljenost $d(A,S)$ da bi se stisnula tipka S širine $w(S)$. Iz ovoga vidimo kako će se pomoću Fittsovog zakona dobiti tipkovnica koja će imati slova koja se često uzastopno koriste, jedan blizu drugoga. Zbog toga je potrebno analizirati statistiku bigrama za ciljani jezik tipkovnice.
+
+//TODO stavit sliku za PAS
+
+Razmišljajući o tome kako pronaći raspodijelu tipki koja će prema Fittsovom zakonu imati najkraće vrijeme unosa teksta, palo mi je na pamet kako bi bilo najjednostavnije isprobati svaku moguću i pronaći onu s najmanjim vremenom. Ali to nije baš tako jednostavno, ako uzmemo u obzir hrvatsku abecedu koja ima 30 slova, potrebno je ispitati $30! = 2.65*10^32$ mogućih različitih razmještaja, što bi vjerojatno potrajalo nekoliko stoljeća. Ako malo bolje razmislimo, ovaj problem predstavlja klasičan problem optimizacije, pitanje je kako pronaći minimum funkcije zadane Fittsovim zakonom uzevši u obzir sve moguće razmještaje slova. Postoje razne metode za rješiti taj problem, ja sam odlučio iskoristiti moć genetskog algoritma. Genetski algoritam i način na koji sam ga koristio su detaljno opisani u poglavlju 2.1.2.
+
+\subsection{Fittsov zakon}
+
+\subsection{Genetski algoritam}
+
+\section{Implementacija i rezultati}
 
 \chapter{Ispitivanje rezultata}
 

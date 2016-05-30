@@ -3,6 +3,10 @@
 \contentsline {section}{\numberline {1.1}Kratka povijest}{1}
 \contentsline {section}{\numberline {1.2}Tipkovnice danas}{2}
 \contentsline {section}{\numberline {1.3}Interakcija \IeC {\v c}ovjeka i ra\IeC {\v c}unala}{4}
-\contentsline {chapter}{\numberline {2}Opis i rje\IeC {\v s}enje problema}{5}
-\contentsline {chapter}{\numberline {3}Ispitivanje rezultata}{6}
-\contentsline {chapter}{\numberline {4}Zaklju\IeC {\v c}ak}{7}
+\contentsline {chapter}{\numberline {2}Dizajniranje alternativne tipkovnice}{5}
+\contentsline {section}{\numberline {2.1}Opis problema}{5}
+\contentsline {subsection}{\numberline {2.1.1}Fittsov zakon}{6}
+\contentsline {subsection}{\numberline {2.1.2}Genetski algoritam}{6}
+\contentsline {section}{\numberline {2.2}Implementacija i rezultati}{6}
+\contentsline {chapter}{\numberline {3}Ispitivanje rezultata}{7}
+\contentsline {chapter}{\numberline {4}Zaklju\IeC {\v c}ak}{8}

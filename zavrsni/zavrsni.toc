@@ -1,0 +1,7 @@
+\select@language {english}
+\contentsline {chapter}{\numberline {1}Uvod}{1}
+\contentsline {section}{\numberline {1.1}Kratka povijest}{1}
+\contentsline {section}{\numberline {1.2}Tipkovnice danas}{2}
+\contentsline {chapter}{\numberline {2}Opis i rje\IeC {\v s}enje problema}{3}
+\contentsline {chapter}{\numberline {3}Ispitivanje rezultata}{4}
+\contentsline {chapter}{\numberline {4}Zaklju\IeC {\v c}ak}{5}

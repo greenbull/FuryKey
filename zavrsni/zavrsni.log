@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.5.9)  31 MAY 2016 14:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.5.9)  31 MAY 2016 18:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -757,39 +757,50 @@ Package pdftex.def Info: img/fitaly.jpg used on input line 73.
 Chapter 2.
 [5
 
-] [6]
+] [6] <img/fitts.png, id=54, 602.25pt x 514.92375pt>
+File: img/fitts.png Graphic file (type png)
+ <use img/fitts.png>
+Package pdftex.def Info: img/fitts.png used on input line 117.
+(pdftex.def)             Requested size: 185.65297pt x 158.73685pt.
+
+<img/scroll.png, id=55, 602.25pt x 301.125pt>
+File: img/scroll.png Graphic file (type png)
+ <use img/scroll.png>
+Package pdftex.def Info: img/scroll.png used on input line 123.
+(pdftex.def)             Requested size: 185.65297pt x 92.82857pt.
+ [7 <./img/fitts.png (PNG copy)> <./img/scroll.png (PNG copy)>]
 Chapter 3.
-[7
+[8
 
 ]
 Chapter 4.
 No file zavrsni.bbl.
-[8
+[9
 
-] [9] (./zavrsni.aux) ) 
+] [10] (./zavrsni.aux) ) 
 Here is how much of TeX's memory you used:
- 5978 strings out of 494910
- 82248 string characters out of 6179837
- 153853 words of memory out of 5000000
- 9120 multiletter control sequences out of 15000+600000
+ 5992 strings out of 494910
+ 82458 string characters out of 6179837
+ 153893 words of memory out of 5000000
+ 9132 multiletter control sequences out of 15000+600000
  67602 words of font info for 86 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 43i,8n,40p,1824b,352s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.e
-nc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/urw/courier/ucrro8a.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/h
-elvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on zavrsni.pdf (13 pages, 230101 bytes).
+ 43i,8n,40p,1824b,369s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.
+enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/urw/courier/ucrro8a.pfb></usr/share/texlive/texmf-dist/font
+s/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
+helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on zavrsni.pdf (14 pages, 393828 bytes).
 PDF statistics:
- 101 PDF objects out of 1000 (max. 8388607)
- 66 compressed objects within 1 object stream
+ 106 PDF objects out of 1000 (max. 8388607)
+ 68 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

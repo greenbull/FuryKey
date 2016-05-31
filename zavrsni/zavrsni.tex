@@ -90,13 +90,44 @@ Cilj ovog rada jest osmisliti alternativnu tipkovnicu za zaslone osjetljive na d
 Razmišljajući o tome kako pronaći raspodijelu tipki koja će prema Fittsovom zakonu imati najkraće vrijeme unosa teksta, palo mi je na pamet kako bi bilo najjednostavnije isprobati svaku moguću i pronaći onu s najmanjim vremenom. Ali to nije baš tako jednostavno, ako uzmemo u obzir hrvatsku abecedu koja ima 30 slova, potrebno je ispitati $30! = 2.65*10^{32}$ mogućih različitih razmještaja, što bi vjerojatno potrajalo nekoliko stoljeća. Ako malo bolje razmislimo, ovaj problem predstavlja klasičan problem optimizacije, pitanje je kako pronaći minimum funkcije zadane Fittsovim zakonom uzevši u obzir sve moguće razmještaje slova. Postoje razne metode za rješiti taj problem, ja sam odlučio iskoristiti moć genetskog algoritma. Genetski algoritam i način na koji sam ga koristio su detaljno opisani u poglavlju 2.1.2.
 
 \subsection{Fittsov zakon}
-Fittsov zakon je opisni model ljudskog pokreta koji se primarno koristi u \emph{HCI-u}\footnote{Interakcija čovjeka i računala.} i \emph{ergonomiji}\footnote{Znanstvena disciplina koja istražuje ljudski organizam i ponašanje, te pruža podatke o prilagođenošću predmeta s kojima čovjek dolazi u kontakt.}. Kao što smo već rekli, Fittsov zakon predviđa vrijeme brzog pokreta do odredišne lokacije, to je funkcija udaljenosti do odredišta i širine tog odredišta. Ovaj zakon modelira čin pokazivanja (engl. \emph{act of pointing}), to može biti fizičko dodirivanje nekog objekta, primjerice rukom i prstom, a može biti i virtualno kao što je strelicom miša na računalu. Fittsov zakon se pokazao učinkovit u mnogo različitih slučajeva, koristeći razne dijelove tijela (ruke, noge, usne, kretanje oka...), u raznim okolinama (čak i pod vodom) i u raznim društvenim skupinama (mladi, stariji, ljudi s posebnim potrebama...).
+Fittsov zakon je opisni model ljudskog pokreta koji se primarno koristi u \emph{HCI-u}\footnote{Interakcija čovjeka i računala.} i \emph{ergonomiji}\footnote{Znanstvena disciplina koja istražuje ljudski organizam i ponašanje, te pruža podatke o prilagođenošću predmeta s kojima čovjek dolazi u kontakt.}. Kao što smo već rekli, Fittsov zakon predviđa vrijeme brzog pokreta do odredišne lokacije, to je funkcija udaljenosti do odredišta i širine tog odredišta. Ovaj zakon modelira čin pokazivanja (engl. \emph{act of pointing}), to može biti fizičko dodirivanje nekog objekta, primjerice rukom i prstom, a može biti i virtualno kao što je strelicom miša na računalu. Fittsov zakon se pokazao učinkovit u mnogo različitih slučajeva, koristeći razne dijelove tijela (ruke, noge, usne, kretanje oka...), u raznim okolinama (čak i pod vodom) i u raznim društvenim skupinama (mladi, stariji, ljudi s posebnim potrebama...). 
+
+Ideja Fittsovog zakona prikazana je na slici \ref{fig:fitts} gdje se kao udaljenost do odredišta gleda udaljenost od dvije istaknute lokacije, a širina odredišta je širina "Take the Tour" gumba. Na slici \ref{fig:scroll} vidimo razliku između klizne trake (engl. \emph{scroll-bar}) kod OSX-a i Windows-a. Windows je strelice za pomicanje klizne trake stavio kranje lijevo i krajne desno, što više prati mentalni model osobe kojoj je to intuitivnije. S druge strane OSX je stavio obe strelice jednu uz drugu kako bi se smanjilo vrijeme pomicanja strelice miša s jedne na drugu, što je konkretno ono čega se Fittsov zakon dotiče.
 
 Paul Fitts je 1954. godine predložio metriku pomoću koje se vrednuje težina zadatka pokazivanja (brzog pomicanja na odredišnu lokaciju). Ta metrika se temelji na informacijskoj analogiji, gdje je $D$ udaljenost do odredišta i gleda se na njega kao na signal, a $W$ je širina ili tolerancija koja se ponaša kao šum. $ID$ predstavlja indeks težine (engl. \emph{index of difficulty}) i mjeri se u bitovima. Formula je dana izrazom \ref{eq:fitts}.
 \begin{equation}
 \label{eq:fitts}
 ID = log_2(2D/W)
 \end{equation}
+
+Fitts je također predložio indeks izvedbe (engl. \emph{index of performance}) kao mjerilo ljudske izvedbe . Ova metrika kombinira $ID$ (\emph{index of difficulty}) s vremenom pomicanja $MT$ (\emph{movement time}) na odredišnu lokaciju. Prosječna stopa informacije koja je dobivena serijom pokreta jest prosječna informacija po pomicanju podijeljena s vremenom pomicanja. Formula je dana izrazom \ref{eq:fitts2}.
+\begin{equation}
+\label{eq:fitts2}
+IP = ID/MT
+\end{equation}
+$MT$ je definiran izrazom \ref{eq:fitts3}. Parametri $a$ i $b$ koji najviše odgovaraju tom izrazu pronalaze se linearnom regresijom.
+\begin{equation}
+\label{eq:fitts3}
+MT = a+b*ID = a+b*log_2(2D/W)
+\end{equation}
+
+\begin{figure}[htb]
+  \centering
+  \begin{minipage}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{img/fitts.png}
+    \caption{Uporaba Fittsovog zakona}
+    \label{fig:fitts}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{img/scroll.png}
+    \caption{Uporaba Fittsovog zakona}
+    \label{fig:scroll}
+  \end{minipage}
+\end{figure}
+
+
+\subsubsection{Fittsov zakon u mom radu}
 
 \subsection{Genetski algoritam}
 

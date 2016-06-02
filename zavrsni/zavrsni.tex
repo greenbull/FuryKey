@@ -1,6 +1,7 @@
 \documentclass[times, utf8, zavrsni]{fer}
 \usepackage{booktabs}
 \usepackage{algorithm}
+\usepackage{algorithmic}
 \begin{document}
 
 % TODO: Navedite broj rada.
@@ -155,15 +156,34 @@ Opišimo sada na primjeru što izraz \ref{eq:fitts4} zapravo znači. Recimo da t
 Prethodno opisani model je preuzet je iz rada \emph{"Optimizing stylus keyboard layouts with a genetic algorithm: customization and internationalization" - Chad R. Brewbaker}.
 
 \subsection{Genetski algoritam}
-Genetski ili genetički algoritam (GA)  je heuristička metoda optimiranja koja imitira prirodni evolucijski proces. Evolucija je robustan proces pretraživanja prostora rješenja. Živa bića se tijekom evolucije prilagođavaju uvjetima u prirodi, tj. životnoj okolini. Analogija evolucije kao prirodnog procesa i genetskog algoritma kao metode optimiranja, očituje se u procesu selekcije i genetskim operatorima. Mehanizam odabira nad nekom vrstom živih bića u evolucijskom procesu čine okolina i uvjeti u prirodi. U genetskim algoritmima ključ selekcije je funkcija cilja, koja na odgovarajući način predstavlja problem koji se rješava. Slično kao što su okolina i uvjeti u prirodi ključ selekcije nad nekom vrstom živih bića, tako je i funkcija cilja ključ selekcije nad populacijom rješenja u genetskom algoritmu. Naime, u prirodi jedinka koja je najbolje prilagođena uvjetima i okolini u kojoj živi ima najveću vjerojatnost preživljavanja i parenja, a time i prenošenja svojega genetskog materijala na svoje potomke. Za genetski algoritam jedno rješenje je jedna jedinka. Selekcijom se odabiru dobre jedinke koje se prenose u slijedeću populaciju, a manipulacijom genetskog materijala stvaraju se nove jedinke. Takav ciklus selekcije, reprodukcije i manipulacije genetskim materijalom jedinki ponavlja se sve dok nije zadovoljen uvjet zaustavljanja evolucijskog procesa. Konačan rezultat je populacija jedinki (potencijalnih rješenja). Najbolja jedinka u zadnjoj iteraciji predstavlja rješenje optimiranja.
-
+Genetski ili genetički algoritam (GA)  je heuristička metoda optimiranja koja imitira prirodni evolucijski proces. Evolucija je robustan proces pretraživanja prostora rješenja. Živa bića se tijekom evolucije prilagođavaju uvjetima u prirodi, tj. životnoj okolini. Analogija evolucije kao prirodnog procesa i genetskog algoritma kao metode optimiranja, očituje se u procesu selekcije i genetskim operatorima. Mehanizam odabira nad nekom vrstom živih bića u evolucijskom procesu čine okolina i uvjeti u prirodi. U genetskim algoritmima ključ selekcije je funkcija cilja, koja na odgovarajući način predstavlja problem koji se rješava. Slično kao što su okolina i uvjeti u prirodi ključ selekcije nad nekom vrstom živih bića, tako je i funkcija cilja ključ selekcije nad populacijom rješenja u genetskom algoritmu. Naime, u prirodi jedinka koja je najbolje prilagođena uvjetima i okolini u kojoj živi ima najveću vjerojatnost preživljavanja i parenja, a time i prenošenja svojega genetskog materijala na svoje potomke. Za genetski algoritam jedno rješenje je jedna jedinka. Selekcijom se odabiru dobre jedinke koje se prenose u slijedeću populaciju, a manipulacijom genetskog materijala stvaraju se nove jedinke. Takav ciklus selekcije, reprodukcije i manipulacije genetskim materijalom jedinki ponavlja se sve dok nije zadovoljen uvjet zaustavljanja evolucijskog procesa. Konačan rezultat je populacija jedinki (potencijalnih rješenja). Najbolja jedinka u zadnjoj iteraciji predstavlja rješenje optimiranja. TODO dodat posebno opis selekcije, mutacije itd ?
+\begin{algorithm}
+\caption{Genetski algoritam - pseudokod}
+\label{alg:genetski}
+\begin{algorithmic}
+\STATE{P = stvoriPocetnuPopulaciju(VELICINA)}
+\STATE{evaluiraj(P)}
+\REPEAT
+\STATE{novaPopulacija P' = $\emptyset$}
+\WHILE{velicina(P') < VELICINA}
+\STATE{odaberi R1 i R2 iz P}
+\STATE{\{D1, D2\} = krizaj(R1, R2)}
+\STATE{mutiraj D1, mutiraj D2}
+\STATE{dodaj D1 i D2 u P'}
+\ENDWHILE
+\STATE{P = P'}
+\UNTIL{uvjetZadovoljen}
+\end{algorithmic}
+\end{algorithm}
 
 \subsubsection{Genetski algoritam u mom radu}
-Jedinku u genetskom algoritmu je predstavljala jedna tipkovnica sa svojim oblikom i rasporedom tipku. Na početku se stvori generacija 
+Jedinku u genetskom algoritmu predstavljala je jedna tipkovnica sa svojim oblikom i rasporedom tipki. Na početku se stvori populacija tipkovnica sa slučajno odabranim rasporedom tipki i slučajnim oblikom. Nakon toga se za svaku tipkovnicu izračuna vremenska cijena prema izrazu \ref{eq:fitts4} te se jedinke u populaciji uzlazno sortiraju, tako da je najbolja jedinka (ona s najmanjom vremenskom cijenom) na početku. Stvori se nova populacija koja je na početku prazan skup. Ta se populacija puni novim jedinkama (tipkovnicama) križanjem, mutiranjem i reprodukcijom sve dok broj jedinki ne bude isti kao i u trenutnoj populaciji. Nova populacija tada postaje trenutna populacija koja se opet evaluira i tako u krug sve dok se ne dosegne maksimalan broj generacija (zadan proizvoljno). Najbolja tipkovnica u posljednjoj generaciji predstavlja rješenje algoritma.
 
 \section{Implementacija i rezultati}
+TODO \\
+Opisat kako sam oblikovao kod, stavit dijelove koda, opisat način na koji funkcioniraju crossover, mutation, reproduction, način na koji se pokreće program, opisat kako sam više puta pokrećao algoritam jer često zapne u lokalnom optimumu, kako sam za cost koristio 1/t, kako sam napravio varijaciju za 2-handed, opisat zašto i da želim eksperimentom provjerit rezultat ... navest sve razne layoute i rezultate koje sam dobio 
 
-\chapter{Ispitivanje rezultata}
+\chapter{Ispitivanje rezultata / Eksperiment}
 
 \chapter{Zaključak}
 Zaključak.

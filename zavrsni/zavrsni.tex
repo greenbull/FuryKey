@@ -156,7 +156,45 @@ Opišimo sada na primjeru što izraz \ref{eq:fitts4} zapravo znači. Recimo da t
 Prethodno opisani model je preuzet je iz rada \emph{"Optimizing stylus keyboard layouts with a genetic algorithm: customization and internationalization" - Chad R. Brewbaker}.
 
 \subsection{Genetski algoritam}
-Genetski ili genetički algoritam (GA)  je heuristička metoda optimiranja koja imitira prirodni evolucijski proces. Evolucija je robustan proces pretraživanja prostora rješenja. Živa bića se tijekom evolucije prilagođavaju uvjetima u prirodi, tj. životnoj okolini. Analogija evolucije kao prirodnog procesa i genetskog algoritma kao metode optimiranja, očituje se u procesu selekcije i genetskim operatorima. Mehanizam odabira nad nekom vrstom živih bića u evolucijskom procesu čine okolina i uvjeti u prirodi. U genetskim algoritmima ključ selekcije je funkcija cilja, koja na odgovarajući način predstavlja problem koji se rješava. Slično kao što su okolina i uvjeti u prirodi ključ selekcije nad nekom vrstom živih bića, tako je i funkcija cilja ključ selekcije nad populacijom rješenja u genetskom algoritmu. Naime, u prirodi jedinka koja je najbolje prilagođena uvjetima i okolini u kojoj živi ima najveću vjerojatnost preživljavanja i parenja, a time i prenošenja svojega genetskog materijala na svoje potomke. Za genetski algoritam jedno rješenje je jedna jedinka. Selekcijom se odabiru dobre jedinke koje se prenose u slijedeću populaciju, a manipulacijom genetskog materijala stvaraju se nove jedinke. Takav ciklus selekcije, reprodukcije i manipulacije genetskim materijalom jedinki ponavlja se sve dok nije zadovoljen uvjet zaustavljanja evolucijskog procesa. Konačan rezultat je populacija jedinki (potencijalnih rješenja). Najbolja jedinka u zadnjoj iteraciji predstavlja rješenje optimiranja. TODO dodat posebno opis selekcije, mutacije itd ?
+Genetski ili genetički algoritam (GA)  je heuristička metoda optimiranja koja imitira prirodni evolucijski proces. Evolucija je robustan proces pretraživanja prostora rješenja. Živa bića se tijekom evolucije prilagođavaju uvjetima u prirodi, tj. životnoj okolini. Analogija evolucije kao prirodnog procesa i genetskog algoritma kao metode optimiranja, očituje se u procesu selekcije i genetskim operatorima. Mehanizam odabira nad nekom vrstom živih bića u evolucijskom procesu čine okolina i uvjeti u prirodi. U genetskim algoritmima ključ selekcije je funkcija cilja, koja na odgovarajući način predstavlja problem koji se rješava. Slično kao što su okolina i uvjeti u prirodi ključ selekcije nad nekom vrstom živih bića, tako je i funkcija cilja ključ selekcije nad populacijom rješenja u genetskom algoritmu. Naime, u prirodi jedinka koja je najbolje prilagođena uvjetima i okolini u kojoj živi ima najveću vjerojatnost preživljavanja i parenja, a time i prenošenja svojega genetskog materijala na svoje potomke. Za genetski algoritam jedno rješenje je jedna jedinka. Selekcijom se odabiru dobre jedinke koje se prenose u slijedeću populaciju, a manipulacijom genetskog materijala stvaraju se nove jedinke. Takav ciklus selekcije, reprodukcije i manipulacije genetskim materijalom jedinki ponavlja se sve dok nije zadovoljen uvjet zaustavljanja evolucijskog procesa. Konačan rezultat je populacija jedinki (potencijalnih rješenja). Najbolja jedinka u zadnjoj iteraciji predstavlja rješenje optimiranja. Genetski algoritam izvršava se uporabom operatora križanja, mutacije, selekcije i reprodukcije. Svaki od njih objašnjen je u nastavku.
+
+\subsubsection{Operator križanja}
+U procesu križanja (engl. \emph{crossover}) sudjeluju dvije jedinke koje se nazivaju \emph{roditelji}. Dakle, križanje je binarni operator. Križanjem nastaju jedna ili dvije nove jedinke koje se nazivaju \emph{djeca}. Najvažnija karakteristika križanja jest da \emph{djeca} nasljeđuju svojstva svojih roditelja. Ako su roditelji \emph{dobri} (prošli su proces selekcije), tada će najvjerojatnije i \emph{dijete} biti dobro, ako ne i bolje od svojih roditelja. Ako jedinku predstavimo kao niz bitova onda se križanje implementira slično kao što je prikazano na slici \ref{fig:krizanje}. Bitno je napomenuti da se križanje može izvesti na mnogo različitih načina, ovisno o problemu i načinu prikaza jedinke.
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=12cm]{img/krizanje.png}
+\caption{Križanje s jednom točkom prijeloma}
+\label{fig:krizanje}
+\end{figure}
+
+\subsubsection{Operator mutacije}
+Mutacija ili slučajna promjena jednog ili više gena je unarni operator koji djeluje nad jednom jedinkom. Rezultat mutacije je izmijenjena jedinka. Parametar koji određuje vjerojatnost mutacije $p_m$ jednog bita je ujedno i parametar algoritma. Ako vjerojatnost mutacije teži k jedinici, tada se algoritam pretvara u algoritam slučajne pretrage prostora rješenja. S druge strane, ako vjerojatnost mutacije teži k nuli, postupak će najvjerojatnije već u početku optimiranja stati u nekom lokalnom optimumu. \emph{Jednostavna mutacija} svaki bit kromosoma mijenja s jednakom vjerojatnošću $p_m$.
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=12cm]{img/mutacija.png}
+\caption{Jednostavna mutacija}
+\label{fig:mutacija}
+\end{figure}
+
+\subsubsection{Operator selekcije}
+Jedan od centralnih mehanizama, kako kod većine populacijskih algoritama pa i općenito, jest mehanizam \emph{selekcije}. Kod populacijskih algoritama zadaća operatora selekcije jest osigurati mehanizam koji će češće boljim rješenjima dati priliku da sudjeluju u produkciji novih rješenja, čime će se proces pretraživanja prostora rješenja voditi u područja koja više obećavaju. Postoji više različitih vrsta selekcija.
+
+\emph{Proporcionalna selekcija} (engl. \emph{Roulette-wheel selection} funkcionira na način da sve jedinke postavimo na kolo, tako da bolja jedinka ima veću površinu na kolu (prikazano na slici \ref{fig:selekcija}). Potom zavrtimo kolo i pogledamo na kojoj se jedinki kolo zaustavilo. S obzirom da jedinki pripada to veći dio oboda kola što ima veću dobrotu, ponavljamo li eksperiment puno puta, bolje jedinke će biti češće birane od lošijih, i ta će vjerojatnost biti upravo proporionalna dobroti same jedinke.
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=6cm]{img/selekcija.png}
+\caption{Shema genetskog algoritma}
+\label{fig:selekcija}
+\end{figure}
+
+Kod \emph{k-turnirske selekcije} se iz populacije posredstvom slučajnog mehanizma odabire \emph{k} jedinki, i potom uzima najbolju. Ukoliko trebamo \emph{n} roditelja,, naprosto ćemo \emph{n} puta ponoviti turnirsku selekciju.
+
+\subsubsection{Operator reprodukcije}
+Reprodukcijom se jednostavno jedinka prenosi iz jedne generacije u drugu. Ta jedinka se odabere operatorom selekcije.
+
 \begin{algorithm}
 \caption{Genetski algoritam - pseudokod}
 \label{alg:genetski}
@@ -176,14 +214,27 @@ Genetski ili genetički algoritam (GA)  je heuristička metoda optimiranja koja 
 \end{algorithmic}
 \end{algorithm}
 
+\begin{figure}[htb]
+\centering
+\includegraphics[width=12cm]{img/genetski_shema.png}
+\caption{Shema genetskog algoritma}
+\label{fig:genetski_shema}
+\end{figure}
+
 \subsubsection{Genetski algoritam u mom radu}
 Jedinku u genetskom algoritmu predstavljala je jedna tipkovnica sa svojim oblikom i rasporedom tipki. Na početku se stvori populacija tipkovnica sa slučajno odabranim rasporedom tipki i slučajnim oblikom. Nakon toga se za svaku tipkovnicu izračuna vremenska cijena prema izrazu \ref{eq:fitts4} te se jedinke u populaciji uzlazno sortiraju, tako da je najbolja jedinka (ona s najmanjom vremenskom cijenom) na početku. Stvori se nova populacija koja je na početku prazan skup. Ta se populacija puni novim jedinkama (tipkovnicama) križanjem, mutiranjem i reprodukcijom sve dok broj jedinki ne bude isti kao i u trenutnoj populaciji. Nova populacija tada postaje trenutna populacija koja se opet evaluira i tako u krug sve dok se ne dosegne maksimalan broj generacija (zadan proizvoljno). Najbolja tipkovnica u posljednjoj generaciji predstavlja rješenje algoritma.
 
 \section{Implementacija i rezultati}
 TODO \\
-Opisat kako sam oblikovao kod, stavit dijelove koda, opisat način na koji funkcioniraju crossover, mutation, reproduction, način na koji se pokreće program, opisat kako sam više puta pokrećao algoritam jer često zapne u lokalnom optimumu, kako sam za cost koristio 1/t, kako sam napravio varijaciju za 2-handed, opisat zašto i da želim eksperimentom provjerit rezultat ... navest sve razne layoute i rezultate koje sam dobio 
+Opisat kako sam oblikovao kod, stavit dijelove koda, opisat način na koji funkcioniraju crossover, mutation, reproduction, način na koji se pokreće program, opisat kako sam više puta pokrećao algoritam jer često zapne u lokalnom optimumu, kako sam za cost koristio 1/t, kako sam napravio varijaciju za 2-handed, opisat zašto i da želim eksperimentom provjerit rezultat ... navest sve razne layoute i rezultate koje sam dobio
 
-\chapter{Ispitivanje rezultata / Eksperiment}
+U poglavlju 2.1 opisana je problematika i dobrim dijelom pristup rješavanju problema. U ovom poglavlju ćemo se detaljnije pozabaviti načinu na koji sam implementirao algoritam i rezultatima koje sam dobio.
+\\pitat glavinića u vezi opisa koda i te pizdarije 
+\subsection{Implementacija algoritma}
+
+\subsection{Rezultati}
+
+\chapter{Provedba eksperimenta i obrada rezultata}
 
 \chapter{Zaključak}
 Zaključak.

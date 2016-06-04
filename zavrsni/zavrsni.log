@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.5.9)  2 JUN 2016 19:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.5.9)  4 JUN 2016 20:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -807,24 +807,55 @@ File: img/primjer.png Graphic file (type png)
 Package pdftex.def Info: img/primjer.png used on input line 151.
 (pdftex.def)             Requested size: 227.62204pt x 157.39172pt.
 
-[8 <./img/primjer.png>] [9] [10]
+[8 <./img/primjer.png>] <img/krizanje.png, id=65, 597.23125pt x 123.46124pt>
+File: img/krizanje.png Graphic file (type png)
+
+<use img/krizanje.png>
+Package pdftex.def Info: img/krizanje.png used on input line 166.
+(pdftex.def)             Requested size: 341.43306pt x 70.58273pt.
+ [9 <./img/krizanje.png>]
+<img/mutacija.png, id=70, 564.1075pt x 111.41624pt>
+File: img/mutacija.png Graphic file (type png)
+ <use img/mutacija.png>
+Package pdftex.def Info: img/mutacija.png used on input line 176.
+(pdftex.def)             Requested size: 341.43306pt x 67.43678pt.
+
+Overfull \hbox (13.18019pt too wide) in paragraph at lines 184--185
+\T1/ptm/m/n/12 sve jedinke postavimo na kolo, tako da bolja jedinka ima ve¢u po
+vr²inu na kolu (prikazano
+ []
+
+<img/selekcija.png, id=71, 249.93375pt x 213.79875pt>
+File: img/selekcija.png Graphic file (type png)
+ <use img/selekcija.png>
+Package pdftex.def Info: img/selekcija.png used on input line 188.
+(pdftex.def)             Requested size: 170.71652pt x 146.0402pt.
+
+<img/genetski_shema.png, id=72, 488.82625pt x 226.8475pt>
+File: img/genetski_shema.png Graphic file (type png)
+
+<use img/genetski_shema.png>
+Package pdftex.def Info: img/genetski_shema.png used on input line 219.
+(pdftex.def)             Requested size: 341.43306pt x 158.44948pt.
+ [10 <./img/mutacija.png>] [11 <./img/selekcija.png>] [12 <./img/genetski_shema
+.png>]
 Chapter 3.
-[11
+[13
 
 ]
 Chapter 4.
 No file zavrsni.bbl.
-[12
+[14
 
-] [13] (./zavrsni.aux) ) 
+] [15] (./zavrsni.aux) ) 
 Here is how much of TeX's memory you used:
- 6226 strings out of 494910
- 85459 string characters out of 6179837
- 161795 words of memory out of 5000000
- 9354 multiletter control sequences out of 15000+600000
+ 6250 strings out of 494910
+ 85937 string characters out of 6179837
+ 160839 words of memory out of 5000000
+ 9374 multiletter control sequences out of 15000+600000
  67602 words of font info for 86 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 43i,8n,40p,1824b,603s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 43i,8n,40p,1824b,597s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.
 enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/sh
@@ -838,10 +869,10 @@ elvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr
 are/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/urw/times/utmri8a.pfb>
-Output written on zavrsni.pdf (17 pages, 424278 bytes).
+Output written on zavrsni.pdf (19 pages, 475933 bytes).
 PDF statistics:
- 124 PDF objects out of 1000 (max. 8388607)
- 80 compressed objects within 1 object stream
+ 135 PDF objects out of 1000 (max. 8388607)
+ 85 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
 

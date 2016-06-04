@@ -145,7 +145,7 @@ gdje je:
 \end{itemize}
 Ovaj model se može pojednostavniti ako postavimo $W=IP=1$ što neće utjecati na konačne rezultate.
 
-Opišimo sada na primjeru što izraz \ref{eq:fitts4} zapravo znači. Recimo da treba evaluirati raspored slova na tipkovnici prikazanoj na slici \ref{fig:fitts_primjer}. Prvo što nam treba je matrica vjerojatnosti $P$. Ona je dimenzija $N$x$N$ i izgleda različito za svaki jezik (za engleski jezik najveću će vrijednost imati polje koje označava bigram \emph{TH}). Nakon toga potrebno je izračunati matricu $D$. Udaljenost dva slova na tipkovnici se jednostavno računaju tako da se tipkovnica gleda kao šahovska ploča gdje svako slovo ima svoje koordinate. Primjerice udaljenost slova \emph{z} i \emph{d} je 1, a udaljenost slova \emph{ć} i \emph{h} je $\sqrt{2^2+1^2} = 2.236$. Provučemo li izračunate vrijednosti kroz izraz \ref{eq:fitts4} dobit ćemo vremensku cijenu tipkovnice koja približno iznosi $1.038$. Jedinica ove vrijednosti nam nije bitna, bitno je jedino da imamo kriterij za usporedbu dvije tipkovnice. Što je vremenska cijena tipkovnice manja to je tipkovnica "bolja".
+Opišimo sada na primjeru što izraz \ref{eq:fitts4} zapravo znači. Recimo da treba evaluirati raspored slova na tipkovnici prikazanoj na slici \ref{fig:fitts_primjer}. Prvo što nam treba je matrica vjerojatnosti $P$. Ona je dimenzija $N$x$N$ i izgleda različito za svaki jezik (za engleski jezik najveću će vrijednost imati polje koje označava bigram \emph{TH}). Nakon toga potrebno je izračunati matricu $D$. Udaljenost dva slova na tipkovnici se jednostavno računaju tako da se tipkovnica gleda kao šahovska ploča gdje svako slovo ima svoje koordinate. Primjerice udaljenost slova \emph{z} i \emph{d} je 1, a udaljenost slova \emph{ć} i \emph{h} je $\sqrt{2^2+1^2} = 2.236$. Provučemo li izračunate vrijednosti kroz izraz \ref{eq:fitts4} dobit ćemo vremensku cijenu tipkovnice koja približno iznosi $1.038$. Jedinica ove vrijednosti nam nije bitna, bitno je jedino da imamo kriterij za usporedbu dvije tipkovnice. Što je vremenska cijena tipkovnice manja to je tipkovnica "bolja". //TODO opis za 2-handed
 \begin{figure}[htb]
 \centering
 \includegraphics[width=8cm]{img/primjer.png}
@@ -222,17 +222,14 @@ Reprodukcijom se jednostavno jedinka prenosi iz jedne generacije u drugu. Ta jed
 \end{figure}
 
 \subsubsection{Genetski algoritam u mom radu}
-Jedinku u genetskom algoritmu predstavljala je jedna tipkovnica sa svojim oblikom i rasporedom tipki. Na početku se stvori populacija tipkovnica sa slučajno odabranim rasporedom tipki i slučajnim oblikom. Nakon toga se za svaku tipkovnicu izračuna vremenska cijena prema izrazu \ref{eq:fitts4} te se jedinke u populaciji uzlazno sortiraju, tako da je najbolja jedinka (ona s najmanjom vremenskom cijenom) na početku. Stvori se nova populacija koja je na početku prazan skup. Ta se populacija puni novim jedinkama (tipkovnicama) križanjem, mutiranjem i reprodukcijom sve dok broj jedinki ne bude isti kao i u trenutnoj populaciji. Nova populacija tada postaje trenutna populacija koja se opet evaluira i tako u krug sve dok se ne dosegne maksimalan broj generacija (zadan proizvoljno). Najbolja tipkovnica u posljednjoj generaciji predstavlja rješenje algoritma.
+Jedinku u genetskom algoritmu predstavlja jedna tipkovnica sa svojim oblikom i rasporedom tipki. Jedna generacija sadrži $500$ jedinki, a $1000$ je postavljen za maksimalan broj jedinki (uvjet zaustavljanja algoritma). Algoritam koristi operatore križanja, selekcije, mutacije i reprodukcije kako bi pronašao optimalno rješenje. Tip selekcije koji se koristio jest \emph{k-turnirska selekcija} gdje je \emph{k} postavljen na $24$. Mutacija je implementirana na način da su slučajnom odabirom zamijenjene pozicije od $p\%$ znakova na tipkovnici. $p$ je postavljen na $0.3$. Križanje je napravljeno tako da su svi znakovi s pojedine tipkovnice po redu nanizani u polje. Točka prekida polja je središnji element. Nakon prekida dvije polovice se zamijene i tada nastaju 2 nova polja. Svako polje može sadržavati duple znakove. Taj problem je rješen tako da su u svakom pronađeni znakovi koji nedostaju i stavljeni umjesto duplikata. Proces križanja prikazan je na slici \ref{fig:krizanje_primjer}.
 
 \section{Implementacija i rezultati}
 TODO \\
 Opisat kako sam oblikovao kod, stavit dijelove koda, opisat način na koji funkcioniraju crossover, mutation, reproduction, način na koji se pokreće program, opisat kako sam više puta pokrećao algoritam jer često zapne u lokalnom optimumu, kako sam za cost koristio 1/t, kako sam napravio varijaciju za 2-handed, opisat zašto i da želim eksperimentom provjerit rezultat ... navest sve razne layoute i rezultate koje sam dobio
 
-U poglavlju 2.1 opisana je problematika i dobrim dijelom pristup rješavanju problema. U ovom poglavlju ćemo se detaljnije pozabaviti načinu na koji sam implementirao algoritam i rezultatima koje sam dobio.
-\\pitat glavinića u vezi opisa koda i te pizdarije 
-\subsection{Implementacija algoritma}
+U poglavlju 2.1 opisana je problematika i dobrim dijelom pristup rješavanju problema. U ovom poglavlju ćemo se detaljnije pozabaviti načinu na koji sam implementirao algoritam, rezultatima koje sam dobio i alatima koje sam koristio kako bi došao do rješenja.
 
-\subsection{Rezultati}
 
 \chapter{Provedba eksperimenta i obrada rezultata}
 

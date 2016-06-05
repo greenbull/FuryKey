@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.5.9)  4 JUN 2016 22:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.5.9)  5 JUN 2016 18:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -786,16 +786,16 @@ Chapter 2.
 ] [6] <img/fitts.png, id=54, 602.25pt x 514.92375pt>
 File: img/fitts.png Graphic file (type png)
  <use img/fitts.png>
-Package pdftex.def Info: img/fitts.png used on input line 118.
+Package pdftex.def Info: img/fitts.png used on input line 119.
 (pdftex.def)             Requested size: 185.65297pt x 158.73685pt.
 
 <img/scroll.png, id=55, 602.25pt x 301.125pt>
 File: img/scroll.png Graphic file (type png)
  <use img/scroll.png>
-Package pdftex.def Info: img/scroll.png used on input line 124.
+Package pdftex.def Info: img/scroll.png used on input line 125.
 (pdftex.def)             Requested size: 185.65297pt x 92.82857pt.
 
-Overfull \hbox (12.89174pt too wide) in paragraph at lines 132--133
+Overfull \hbox (12.89174pt too wide) in paragraph at lines 133--134
 \T1/ptm/m/n/12 Za potrebe ovog rada ko-ris-tio sam mod-i-fikaciju Fittsovog za-
 kona kako bi mo-gao evaluirati
  []
@@ -804,84 +804,93 @@ kona kako bi mo-gao evaluirati
 <img/primjer.png, id=61, 270.00874pt x 186.6975pt>
 File: img/primjer.png Graphic file (type png)
  <use img/primjer.png>
-Package pdftex.def Info: img/primjer.png used on input line 151.
-(pdftex.def)             Requested size: 227.62204pt x 157.39172pt.
+Package pdftex.def Info: img/primjer.png used on input line 156.
+(pdftex.def)             Requested size: 198.02942pt x 136.929pt.
 
-[8 <./img/primjer.png>] <img/krizanje.png, id=65, 597.23125pt x 123.46124pt>
+<img/2hand_primjer.png, id=62, 337.26pt x 148.555pt>
+File: img/2hand_primjer.png Graphic file (type png)
+
+<use img/2hand_primjer.png>
+Package pdftex.def Info: img/2hand_primjer.png used on input line 162.
+(pdftex.def)             Requested size: 198.02942pt x 87.2296pt.
+ [8] [9 <./img/primjer.png> <./img/2hand_primjer.png>] <img/krizanje.png, id=71
+, 597.23125pt x 123.46124pt>
 File: img/krizanje.png Graphic file (type png)
-
-<use img/krizanje.png>
-Package pdftex.def Info: img/krizanje.png used on input line 166.
+ <use img/krizanje.png>
+Package pdftex.def Info: img/krizanje.png used on input line 176.
 (pdftex.def)             Requested size: 341.43306pt x 70.58273pt.
- [9 <./img/krizanje.png>]
-<img/mutacija.png, id=70, 564.1075pt x 111.41624pt>
+
+<img/mutacija.png, id=72, 564.1075pt x 111.41624pt>
 File: img/mutacija.png Graphic file (type png)
  <use img/mutacija.png>
-Package pdftex.def Info: img/mutacija.png used on input line 176.
+Package pdftex.def Info: img/mutacija.png used on input line 186.
 (pdftex.def)             Requested size: 341.43306pt x 67.43678pt.
 
-Overfull \hbox (13.18019pt too wide) in paragraph at lines 184--185
+Overfull \hbox (13.18019pt too wide) in paragraph at lines 194--195
 \T1/ptm/m/n/12 sve jedinke postavimo na kolo, tako da bolja jedinka ima ve¢u po
 vr²inu na kolu (prikazano
  []
 
-<img/selekcija.png, id=71, 249.93375pt x 213.79875pt>
+[10 <./img/krizanje.png> <./img/mutacija.png>]
+<img/selekcija.png, id=76, 249.93375pt x 213.79875pt>
 File: img/selekcija.png Graphic file (type png)
  <use img/selekcija.png>
-Package pdftex.def Info: img/selekcija.png used on input line 188.
+Package pdftex.def Info: img/selekcija.png used on input line 198.
 (pdftex.def)             Requested size: 170.71652pt x 146.0402pt.
 
-<img/genetski_shema.png, id=72, 488.82625pt x 226.8475pt>
+<img/genetski_shema.png, id=77, 488.82625pt x 226.8475pt>
 File: img/genetski_shema.png Graphic file (type png)
 
 <use img/genetski_shema.png>
-Package pdftex.def Info: img/genetski_shema.png used on input line 219.
+Package pdftex.def Info: img/genetski_shema.png used on input line 229.
 (pdftex.def)             Requested size: 341.43306pt x 158.44948pt.
+ [11 <./img/selekcija.png> <./img/genetski_shema.png>] <img/krizanje_tip.png, i
+d=81, 666.49pt x 863.225pt>
+File: img/krizanje_tip.png Graphic file (type png)
 
+<use img/krizanje_tip.png>
+Package pdftex.def Info: img/krizanje_tip.png used on input line 239.
+(pdftex.def)             Requested size: 455.24408pt x 589.63277pt.
 
-LaTeX Warning: Reference `fig:krizanje_primjer' on page 10 undefined on input l
-ine 225.
+Overfull \hbox (42.67911pt too wide) in paragraph at lines 239--240
+ [][] 
+ []
 
-[10 <./img/mutacija.png>] [11 <./img/selekcija.png>] [12 <./img/genetski_shema.
-png>]
+[12] [13] [14 <./img/krizanje_tip.png>]
 Chapter 3.
-[13
+[15
 
 ]
 Chapter 4.
 No file zavrsni.bbl.
-[14
+[16
 
-] [15] (./zavrsni.aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+] [17] (./zavrsni.aux) ) 
 Here is how much of TeX's memory you used:
- 6251 strings out of 494910
- 85959 string characters out of 6179837
- 160839 words of memory out of 5000000
- 9375 multiletter control sequences out of 15000+600000
+ 6262 strings out of 494910
+ 86214 string characters out of 6179837
+ 161861 words of memory out of 5000000
+ 9384 multiletter control sequences out of 15000+600000
  67602 words of font info for 86 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  43i,8n,40p,1824b,597s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucr
-ro8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/ur
-w/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a
-.pfb>
-Output written on zavrsni.pdf (19 pages, 476919 bytes).
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.
+enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/urw/courier/ucrro8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/h
+elvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr
+8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/urw/times/utmri8a.pfb>
+Output written on zavrsni.pdf (21 pages, 527501 bytes).
 PDF statistics:
- 135 PDF objects out of 1000 (max. 8388607)
- 85 compressed objects within 1 object stream
+ 144 PDF objects out of 1000 (max. 8388607)
+ 89 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
 

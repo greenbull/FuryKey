@@ -82,7 +82,8 @@ Ovaj raspodijela je također napravljena za korištenje stilus-a ili jednog prst
 Problematikom koju sam naveo u prethodna dva poglavlja bavi se područje zvano \emph{Interakcija čovjeka i računala (engl. Human-Computer Interaction)}, skraćeno \emph{HCI}. Istraživači u tom području bave se dizajnom i računalnom tehnologijom. Proučavaju se brojni načini na koje korisnik može imati interakciju s računalima te nastoji tu interakciju što više pojednostavniti, olakšati i ubrzati. Postoji mnogo načina za unos teksta, i mnogo će ih još nastati, pitanje je vremena koliko dugo će se još QWERTY koristiti. Zato je važno isprobati nove algoritme, metode i pristupe te ih eksperimentalno vrednovati kako bi se provjerila njihova učinkovitost i koliko su korisnici zadovoljni.
 
 \chapter{Dizajniranje alternativne tipkovnice}
-Ovo poglavlje obuhvaća opis samog problema te pristup njegovog rješavanja. TODO još 2-3 rečenice dodat, npr o soft keyboard, smartphonima bla bla
+Ovo poglavlje obuhvaća opis samog problema te pristup njegovog rješavanja. 
+\\TODO još 2-3 rečenice dodat, npr o soft keyboard, smartphonima itd
 \section{Opis problema}
 Cilj ovog rada jest osmisliti alternativnu tipkovnicu za zaslone osjetljive na dodir koristeći Fittsov zakon. Jednostavnije rečeno, radio sam na dizajniranju tipkovnice s određenim raspodijelom tipki koja bi korisniku omogućila brže unošenje teksta u odnosu na QWERTY tipkovnicu. Algoritam koji sam koristio temelji se na zasadama Fittsovog zakona (detaljnije opisan u poglavlju 2.1.1.). Taj zakon predviđa vrijeme potrebno da korisnik reagira i pomakne \emph{nešto} s jedne lokacije na drugu. To \emph{nešto} može biti npr. kursor miša, ruka, noga ili konkretno što se tiče ovog rada: prst. To vrijeme je funkcija udaljenosti do odredišne lokacije i širine te lokacije: $f(D,W)$. U okviru pronalaženja optimalne raspodijele znakova na tipkovnici, udaljenost predstavlja međusobnu udaljenost dvije tipke na tipkovnici koje planiramo uzastopno stisnuti, a širina jest širina same tipke. Kao što se već da naslutiti, cilj je minimizirati funkciju vremena što istovremeno znači i minimizirati vrijeme potrebno da se unese određeni tekst. Uzmimo kao primjer riječ PAS i da korisnik tekst unosi prstom jedne ruke. Kako bi izračunali vrijeme koje je potrebno da korisnik to unese trebamo izračunati udaljenost od P do A $d(P,A)$ i širinu od A $w(A)$, pa udaljenost od A do S $d(A,S)$ i širinu od S $w(S)$. Pretpostavlja se da je početni položaj korisnikova prsta iznad slova P, kada njega stisne potrebno je preći udaljenost $d(P,A)$ da bi se stisnula tipka A širine $w(A)$ pa udaljenost $d(A,S)$ da bi se stisnula tipka S širine $w(S)$. Iz ovoga vidimo kako će se pomoću Fittsovog zakona dobiti tipkovnica koja će imati slova koja se često uzastopno koriste, jedan blizu drugoga. Zbog toga je potrebno analizirati statistiku bigrama za ciljani jezik tipkovnice.
 
@@ -145,15 +146,24 @@ gdje je:
 \end{itemize}
 Ovaj model se može pojednostavniti ako postavimo $W=IP=1$ što neće utjecati na konačne rezultate.
 
-Opišimo sada na primjeru što izraz \ref{eq:fitts4} zapravo znači. Recimo da treba evaluirati raspored slova na tipkovnici prikazanoj na slici \ref{fig:fitts_primjer}. Prvo što nam treba je matrica vjerojatnosti $P$. Ona je dimenzija $N$x$N$ i izgleda različito za svaki jezik (za engleski jezik najveću će vrijednost imati polje koje označava bigram \emph{TH}). Nakon toga potrebno je izračunati matricu $D$. Udaljenost dva slova na tipkovnici se jednostavno računaju tako da se tipkovnica gleda kao šahovska ploča gdje svako slovo ima svoje koordinate. Primjerice udaljenost slova \emph{z} i \emph{d} je 1, a udaljenost slova \emph{ć} i \emph{h} je $\sqrt{2^2+1^2} = 2.236$. Provučemo li izračunate vrijednosti kroz izraz \ref{eq:fitts4} dobit ćemo vremensku cijenu tipkovnice koja približno iznosi $1.038$. Jedinica ove vrijednosti nam nije bitna, bitno je jedino da imamo kriterij za usporedbu dvije tipkovnice. Što je vremenska cijena tipkovnice manja to je tipkovnica "bolja". //TODO opis za 2-handed
-\begin{figure}[htb]
-\centering
-\includegraphics[width=8cm]{img/primjer.png}
-\caption{Primjer tipkovnice}
-\label{fig:fitts_primjer}
-\end{figure}
+Opišimo sada na primjeru što izraz \ref{eq:fitts4} zapravo znači. Recimo da treba evaluirati raspored slova na tipkovnici prikazanoj na slici \ref{fig:fitts_primjer}. Prvo što nam treba je matrica vjerojatnosti $P$. Ona je dimenzija $N$x$N$ i izgleda različito za svaki jezik (za engleski jezik najveću će vrijednost imati polje koje označava bigram \emph{TH}). Nakon toga potrebno je izračunati matricu $D$. Udaljenost dva slova na tipkovnici se jednostavno računaju tako da se tipkovnica gleda kao šahovska ploča gdje svako slovo ima svoje koordinate. Primjerice udaljenost slova \emph{z} i \emph{d} je $1$, a udaljenost slova \emph{ć} i \emph{h} je $\sqrt{2^2+1^2} = 2.236$. Provučemo li izračunate vrijednosti kroz izraz \ref{eq:fitts4} dobit ćemo vremensku cijenu tipkovnice koja približno iznosi $1.038$. Jedinica ove vrijednosti nam nije bitna, bitno je jedino da imamo kriterij za usporedbu dvije tipkovnice. Što je vremenska cijena tipkovnice manja to je tipkovnica "bolja". Ovaj model je preuzet je iz rada \emph{"Optimizing stylus keyboard layouts with a genetic algorithm: customization and internationalization" - Chad R. Brewbaker}.
 
-Prethodno opisani model je preuzet je iz rada \emph{"Optimizing stylus keyboard layouts with a genetic algorithm: customization and internationalization" - Chad R. Brewbaker}.
+Ovakva tipkovnica namijenjena je za unošenje teksta koristeći stilus ili jednim prstom. Kako bi generirao tipkovnicu koja je idealnija za korištenje dva prsta (primjerice palčevima kao što to većina ljudi radi na pametnim uređajima) napravio sam neke izmjene u odnosu na prethodno opisani model. Svaka tipkovnica podijeljena je na dva dijela (lijevi i desni) od kojih je svaki dio namijenjen za lijevu, odnosno desnu ruku. Svaki dio ima svoje središte za koje se pretpostavlja da je lokacija iznad koje korisnik drži prst kada unosi tekst. Vremenska cijena ovakve tipkovnice računa se na malo drugačiji način. Uzmimo za primjer tipkovnicu na slici \ref{fig:fitts_primjer2}. Lijevo i desno središte označeni su crvenim kružićem. Znakovi \emph{B} i \emph{H} su na istoj strani (lijevoj) pa se pretpostavlja da će ih korisnik oba unijeti koristeći palac lijeve ruke. Njihova udaljenost se tada računa kao i prije te iznosi $2$. Znakovi \emph{R} i \emph{O} nalaze se na suprotnim stranama. Za njihovu udaljenost uzima se zbroj udaljenosti od lijevog središta do znaka \emph{R} i udaljenosti od desnog središta do znaka \emph{O}. Ovakav način računanja sam odabrao promatrajući sebe, a i drugi ljude kako koriste tipkovnice na svojim uređajima. Kako bi provjerio valjanost ovog modela napravio sam eksperiment koji je opisan u poglavlju 3.
+
+\begin{figure}[htb]
+  \centering
+  \begin{minipage}[b]{0.48\textwidth}
+    \includegraphics[width=\textwidth]{img/primjer.png}
+    \caption{Primjer tipkovnice}
+    \label{fig:fitts_primjer}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.48\textwidth}
+    \includegraphics[width=\textwidth]{img/2hand_primjer.png}
+    \caption{Primjer tipkovnice}
+    \label{fig:fitts_primjer2}
+  \end{minipage}
+\end{figure}
 
 \subsection{Genetski algoritam}
 Genetski ili genetički algoritam (GA)  je heuristička metoda optimiranja koja imitira prirodni evolucijski proces. Evolucija je robustan proces pretraživanja prostora rješenja. Živa bića se tijekom evolucije prilagođavaju uvjetima u prirodi, tj. životnoj okolini. Analogija evolucije kao prirodnog procesa i genetskog algoritma kao metode optimiranja, očituje se u procesu selekcije i genetskim operatorima. Mehanizam odabira nad nekom vrstom živih bića u evolucijskom procesu čine okolina i uvjeti u prirodi. U genetskim algoritmima ključ selekcije je funkcija cilja, koja na odgovarajući način predstavlja problem koji se rješava. Slično kao što su okolina i uvjeti u prirodi ključ selekcije nad nekom vrstom živih bića, tako je i funkcija cilja ključ selekcije nad populacijom rješenja u genetskom algoritmu. Naime, u prirodi jedinka koja je najbolje prilagođena uvjetima i okolini u kojoj živi ima najveću vjerojatnost preživljavanja i parenja, a time i prenošenja svojega genetskog materijala na svoje potomke. Za genetski algoritam jedno rješenje je jedna jedinka. Selekcijom se odabiru dobre jedinke koje se prenose u slijedeću populaciju, a manipulacijom genetskog materijala stvaraju se nove jedinke. Takav ciklus selekcije, reprodukcije i manipulacije genetskim materijalom jedinki ponavlja se sve dok nije zadovoljen uvjet zaustavljanja evolucijskog procesa. Konačan rezultat je populacija jedinki (potencijalnih rješenja). Najbolja jedinka u zadnjoj iteraciji predstavlja rješenje optimiranja. Genetski algoritam izvršava se uporabom operatora križanja, mutacije, selekcije i reprodukcije. Svaki od njih objašnjen je u nastavku.
@@ -186,7 +196,7 @@ Jedan od centralnih mehanizama, kako kod većine populacijskih algoritama pa i o
 \begin{figure}[htb]
 \centering
 \includegraphics[width=6cm]{img/selekcija.png}
-\caption{Shema genetskog algoritma}
+\caption{Proporcionalna selekcija}
 \label{fig:selekcija}
 \end{figure}
 
@@ -222,7 +232,14 @@ Reprodukcijom se jednostavno jedinka prenosi iz jedne generacije u drugu. Ta jed
 \end{figure}
 
 \subsubsection{Genetski algoritam u mom radu}
-Jedinku u genetskom algoritmu predstavlja jedna tipkovnica sa svojim oblikom i rasporedom tipki. Jedna generacija sadrži $500$ jedinki, a $1000$ je postavljen za maksimalan broj jedinki (uvjet zaustavljanja algoritma). Algoritam koristi operatore križanja, selekcije, mutacije i reprodukcije kako bi pronašao optimalno rješenje. Tip selekcije koji se koristio jest \emph{k-turnirska selekcija} gdje je \emph{k} postavljen na $24$. Mutacija je implementirana na način da su slučajnom odabirom zamijenjene pozicije od $p\%$ znakova na tipkovnici. $p$ je postavljen na $0.3$. Križanje je napravljeno tako da su svi znakovi s pojedine tipkovnice po redu nanizani u polje. Točka prekida polja je središnji element. Nakon prekida dvije polovice se zamijene i tada nastaju 2 nova polja. Svako polje može sadržavati duple znakove. Taj problem je rješen tako da su u svakom pronađeni znakovi koji nedostaju i stavljeni umjesto duplikata. Proces križanja prikazan je na slici \ref{fig:krizanje_primjer}.
+Jedinku u genetskom algoritmu predstavlja jedna tipkovnica sa svojim oblikom i rasporedom tipki. Jedna generacija sadrži $500$ jedinki, a $1000$ je postavljen za maksimalan broj generacija (uvjet zaustavljanja algoritma). Algoritam koristi operatore križanja, selekcije, mutacije i reprodukcije kako bi pronašao optimalno rješenje. Tip selekcije koji se koristio jest \emph{k-turnirska selekcija} gdje je \emph{k} postavljen na $24$. Mutacija je implementirana na način da su slučajnom odabirom zamijenjene pozicije od $p\%$ znakova na tipkovnici. $p$ je postavljen na $0.3$. Križanje je napravljeno tako da su svi znakovi s pojedine tipkovnice po redu nanizani u polje. Točka prekida polja je središnji element. Nakon prekida dvije polovice se zamijene i tada nastaju 2 nova polja. Svako polje može sadržavati duple znakove. Taj problem je rješen tako da su u svakom pronađeni znakovi koji nedostaju i stavljeni umjesto duplikata. Proces križanja prikazan je na slici \ref{fig:krizanje_primjer}. \\TODO opisat detaljnije ? 
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=16cm]{img/krizanje_tip.png}
+\caption{Primjer križanja tipkovnica}
+\label{fig:krizanje_primjer}
+\end{figure}
 
 \section{Implementacija i rezultati}
 TODO \\

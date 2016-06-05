@@ -7,12 +7,12 @@
 \contentsline {section}{\numberline {2.1}Opis problema}{5}
 \contentsline {subsection}{\numberline {2.1.1}Fittsov zakon}{6}
 \contentsline {subsubsection}{Fittsov zakon u mom radu}{7}
-\contentsline {subsection}{\numberline {2.1.2}Genetski algoritam}{8}
+\contentsline {subsection}{\numberline {2.1.2}Genetski algoritam}{9}
 \contentsline {subsubsection}{Operator kri\IeC {\v z}anja}{9}
 \contentsline {subsubsection}{Operator mutacije}{10}
 \contentsline {subsubsection}{Operator selekcije}{10}
-\contentsline {subsubsection}{Operator reprodukcije}{10}
-\contentsline {subsubsection}{Genetski algoritam u mom radu}{11}
+\contentsline {subsubsection}{Operator reprodukcije}{11}
+\contentsline {subsubsection}{Genetski algoritam u mom radu}{12}
 \contentsline {section}{\numberline {2.2}Implementacija i rezultati}{12}
-\contentsline {chapter}{\numberline {3}Provedba eksperimenta i obrada rezultata}{13}
-\contentsline {chapter}{\numberline {4}Zaklju\IeC {\v c}ak}{14}
+\contentsline {chapter}{\numberline {3}Provedba eksperimenta i obrada rezultata}{15}
+\contentsline {chapter}{\numberline {4}Zaklju\IeC {\v c}ak}{16}

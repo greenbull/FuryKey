@@ -1,18 +1,21 @@
 \select@language {english}
 \contentsline {chapter}{\numberline {1}Uvod}{1}
-\contentsline {section}{\numberline {1.1}Kratka povijest}{1}
-\contentsline {section}{\numberline {1.2}Tipkovnice danas}{2}
-\contentsline {section}{\numberline {1.3}Interakcija \IeC {\v c}ovjeka i ra\IeC {\v c}unala}{4}
-\contentsline {chapter}{\numberline {2}Dizajniranje alternativne tipkovnice}{5}
-\contentsline {section}{\numberline {2.1}Opis problema}{5}
-\contentsline {subsection}{\numberline {2.1.1}Fittsov zakon}{6}
-\contentsline {subsubsection}{Fittsov zakon u mom radu}{7}
-\contentsline {subsection}{\numberline {2.1.2}Genetski algoritam}{8}
-\contentsline {subsubsection}{Operator kri\IeC {\v z}anja}{9}
-\contentsline {subsubsection}{Operator mutacije}{10}
-\contentsline {subsubsection}{Operator selekcije}{10}
-\contentsline {subsubsection}{Operator reprodukcije}{11}
-\contentsline {subsubsection}{Genetski algoritam u mom radu}{12}
-\contentsline {section}{\numberline {2.2}Implementacija i rezultati}{12}
-\contentsline {chapter}{\numberline {3}Provedba eksperimenta i obrada rezultata}{15}
-\contentsline {chapter}{\numberline {4}Zaklju\IeC {\v c}ak}{16}
+\contentsline {chapter}{\numberline {2}Alternativne tipkovnice}{3}
+\contentsline {section}{\numberline {2.1}Dvorak}{3}
+\contentsline {section}{\numberline {2.2}ATOMIK}{4}
+\contentsline {section}{\numberline {2.3}FITALY}{4}
+\contentsline {section}{\numberline {2.4}Colemak}{4}
+\contentsline {chapter}{\numberline {3}Dizajniranje alternativne tipkovnice}{6}
+\contentsline {section}{\numberline {3.1}Opis problema}{6}
+\contentsline {subsection}{\numberline {3.1.1}Fittsov zakon}{7}
+\contentsline {subsubsection}{Fittsov zakon u mom radu}{8}
+\contentsline {subsection}{\numberline {3.1.2}Genetski algoritam}{9}
+\contentsline {subsubsection}{Operator kri\IeC {\v z}anja}{10}
+\contentsline {subsubsection}{Operator mutacije}{11}
+\contentsline {subsubsection}{Operator selekcije}{11}
+\contentsline {subsubsection}{Operator reprodukcije}{12}
+\contentsline {subsubsection}{Genetski algoritam u mom radu}{13}
+\contentsline {section}{\numberline {3.2}Rezultati i implementacija}{15}
+\contentsline {subsection}{\numberline {3.2.1}Implementacija tipkovnica za Android operacijski sustav}{16}
+\contentsline {chapter}{\numberline {4}Provedba eksperimenta i obrada rezultata}{17}
+\contentsline {chapter}{\numberline {5}Zaklju\IeC {\v c}ak}{18}

@@ -2,6 +2,7 @@
 \usepackage{booktabs}
 \usepackage{algorithm}
 \usepackage{algorithmic}
+\usepackage{multirow}
 \begin{document}
 
 % TODO: Navedite broj rada.
@@ -90,17 +91,13 @@ Colemak tipkovnica (slika \ref{fig:colemak}) nudi male promjene u odnosu na QWER
   \end{minipage}
 \end{figure}
 
-\chapter{Dizajniranje alternativne tipkovnice}
-Ovo poglavlje obuhvaća opis samog problema te pristup njegovog rješavanja. 
-\\TODO još 2-3 rečenice dodat
-\section{Opis problema}
-Cilj ovog rada jest osmisliti alternativnu tipkovnicu za zaslone osjetljive na dodir koristeći Fittsov zakon. Jednostavnije rečeno, cilj je dizajnirati tipkovnicu s određenim rasporedom tipki koja bi korisniku omogućila brže unošenje teksta u odnosu na QWERTY tipkovnicu. Algoritam koji se koristi temelji se na zasadama Fittsovog zakona (detaljnije opisan u poglavlju 2.1.1.). Taj zakon predviđa vrijeme potrebno da korisnik reagira i pomakne \emph{nešto} s jedne lokacije na drugu. To \emph{nešto} može biti npr. kursor miša, ruka, noga ili konkretno što se tiče ovog rada: prst. To vrijeme je funkcija udaljenosti do odredišne lokacije i širine te lokacije: $f(D,W)$. U okviru pronalaženja optimalnog rasporeda znakova na tipkovnici, udaljenost predstavlja međusobnu udaljenost dvije tipke na tipkovnici koje će se uzastopno stisnuti, a širina jest širina same tipke. Kao što se već da naslutiti, cilj je minimizirati funkciju vremena što istovremeno znači i minimizirati vrijeme potrebno da se unese određeni tekst. Uzmimo kao primjer riječ PAS i da korisnik tekst unosi prstom jedne ruke. Kako bi se izračunalo vrijeme koje je potrebno da korisnik to unese treba izračunati udaljenost od P do A $d(P,A)$ i širinu od A $w(A)$, pa udaljenost od A do S $d(A,S)$ i širinu od S $w(S)$. Pretpostavlja se da je početni položaj korisnikova prsta iznad slova P, kada njega stisne potrebno je preći udaljenost $d(P,A)$ da bi se stisnula tipka A širine $w(A)$ pa udaljenost $d(A,S)$ da bi se stisnula tipka S širine $w(S)$. Iz ovoga se vidi kako će se pomoću Fittsovog zakona dobiti tipkovnica koja će imati slova koja se često uzastopno koriste, jedan blizu drugoga. Zbog toga je potrebno analizirati statistiku bigrama za ciljani jezik tipkovnice.
+\chapter{Oblikovanje alternativne tipkovnice}
+Ovo poglavlje obuhvaća opis samog problema te pristup njegovog rješavanja. Cilj ovog rada jest osmisliti alternativnu tipkovnicu za zaslone osjetljive na dodir koristeći Fittsov zakon. Jednostavnije rečeno, cilj je dizajnirati tipkovnicu s određenim rasporedom tipki koja bi korisniku omogućila brže unošenje teksta u odnosu na QWERTY tipkovnicu. Algoritam koji se koristi temelji se na zasadama Fittsovog zakona (detaljnije opisan u poglavlju \ref{sec:fitts}). Taj zakon predviđa vrijeme potrebno da korisnik reagira i pomakne \emph{nešto} s jedne lokacije na drugu. To \emph{nešto} može biti npr. kursor miša, ruka, noga ili konkretno što se tiče ovog rada: prst. To vrijeme je funkcija udaljenosti do odredišne lokacije i širine te lokacije: $f(D,W)$. U okviru pronalaženja optimalnog rasporeda znakova na tipkovnici, udaljenost predstavlja međusobnu udaljenost dvije tipke na tipkovnici koje će se uzastopno stisnuti, a širina jest širina same tipke. Kao što se već da naslutiti, cilj je minimizirati funkciju vremena što istovremeno znači i minimizirati vrijeme potrebno da se unese određeni tekst. Uzmimo kao primjer riječ PAS i da korisnik tekst unosi prstom jedne ruke. Kako bi se izračunalo vrijeme koje je potrebno da korisnik to unese treba izračunati udaljenost od P do A $d(P,A)$ i širinu od A $w(A)$, pa udaljenost od A do S $d(A,S)$ i širinu od S $w(S)$. Pretpostavlja se da je početni položaj korisnikova prsta iznad slova P, kada njega stisne potrebno je preći udaljenost $d(P,A)$ da bi se stisnula tipka A širine $w(A)$ pa udaljenost $d(A,S)$ da bi se stisnula tipka S širine $w(S)$. Iz ovoga se vidi kako će se pomoću Fittsovog zakona dobiti tipkovnica koja će imati slova koja se često uzastopno koriste, jedan blizu drugoga. Zbog toga je potrebno analizirati statistiku bigrama za ciljani jezik tipkovnice.
 
-//TODO stavit sliku za PAS
+Kako bi se pronašao raspored tipki koji će prema Fittsovom zakonu imati najkraće vrijeme unosa teksta bilo bi najjednostavnije isprobati svaku moguću i pronaći onu s najmanjim vremenom. Ali to nije izvedivo, ako se uzme u obzir hrvatska abeceda koja ima 30 slova, potrebno je ispitati $30! = 2.65*10^{32}$ mogućih različitih razmještaja (starost svemira je $10^{10}$ sekundi). Ovaj problem predstavlja tipičan problem optimizacije, pitanje je kako pronaći minimum funkcije zadane Fittsovim zakonom uzevši u obzir sve moguće razmještaje slova. Postoje razne metode za rješiti taj problem. U ovom radu se koristio genetski algoritam. Genetski algoritam i način na koji je iskorišten detaljno je opisan u poglavlju \ref{sec:genetski}.
 
-Kako bi se pronašao raspored tipki koji će prema Fittsovom zakonu imati najkraće vrijeme unosa teksta bilo bi najjednostavnije isprobati svaku moguću i pronaći onu s najmanjim vremenom. Ali to nije izvedivo, ako se uzme u obzir hrvatska abeceda koja ima 30 slova, potrebno je ispitati $30! = 2.65*10^{32}$ mogućih različitih razmještaja, što bi vjerojatno potrajalo nekoliko stoljeća. Ovaj problem predstavlja tipičan problem optimizacije, pitanje je kako pronaći minimum funkcije zadane Fittsovim zakonom uzevši u obzir sve moguće razmještaje slova. Postoje razne metode za rješiti taj problem. U ovom radu se koristio genetski algoritam. Genetski algoritam i način na koji je iskorišten detaljno je opisan u poglavlju 2.1.2.
-
-\subsection{Fittsov zakon}
+\section{Fittsov zakon}
+\label{sec:fitts}
 Fittsov zakon je opisni model ljudskog pokreta koji se primarno koristi u \emph{HCI-u}\footnote{Interakcija čovjeka i računala.} i \emph{ergonomiji}\footnote{Znanstvena disciplina koja istražuje ljudski organizam i ponašanje, te pruža podatke o prilagođenošću predmeta s kojima čovjek dolazi u kontakt.}. Kao što je već navedeno, Fittsov zakon predviđa vrijeme brzog pokreta do odredišne lokacije, to je funkcija udaljenosti do odredišta i širine tog odredišta. Ovaj zakon modelira čin pokazivanja (engl. \emph{act of pointing}), to može biti fizičko dodirivanje nekog objekta, primjerice rukom i prstom, a može biti i virtualno kao što je strelicom miša na računalu. Fittsov zakon se pokazao učinkovit u mnogo različitih slučajeva, koristeći razne dijelove tijela (ruke, noge, usne, kretanje oka...), u raznim okolinama (čak i pod vodom) i u raznim društvenim skupinama (mladi, stariji, ljudi s posebnim potrebama...). 
 
 Ideja Fittsovog zakona prikazana je na slici \ref{fig:fitts} gdje se kao udaljenost do odredišta gleda udaljenost od dvije istaknute lokacije, a širina odredišta je širina "Take the Tour" gumba. Na slici \ref{fig:scroll} vidi se razlika između klizne trake (engl. \emph{scroll-bar}) kod OSX-a i Windows-a. Kod Windows-a su strelice za pomicanje klizne trake krajnje lijevo i krajnje desno, što više prati mentalni model osobe kojoj je to intuitivnije. S druge strane kod OSX-a su obe strelice jednu uz drugu kako bi se smanjilo vrijeme pomicanja strelice miša s jedne na drugu, što je konkretno ono čega se Fittsov zakon dotiče.
@@ -138,7 +135,7 @@ MT = a+b*ID = a+b*log_2(2D/W)
 \end{figure}
 
 
-\subsubsection{Fittsov zakon u mom radu}
+\subsection{Vrednovanje razmještaja tipki}
 Za potrebe ovog rada korištena je modifikacija Fittsovog zakona kako bi se evaluirala pojedina tipkovnica. Formula je dana izrazom \ref{eq:fitts4}
 \begin{equation}
 \label{eq:fitts4}
@@ -174,10 +171,11 @@ Ovakva tipkovnica namijenjena je za unošenje teksta koristeći stilus ili jedni
   \end{minipage}
 \end{figure}
 
-\subsection{Genetski algoritam}
+\section{Genetski algoritam}
+\label{sec:genetski}
 Genetski ili genetički algoritam (GA)  je heuristička metoda optimiranja koja imitira prirodni evolucijski proces. Evolucija je robustan proces pretraživanja prostora rješenja. Živa bića se tijekom evolucije prilagođavaju uvjetima u prirodi, tj. životnoj okolini. Analogija evolucije kao prirodnog procesa i genetskog algoritma kao metode optimiranja, očituje se u procesu selekcije i genetskim operatorima. Mehanizam odabira nad nekom vrstom živih bića u evolucijskom procesu čine okolina i uvjeti u prirodi. U genetskim algoritmima ključ selekcije je funkcija cilja, koja na odgovarajući način predstavlja problem koji se rješava. Slično kao što su okolina i uvjeti u prirodi ključ selekcije nad nekom vrstom živih bića, tako je i funkcija cilja ključ selekcije nad populacijom rješenja u genetskom algoritmu. Naime, u prirodi jedinka koja je najbolje prilagođena uvjetima i okolini u kojoj živi ima najveću vjerojatnost preživljavanja i parenja, a time i prenošenja svojega genetskog materijala na svoje potomke. Za genetski algoritam jedno rješenje je jedna jedinka. Selekcijom se odabiru dobre jedinke koje se prenose u slijedeću populaciju, a manipulacijom genetskog materijala stvaraju se nove jedinke. Takav ciklus selekcije, reprodukcije i manipulacije genetskim materijalom jedinki ponavlja se sve dok nije zadovoljen uvjet zaustavljanja evolucijskog procesa. Konačan rezultat je populacija jedinki (potencijalnih rješenja). Najbolja jedinka u zadnjoj iteraciji predstavlja rješenje optimiranja. Genetski algoritam izvršava se uporabom operatora križanja, mutacije, selekcije i reprodukcije. Svaki od njih objašnjen je u nastavku.
 
-\subsubsection{Operator križanja}
+\subsection{Operator križanja}
 U procesu križanja (engl. \emph{crossover}) sudjeluju dvije jedinke koje se nazivaju \emph{roditelji}. Dakle, križanje je binarni operator. Križanjem nastaju jedna ili dvije nove jedinke koje se nazivaju \emph{djeca}. Najvažnija karakteristika križanja jest da \emph{djeca} nasljeđuju svojstva svojih roditelja. Ako su roditelji \emph{dobri} (prošli su proces selekcije), tada će najvjerojatnije i \emph{dijete} biti dobro, ako ne i bolje od svojih roditelja. Ako se jedinka predstavi kao niz bitova onda se križanje implementira slično kao što je prikazano na slici \ref{fig:krizanje}. Bitno je napomenuti da se križanje može izvesti na mnogo različitih načina, ovisno o problemu i načinu prikaza jedinke.
 
 \begin{figure}[htb]
@@ -187,7 +185,7 @@ U procesu križanja (engl. \emph{crossover}) sudjeluju dvije jedinke koje se naz
 \label{fig:krizanje}
 \end{figure}
 
-\subsubsection{Operator mutacije}
+\subsection{Operator mutacije}
 Mutacija ili slučajna promjena jednog ili više gena je unarni operator koji djeluje nad jednom jedinkom. Rezultat mutacije je izmijenjena jedinka. Parametar koji određuje vjerojatnost mutacije $p_m$ jednog bita je ujedno i parametar algoritma. Ako vjerojatnost mutacije teži k jedinici, tada se algoritam pretvara u algoritam slučajne pretrage prostora rješenja. S druge strane, ako vjerojatnost mutacije teži k nuli, postupak će najvjerojatnije već u početku optimiranja stati u nekom lokalnom optimumu. \emph{Jednostavna mutacija} svaki bit kromosoma mijenja s jednakom vjerojatnošću $p_m$.
 
 \begin{figure}[htb]
@@ -197,7 +195,7 @@ Mutacija ili slučajna promjena jednog ili više gena je unarni operator koji dj
 \label{fig:mutacija}
 \end{figure}
 
-\subsubsection{Operator selekcije}
+\subsection{Operator selekcije}
 Jedan od centralnih mehanizama, kako kod većine populacijskih algoritama pa i općenito, jest mehanizam \emph{selekcije}. Kod populacijskih algoritama zadaća operatora selekcije jest osigurati mehanizam koji će češće boljim rješenjima dati priliku da sudjeluju u produkciji novih rješenja, čime će se proces pretraživanja prostora rješenja voditi u područja koja više obećavaju. Postoji više različitih vrsta selekcija.
 
 \emph{Proporcionalna selekcija} (engl. \emph{Roulette-wheel selection} funkcionira na način da sve jedinke postavimo na kolo, tako da bolja jedinka ima veću površinu na kolu (prikazano na slici \ref{fig:selekcija}). Potom zavrtimo kolo i pogledamo na kojoj se jedinki kolo zaustavilo. S obzirom da jedinki pripada to veći dio oboda kola što ima veću dobrotu, ponavljamo li eksperiment puno puta, bolje jedinke će biti češće birane od lošijih, i ta će vjerojatnost biti upravo proporionalna dobroti same jedinke.
@@ -211,7 +209,7 @@ Jedan od centralnih mehanizama, kako kod većine populacijskih algoritama pa i o
 
 Kod \emph{k-turnirske selekcije} se iz populacije posredstvom slučajnog mehanizma odabire \emph{k} jedinki, i potom uzima najbolju. Ukoliko trebamo \emph{n} roditelja,, naprosto ćemo \emph{n} puta ponoviti turnirsku selekciju.
 
-\subsubsection{Operator reprodukcije}
+\subsection{Operator reprodukcije}
 Reprodukcijom se jednostavno jedinka prenosi iz jedne generacije u drugu. Ta jedinka se odabere operatorom selekcije.
 
 \begin{algorithm}
@@ -240,7 +238,7 @@ Reprodukcijom se jednostavno jedinka prenosi iz jedne generacije u drugu. Ta jed
 \label{fig:genetski_shema}
 \end{figure}
 
-\subsubsection{Genetski algoritam u mom radu}
+\subsection{Primjena genetskog algoritma}
 Jedinku u genetskom algoritmu predstavlja jedna tipkovnica sa svojim oblikom i rasporedom tipki. Jedna generacija sadrži $500$ jedinki, a $1000$ je postavljen za maksimalan broj generacija (uvjet zaustavljanja algoritma). Algoritam koristi operatore križanja, selekcije, mutacije i reprodukcije kako bi pronašao optimalno rješenje. Tip selekcije koji se koristio jest \emph{k-turnirska selekcija} gdje je \emph{k} postavljen na $24$. Mutacija je implementirana na način da su slučajnom odabirom zamijenjene pozicije od $p\%$ znakova na tipkovnici. $p$ je postavljen na $0.3$. Križanje je napravljeno tako da su svi znakovi s pojedine tipkovnice po redu nanizani u polje. Točka prekida polja je središnji element. Nakon prekida dvije polovice se zamijene i tada nastaju 2 nova polja. Svako polje može sadržavati duple znakove. Taj problem je rješen tako da su u svakom pronađeni znakovi koji nedostaju i stavljeni umjesto duplikata. Proces križanja prikazan je na slici \ref{fig:krizanje_primjer}. \\TODO opisat detaljnije ? 
 
 \begin{figure}[htb]
@@ -252,10 +250,10 @@ Jedinku u genetskom algoritmu predstavlja jedna tipkovnica sa svojim oblikom i r
 
 \clearpage
 
-\section{Rezultati i implementacija}
+\section{Rješenja genetskog algoritma}
 U ovom poglavlju će biti predstavljene najbolje tipkovnice koje su dobivene genetskim algoritmom te način njihove implementacije. Isprobano je nekoliko različith izgleda (engl. \emph{layout}) tipkovnica za korištenje pomoću jednog i pomoću dva prsta. Neke od njih prikazane su na sljedećim slikama //TODO ref bla bla
 
-Moguće je da postoje i neki izgledi koji bi se pokazali optimalniji prema Fittsovom zakonu ali zbog ograničenosti vremena testirani su samo pojedini. Tipkovnica namijenjena korištenju s jednim prstom prikazana je na slici \ref{fig:FuryKey1} i prema Fittsovom zakonu njena vremenska cijena iznosi $1.038$. Tipkovnica namijenjena korištenju s dva prsta prikazana je na slici \ref{fig:FuryKey2} i njena vremenska cijena iznosi $0.948$. Prema tome tipkovnica \emph{FuryKey2} se pokazala učinkovitijom za korištenje što je i logično jer se koristeći dva prsta tekst može brže unositi nego s jednim. Kako bi se provjerilo imaju li navedeni rezultati smisla i je li \emph{FuryKey1} zaista bolje koristiti s jednim prstom, a \emph{FuryKey2} s dva prsta, potrebno je provesti eksperiment pomoću kojeg će se nad grupom ispitanika evaluirati obe tipkovnice. Provedeni eksperiment je opisan u poglavlju 3.
+Moguće je da postoje i neki izgledi koji bi se pokazali optimalniji prema Fittsovom zakonu ali zbog ograničenosti vremena testirani su samo pojedini. Tipkovnica namijenjena korištenju s jednim prstom prikazana je na slici \ref{fig:FuryKey1} i prema Fittsovom zakonu njena vremenska cijena iznosi $1.038$. Može se lako uočiti da se sva često korištena slova u hrvatskom jeziku nalaze u sredini dok se ona rijeđe korištena nalaze na rubovima. Takav razmještaj omogućuje brže unošenje teksta. Tipkovnica namijenjena korištenju s dva prsta prikazana je na slici \ref{fig:FuryKey2} i njena vremenska cijena iznosi $0.948$. Prema tome tipkovnica \emph{FuryKey2} se pokazala učinkovitijom za korištenje što je i logično jer se koristeći dva prsta tekst može brže unositi nego s jednim. Kako bi se provjerilo imaju li navedeni rezultati smisla i je li \emph{FuryKey1} zaista bolje koristiti s jednim prstom, a \emph{FuryKey2} s dva prsta, potrebno je provesti eksperiment pomoću kojeg će se nad grupom ispitanika evaluirati obe tipkovnice. Provedeni eksperiment je opisan u poglavlju \ref{ch:eksperiment}.
 
 \begin{figure}[htb]
   \centering
@@ -276,6 +274,56 @@ Moguće je da postoje i neki izgledi koji bi se pokazali optimalniji prema Fitts
 Obe tipkovnice implementirane su za pametne uređaje s \emph{Android} operacijskim sustavom. //TODO napisat što je to Android ? napisat ponešto o soft keyboardima i način implementacije soft keyboarda ? (pitat mentora)
 
 \chapter{Provedba eksperimenta i obrada rezultata}
+\label{ch:eksperiment}
+TODO napisat nešto općenito o eksperimentima i njihovoj važnosti
+\section{Oblikovanje eksperimenta}
+TODO nešto dodat, opisat što su to nezavisne, zavisne varijable itd...
+bacit oko na mackenzievu knjigu\\
+Ako se svako mjerenje ponavlja za svakog ispitanika onda je oblik eksperimenta \emph{unutar sudionika} (engl. \emph{within-subjects}). Svi ispitanici tada imaju potpuno jednake uvjete pri provedbi eksperimenta. Kod \emph{između sudionika} (engl. \emph{between-subjects}) oblika ispitanici se dijele na više grupa i svaka grupa dobija drugačije uvjete ispitivanja dok unutar jedne grupe ispitanici imaju iste uvjete ispitivanja. Načelno, kod \emph{između sudionika} oblikovanja potrebno je više ispitanika da bi se proveo isti broj mjerenja,a kod \emph{unutar sudionika} potrebno je provesti više testiranja na pojedinom ispitaniku. Ponekad eksperiment mora biti \emph{između sudionika} ako npr. promatramo učinak ljevorukih i desnorukih ispitanika na određenom testu. Ponekad mora biti \emph{unutar sudionika} ako se npr. promatra stjecanje iskustva kod pojedinog ispitanika. Prednost \emph{unutar sudionika} je njegova jednostavnost, nije potrebno uravnotežavati grupe jer postoji samo jedna, dok se kod \emph{između sudionika} potrebno pobrinuti da grupe budu više-manje jednake. To se najčešće radi tako da se ispitanici nasumično odaberu za svaku grupu. Prednost \emph{između sudionika} je to što se smanjuje utjecaj između uvjeta ispitivanja. Do toga dolazi kada ispitanik prelazi s jednog testa na drugi, u tom procesu na drugi test prenosi iskustva i znanje koje je stekao u prethodnom.
+
+Kao što je već navedeno, kad se koristi \emph{unutar sudionika} oblik eksperimenta, svakog ispitanika se testira na svakom testu te se zbog toga učinak ispitanika svakim testom može poboljšati ili čak pogoršati u nekim slučajevima. To je razlog radi kojeg se ponekad, u testovima nakon prvog, ne dobivaju stvarni rezultati. Da bi se to popravilo koristi se metoda suprotstavljanja i latinski kvadrati. Svaki ispitanik dobija testove u drugačijem poretku. Slika \ref{fig:latinski_kvadrat} predstavlja latinski kvadrat reda $3$. Svako slovo predstavlja test koji ispitanik izvršava. U ovom slučaju svi bi ispitanici bili podijeljeni u 3 grupe i svaki bi redak odgovarao redoslijedu kojim bi pojedina grupa radila zadane testove.
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=4cm]{img/latinski_kvadrat.png}
+\caption{Latinski kvadrat reda 3}
+\label{fig:latinski_kvadrat}
+\end{figure}
+
+\section{Eksperimentalno vrednovanje tipkovnica}
+Cilj eksperimenta je vrednovati prethodno opisane tipkovnice \emph{FuryKey1} i \emph{FuryKey2} te ih usporediti s QWERTZ tipkovnicom. Nadalje, potrebno je ispitati na koji je način najbolje koristiti svaku od navedenih tipkovnica (horizontalno ili vertikalno, tipkanje s jednim ili dva prsta). 
+\\\\\textbf{Varijable eksperimenta}
+\begin{itemize}
+\item Nezavisne varijable:
+\begin{itemize}
+\item tipkovnica: FuryKey1, FuryKey2, QWERTZ
+\item veličina pametnog uređaja: 7", 10"
+\item način korištenja: jedan prst, dva prsta
+\item položaj pametnog uređaja: horizontalno \engl{landscape}, vertikaln \engl{portrait}
+\end{itemize}
+\item Zavisne varijable:
+\begin{itemize}
+\item brzina unošenja teksta: broj riječi koje ispitanik prosječno unese u jednoj minuti, mjerna jedinica je stoga \emph{wpm} \engl{words per minute}
+\item broj pogrešaka ER \engl{error rate}: broj pogrešaka koje ispitanik napravi tijekom unosa teksta
+\end{itemize}
+\item Zbunjujuće varijable
+\begin{itemize}
+\item iskustvo: uzevši u obzir da će ispitanik jednu tipkovnicu koristiti više puta za redom, doći će do pojave učenja što nije dobro za eksperiment,zato se korisito latinski kvadrat da bi se smanjio učinak učenja
+\end{itemize}
+\end{itemize}
+
+Eksperiment je oblikovan kao mješavina \emph{unutar sudionika} i \emph{između sudionika}. Osam ispitanika podijeljeno je u dvije grupe po četvero. Jedna je grupa koristila samo \emph{FuryKey1}, a druga samo \emph{FuryKey2}. Na taj način neće doći do nikakve međuovisnosti rezultata jedne i druge tipkovnice. Kako bi se smanjio učinak učenja napravljen je latinski kvadrat i prema njemu su svi ispitanici u jednoj grupi testirani različitim redoslijedom. On je prikazan na slici \ref{fig:lat} gdje slova \emph{H} i \emph{V} označavaju položaj pametnog uređaja (horizontalno, vertikalno), brojevi $1$ i $2$ označavaju broj prstiju koji se koristi pri unošenju teksta.
+
+\subsection{Prikaz i interpretacija rezultata}
+
+
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=10cm]{img/lat.png}
+\caption{Latinski kvadrat reda 4}
+\label{fig:lat}
+\end{figure}
 
 \chapter{Zaključak}
 Zaključak.

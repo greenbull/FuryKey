@@ -224,7 +224,7 @@ Reprodukcijom se jednostavno jedinka prenosi iz jedne generacije u drugu. Ta jed
 \WHILE{velicina(P') < VELICINA}
 \STATE{odaberi R1 i R2 iz P}
 \STATE{\{D1, D2\} = krizaj(R1, R2)}
-\STATE{mutiraj D1, mutiraj D2}
+\STATE{mutiraj D1, mutiraj D2}konfiguracije
 \STATE{dodaj D1 i D2 u P'}
 \ENDWHILE
 \STATE{P = P'}
@@ -276,10 +276,22 @@ Obe tipkovnice implementirane su za pametne uređaje s \emph{Android} operacijsk
 
 \chapter{Provedba eksperimenta i obrada rezultata}
 \label{ch:eksperiment}
-TODO napisat nešto općenito o eksperimentima i njihovoj važnosti
+Koristeći eksperimentalne metode, znanje se prikuplja kontroliranim eksperimentima provedenim u laboratorijskim uvjetima. Prikupljanje znanja preko eksperimenta može značiti otkrivanje nečeg novog ali može značiti i proučavanje već postojećeg u svrhu potvrđivanja, ispravljanja, integriranja ili proširivanja. S obzirom da se eksperimenti odvijaju pod strogo kontroliranim uvjetima, kaos i raznolikost stvarnog svijeta su znantno smanjeni ili čak potpuno uklonjeni. Kontrolirani eksperimenti moraju imati barem dvije varijable: \emph{podešavana varijabla} \engl{manipulated variable} i \emph{odzivna varijabla} \engl{response variable}. Podešavana varijabla je najčešće svojstvo sučelja ili način interakcije koji je dan sudionicima eksperimenta u različitim konfiguracijama. Podešavanje varijable podrazumijeva sistematično podvrgavanje ispitanika različitim konfiguracijama sučelja i načinima interakcije. Barem dvije različite konfiguracije moraju postojati kako bi se proveo kontrolirani eksperiment. Prema tome, usporedba je ključna u eksperimentalnoj metodi. Podešavana varijabla se još naziva i \emph{nezavisna varijabla} \engl{independent variable}. Odzivna varijabla je svojstvo ljudskog ponašanja koje se može promatrati, kvantificirati i mjeriti. Najčešća odzivna varijabla je vrijeme potrebno da ispitanik izvrši određenu konfiguraciju koja se testira. Odzivna varijabla se još naziva i \emph{zavisna varijabla} \engl{dependent variable}.
+
+Kontrolirani eksperiment, ako je kvalitetno oblikovan i proveden, pruža kvalitetan način izvlačenja zaključka iz podataka. Odnos nezavisne i zavisne varijable je \emph{uzročno-posljedični}. Podešavanje sučelja i načina interakcije su uzrok promatranim svojstvima u zavisnoj varijabli, što je zapravo posljedica. Uzročno-posljedični zaključci se ne mogu dobiti koristeći korelacijskom metodom ili metodom promatranja.
+
 \section{Oblikovanje eksperimenta}
-TODO nešto dodat, opisat što su to nezavisne, zavisne varijable itd...
-bacit oko na mackenzievu knjigu\\
+Jedan način razmišljanja o oblikovanju eksperimenata je koristeći signal-šum metaforu. U toj se metafori, sva promatranja i mjerenja dijele na dvije komponente: signal i šum (slika \ref{fig:signal}). Na priloženoj slici možemo vidjeti kako izvor generalno raste, ali je ipak učinak šuma prevelik te je to teško uočiti. Ako se izvor razlomi na signal i šum, lako se može uočiti ponašanje signala. Kod eksperimenata koji uključuju ljudske ispitanike, signal podrazumijeva zavisne i nezavisne varijable dok šum predstavlja sve osta - slučajne, uglavnom neželjene utjecaje. To može biti temperatura, osvjetljenje, pozadinska buka pa čak i sami ispitanici, npr. neki od njih mogu imati loš dan, neki dobar. To sve bitno utječe na rezultate eksperimenta. Zbog svega toga proces oblikovanja eksperimenta znači pojačavanje signala uz istovremeno smanjenje šuma. To se radi tako da se pažljivo biraju postavke eksperimenta u smislu odabira varijabli i njihovi konfiguracija.
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=10cm]{img/signal.png}
+\caption{Signal-šum konceptualizacija eksperimentalnog oblikovanja}
+\label{fig:signal}
+\end{figure}
+
+Oblikovanje eksperimenta je proces slaganja svih potrebnih dijelova kako bi se ispitala hipoteza. To uključuje određivanje koje varijable, zadatke i procedure koristiti, koliko ispitanika uzeti, kako ih rasporediti i tako dalje. U nastavku je opisano nekoliko pojmova povezanih s oblikovanjem eksperimenta u ovom radu.
+
 Ako se svako mjerenje ponavlja za svakog ispitanika onda je oblik eksperimenta \emph{unutar sudionika} (engl. \emph{within-subjects}). Svi ispitanici tada imaju potpuno jednake uvjete pri provedbi eksperimenta. Kod \emph{između sudionika} (engl. \emph{between-subjects}) oblika ispitanici se dijele na više grupa i svaka grupa dobija drugačije uvjete ispitivanja dok unutar jedne grupe ispitanici imaju iste uvjete ispitivanja. Načelno, kod \emph{između sudionika} oblikovanja potrebno je više ispitanika da bi se proveo isti broj mjerenja,a kod \emph{unutar sudionika} potrebno je provesti više testiranja na pojedinom ispitaniku. Ponekad eksperiment mora biti \emph{između sudionika} ako npr. promatramo učinak ljevorukih i desnorukih ispitanika na određenom testu. Ponekad mora biti \emph{unutar sudionika} ako se npr. promatra stjecanje iskustva kod pojedinog ispitanika. Prednost \emph{unutar sudionika} je njegova jednostavnost, nije potrebno uravnotežavati grupe jer postoji samo jedna, dok se kod \emph{između sudionika} potrebno pobrinuti da grupe budu više-manje jednake. To se najčešće radi tako da se ispitanici nasumično odaberu za svaku grupu. Prednost \emph{između sudionika} je to što se smanjuje utjecaj između uvjeta ispitivanja. Do toga dolazi kada ispitanik prelazi s jednog testa na drugi, u tom procesu na drugi test prenosi iskustva i znanje koje je stekao u prethodnom.
 
 Kao što je već navedeno, kad se koristi \emph{unutar sudionika} oblik eksperimenta, svakog ispitanika se testira na svakom testu te se zbog toga učinak ispitanika svakim testom može poboljšati ili čak pogoršati u nekim slučajevima. To je razlog radi kojeg se ponekad, u testovima nakon prvog, ne dobivaju stvarni rezultati. Da bi se to popravilo koristi se metoda suprotstavljanja i latinski kvadrati. Svaki ispitanik dobija testove u drugačijem poretku. Slika \ref{fig:latinski_kvadrat} predstavlja latinski kvadrat reda $3$. Svako slovo predstavlja test koji ispitanik izvršava. U ovom slučaju svi bi ispitanici bili podijeljeni u 3 grupe i svaki bi redak odgovarao redoslijedu kojim bi pojedina grupa radila zadane testove.
@@ -292,7 +304,8 @@ Kao što je već navedeno, kad se koristi \emph{unutar sudionika} oblik eksperim
 \end{figure}
 
 \section{Eksperimentalno vrednovanje tipkovnica}
-Cilj eksperimenta je vrednovati prethodno opisane tipkovnice \emph{FuryKey1} i \emph{FuryKey2} te ih usporediti s QWERTZ tipkovnicom. Nadalje, potrebno je ispitati na koji je način najbolje koristiti svaku od navedenih tipkovnica (horizontalno ili vertikalno, tipkanje s jednim ili dva prsta). Provedeni eksperiment oblikovan je na sljedeći način:
+Cilj eksperimenta je vrednovati prethodno opisane tipkovnice \emph{FuryKey1} i \emph{FuryKey2} te ih usporediti s QWERTZ tipkovnicom. Nadalje, potrebno je ispitati na koji je način najbolje koristiti svaku od navedenih tipkovnica (horizontalno ili vertikalno, tipkanje s jednim ili dva prsta). \\TODO očekivanja \\
+Provedeni eksperiment oblikovan je na sljedeći način:
 \\\\\textbf{Varijable eksperimenta}
 \begin{itemize}
 \item Nezavisne varijable:
@@ -336,92 +349,95 @@ Bitno je napomenuti da su za provedbu eksperimenta tipkovnice testirane nad \emp
 
 \begin{figure}[htb]
 \centering
-\includegraphics[width=14cm]{img/furykey1_sve.png}
+\includegraphics[width=12cm]{img/furykey1_sve.png}
 \captionof{table}{Rezultati mjerenja za FuryKey1}
 \label{tab:furykey1_sve}
 \end{figure}
 
 \begin{figure}[htb]
 \centering
-\includegraphics[width=14cm]{img/furykey2_sve.png}
+\includegraphics[width=12cm]{img/furykey2_sve.png}
 \captionof{table}{Rezultati mjerenja za FuryKey2}
 \label{tab:furykey2_sve}
 \end{figure}
 
 \begin{figure}[htb]
 \centering
-\includegraphics[width=14cm]{img/furykey1_prosjek.png}
+\includegraphics[width=12cm]{img/furykey1_prosjek.png}
 \captionof{table}{Prosječni rezultati za FuryKey1}
 \label{tab:furykey1_avg}
 \end{figure}
 
 \begin{figure}[htb]
 \centering
-\includegraphics[width=14cm]{img/furykey2_prosjek.png}
+\includegraphics[width=12cm]{img/furykey2_prosjek.png}
 \captionof{table}{Prosječni rezultati za FuryKey2}
 \label{tab:furykey2_avg}
 \end{figure}
 
 \begin{figure}[htb]
 \centering
-\includegraphics[width=14cm]{img/qwertz_sve.png}
+\includegraphics[width=12cm]{img/qwertz_sve.png}
 \captionof{table}{Rezultati mjerenja za QWERTZ}
 \label{tab:qwertz_sve}
 \end{figure}
 
 \begin{figure}[htb]
-\centering
-\includegraphics[width=14cm]{img/furykey1_sve_graf.png}
-\caption{Grafički prikaz rezultata za FuryKey1}
-\label{chart:furykey1_sve_graf}
+  \centering
+  \begin{minipage}[b]{0.48\textwidth}
+    \includegraphics[width=\textwidth]{img/furykey1_sve_graf.png}
+    \caption{Grafički prikaz rezultata za FuryKey1}
+    \label{chart:furykey1_sve_graf}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.48\textwidth}
+    \includegraphics[width=\textwidth]{img/furykey2_sve_graf.png}
+    \caption{Grafički prikaz rezultata za FuryKey2}
+    \label{chart:furykey2_sve_graf}
+  \end{minipage}
 \end{figure}
 
 \begin{figure}[htb]
 \centering
-\includegraphics[width=14cm]{img/furykey2_sve_graf.png}
-\caption{Grafički prikaz rezultata za FuryKey2}
-\label{chart:furykey2_sve_graf}
-\end{figure}
-
-\begin{figure}[htb]
-\centering
-\includegraphics[width=14cm]{img/usporedba.png}
+\includegraphics[width=12cm]{img/usporedba.png}
 \caption{Usporedba FuryKey1, FuryKey2 i QWERTZ}
 \label{chart:usporedba}
 \end{figure}
 
 \begin{figure}[htb]
-\centering
-\includegraphics[width=14cm]{img/furykey1_HV.png}
-\caption{Usporedba za horizontalni i vertikalni način držanja (H=7,52 V=7,71)}
-\label{chart:furykey1_HV}
+  \centering
+  \begin{minipage}[b]{0.48\textwidth}
+    \includegraphics[width=\textwidth]{img/furykey1_HV.png}
+    \caption{Usporedba za horizontalni i vertikalni način držanja ($H=7.52wpm, V=7.71wpm$)}
+    \label{chart:furykey1_HV}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.48\textwidth}
+    \includegraphics[width=\textwidth]{img/furykey2_HV.png}
+    \caption{Usporedba za horizontalni i vertikalni način držanja ($H=7.69wpm, V=7.85wpm$)}
+    \label{chart:furykey2_HV}
+  \end{minipage}
+\end{figure}
+
+\begin{figure}[htb]
+  \centering
+  \begin{minipage}[b]{0.48\textwidth}
+    \includegraphics[width=\textwidth]{img/furykey1_12.png}
+    \caption{Usporedba za korištenje s jednim i s dva prsta ($1 prst=7.93wpm, 2 prsta=7.31wpm$)}
+    \label{chart:furykey1_12}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.48\textwidth}
+    \includegraphics[width=\textwidth]{img/furykey2_12.png}
+    \caption{Usporedba za korištenje s jednim i s dva prsta ($1 prst=7.46wpm, 2 prsta=8.08wpm$)}
+    \label{chart:furykey2_12}
+  \end{minipage}
 \end{figure}
 
 \begin{figure}[htb]
 \centering
-\includegraphics[width=14cm]{img/furykey2_HV.png}
-\caption{Usporedba za horizontalni i vertikalni način držanja (H=7,69 V=7,85)}
-\label{chart:furykey2_HV}
-\end{figure}
-
-\begin{figure}[htb]
-\centering
-\includegraphics[width=14cm]{img/furykey1_12.png}
-\caption{Usporedba za korištenje s jednim i s dva prsta (1 prst=7,93 2 prsta=7,31)}
-\label{chart:furykey1_12}
-\end{figure}
-
-\begin{figure}[htb]
-\centering
-\includegraphics[width=14cm]{img/furykey2_12.png}
-\caption{Usporedba za korištenje s jednim i s dva prsta (1 prst=7,46 2 prsta=8,08)}
-\label{chart:furykey2_12}
-\end{figure}
-
-\begin{figure}[htb]
-\centering
-\includegraphics[width=14cm]{img/usporedba_ukupno.png}
-\caption{Ukupna usporedba učinkovitosti (FuryKey1=7,62 FuryKey2=7,77)}
+\includegraphics[width=12cm]{img/usporedba_ukupno.png}
+\caption{Ukupna usporedba učinkovitosti ($FuryKey1=7.62wpm, FuryKey2=7.77wpm$)}
 \label{chart:uk}
 \end{figure}
 

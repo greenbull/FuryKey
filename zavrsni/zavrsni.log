@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.5.9)  10 JUN 2016 17:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.5.9)  10 JUN 2016 20:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -917,160 +917,193 @@ Package pdftex.def Info: img/FuryKey2.PNG used on input line 268.
 ] [16 <./img/FuryKey1.PNG> <./img/FuryKey2.PNG>]
 Chapter 4.
 
-Overfull \hbox (2.18481pt too wide) in paragraph at lines 285--286
-[]\T1/ptm/m/n/12 Kao ²to je ve¢ nave-deno, kad se ko-risti \T1/ptm/m/it/12 un-u
-tar su-dionika \T1/ptm/m/n/12 ob-lik eksper-i-menta, svakog
+Overfull \hbox (0.83038pt too wide) in paragraph at lines 284--285
+\T1/ptm/m/n/12 Jedan na£in razmi²l-janja o ob-liko-vanju eksper-i-me-nata je ko
+-ris-te¢i signal-²um metaforu.
  []
 
 [17
 
-] <img/latinski_kvadrat.png, id=104, 128.48pt x 106.3975pt>
+] <img/signal.png, id=104, 596.2275pt x 195.73125pt>
+File: img/signal.png Graphic file (type png)
+ <use img/signal.png>
+Package pdftex.def Info: img/signal.png used on input line 288.
+(pdftex.def)             Requested size: 284.52756pt x 93.40636pt.
+
+[18 <./img/signal.png>]
+Overfull \hbox (2.18481pt too wide) in paragraph at lines 297--298
+[]\T1/ptm/m/n/12 Kao ²to je ve¢ nave-deno, kad se ko-risti \T1/ptm/m/it/12 un-u
+tar su-dionika \T1/ptm/m/n/12 ob-lik eksper-i-menta, svakog
+ []
+
+<img/latinski_kvadrat.png, id=108, 128.48pt x 106.3975pt>
 File: img/latinski_kvadrat.png Graphic file (type png)
 
 <use img/latinski_kvadrat.png>
-Package pdftex.def Info: img/latinski_kvadrat.png used on input line 289.
+Package pdftex.def Info: img/latinski_kvadrat.png used on input line 301.
 (pdftex.def)             Requested size: 113.81102pt x 94.25188pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 295--297
+Underfull \hbox (badness 10000) in paragraph at lines 307--310
 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 300.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 313.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 300.
- [18 <./img/latinski_kvadrat.png>] <img/lat.png, id=108, 377.41pt x 106.3975pt>
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 313.
+ [19 <./img/latinski_kvadrat.png>] <img/lat.png, id=112, 377.41pt x 106.3975pt>
 File: img/lat.png Graphic file (type png)
  <use img/lat.png>
-Package pdftex.def Info: img/lat.png used on input line 320.
+Package pdftex.def Info: img/lat.png used on input line 333.
 (pdftex.def)             Requested size: 284.52756pt x 80.21191pt.
 
-[19 <./img/lat.png>] <img/furykey1_sve.png, id=112, 1370.11874pt x 662.475pt>
+[20 <./img/lat.png>] <img/furykey1_sve.png, id=116, 1370.11874pt x 662.475pt>
 File: img/furykey1_sve.png Graphic file (type png)
 
 <use img/furykey1_sve.png>
-Package pdftex.def Info: img/furykey1_sve.png used on input line 339.
-(pdftex.def)             Requested size: 398.33858pt x 192.59804pt.
+Package pdftex.def Info: img/furykey1_sve.png used on input line 352.
+(pdftex.def)             Requested size: 341.43306pt x 165.08258pt.
 
-<img/furykey2_sve.png, id=113, 1372.12625pt x 665.48625pt>
+<img/furykey2_sve.png, id=117, 1372.12625pt x 665.48625pt>
 File: img/furykey2_sve.png Graphic file (type png)
 
 <use img/furykey2_sve.png>
-Package pdftex.def Info: img/furykey2_sve.png used on input line 346.
-(pdftex.def)             Requested size: 398.33858pt x 193.19931pt.
+Package pdftex.def Info: img/furykey2_sve.png used on input line 359.
+(pdftex.def)             Requested size: 341.43306pt x 165.59941pt.
 
-<img/furykey1_prosjek.png, id=114, 1365.1pt x 389.455pt>
+<img/furykey1_prosjek.png, id=118, 1365.1pt x 389.455pt>
 File: img/furykey1_prosjek.png Graphic file (type png)
 
 <use img/furykey1_prosjek.png>
-Package pdftex.def Info: img/furykey1_prosjek.png used on input line 353.
-(pdftex.def)             Requested size: 398.33858pt x 113.64027pt.
+Package pdftex.def Info: img/furykey1_prosjek.png used on input line 366.
+(pdftex.def)             Requested size: 341.43306pt x 97.4051pt.
 
-<img/furykey2_prosjek.png, id=115, 1372.12625pt x 396.48125pt>
+<img/furykey2_prosjek.png, id=119, 1372.12625pt x 396.48125pt>
 File: img/furykey2_prosjek.png Graphic file (type png)
 
 <use img/furykey2_prosjek.png>
-Package pdftex.def Info: img/furykey2_prosjek.png used on input line 360.
-(pdftex.def)             Requested size: 398.33858pt x 115.10365pt.
+Package pdftex.def Info: img/furykey2_prosjek.png used on input line 373.
+(pdftex.def)             Requested size: 341.43306pt x 98.66028pt.
 
-<img/qwertz_sve.png, id=116, 1367.1075pt x 609.27625pt>
+<img/qwertz_sve.png, id=120, 1367.1075pt x 609.27625pt>
 File: img/qwertz_sve.png Graphic file (type png)
 
 <use img/qwertz_sve.png>
-Package pdftex.def Info: img/qwertz_sve.png used on input line 367.
-(pdftex.def)             Requested size: 398.33858pt x 177.5223pt.
+Package pdftex.def Info: img/qwertz_sve.png used on input line 380.
+(pdftex.def)             Requested size: 341.43306pt x 152.16063pt.
 
-<img/furykey1_sve_graf.png, id=117, 617.30624pt x 338.26375pt>
+<img/furykey1_sve_graf.png, id=121, 617.30624pt x 338.26375pt>
 File: img/furykey1_sve_graf.png Graphic file (type png)
 
 <use img/furykey1_sve_graf.png>
-Package pdftex.def Info: img/furykey1_sve_graf.png used on input line 374.
-(pdftex.def)             Requested size: 398.33858pt x 218.28424pt.
+Package pdftex.def Info: img/furykey1_sve_graf.png used on input line 388.
+(pdftex.def)             Requested size: 198.02942pt x 108.515pt.
 
-<img/furykey2_sve_graf.png, id=118, 609.27625pt x 330.23375pt>
+Underfull \hbox (badness 1603) in paragraph at lines 389--389
+[]\T1/ptm/b/n/10.95 Figure 4.4: |\T1/ptm/m/n/10.95 Grafi£ki prikaz rezul-tata z
+a
+ []
+
+<img/furykey2_sve_graf.png, id=122, 609.27625pt x 330.23375pt>
 File: img/furykey2_sve_graf.png Graphic file (type png)
 
 <use img/furykey2_sve_graf.png>
-Package pdftex.def Info: img/furykey2_sve_graf.png used on input line 381.
-(pdftex.def)             Requested size: 398.33858pt x 215.90912pt.
+Package pdftex.def Info: img/furykey2_sve_graf.png used on input line 394.
+(pdftex.def)             Requested size: 198.02942pt x 107.33476pt.
 
-<img/usporedba.png, id=119, 609.27625pt x 333.245pt>
+Underfull \hbox (badness 1603) in paragraph at lines 395--395
+[]\T1/ptm/b/n/10.95 Figure 4.5: |\T1/ptm/m/n/10.95 Grafi£ki prikaz rezul-tata z
+a
+ []
+
+<img/usporedba.png, id=123, 609.27625pt x 333.245pt>
 File: img/usporedba.png Graphic file (type png)
  <use img/usporedba.png>
-Package pdftex.def Info: img/usporedba.png used on input line 388.
-(pdftex.def)             Requested size: 398.33858pt x 217.8779pt.
+Package pdftex.def Info: img/usporedba.png used on input line 402.
+(pdftex.def)             Requested size: 341.43306pt x 186.7532pt.
 
-<img/furykey1_HV.png, id=120, 619.31375pt x 340.27126pt>
+<img/furykey1_HV.png, id=124, 619.31375pt x 340.27126pt>
 File: img/furykey1_HV.png Graphic file (type png)
 
 <use img/furykey1_HV.png>
-Package pdftex.def Info: img/furykey1_HV.png used on input line 395.
-(pdftex.def)             Requested size: 398.33858pt x 218.8684pt.
- <img/furykey2_HV.png, id=121, 610.28pt x 331.2375pt>
+Package pdftex.def Info: img/furykey1_HV.png used on input line 410.
+(pdftex.def)             Requested size: 198.02942pt x 108.80594pt.
+ <img/furykey2_HV.png, id=125, 610.28pt x 331.2375pt>
 File: img/furykey2_HV.png Graphic file (type png)
 
 <use img/furykey2_HV.png>
-Package pdftex.def Info: img/furykey2_HV.png used on input line 402.
-(pdftex.def)             Requested size: 398.33858pt x 216.21158pt.
+Package pdftex.def Info: img/furykey2_HV.png used on input line 416.
+(pdftex.def)             Requested size: 198.02942pt x 107.48412pt.
 
-<img/furykey1_12.png, id=122, 608.2725pt x 323.2075pt>
+<img/furykey1_12.png, id=126, 608.2725pt x 323.2075pt>
 File: img/furykey1_12.png Graphic file (type png)
 
 <use img/furykey1_12.png>
-Package pdftex.def Info: img/furykey1_12.png used on input line 409.
-(pdftex.def)             Requested size: 398.33858pt x 211.66547pt.
+Package pdftex.def Info: img/furykey1_12.png used on input line 425.
+(pdftex.def)             Requested size: 198.02942pt x 105.22366pt.
 
-<img/furykey2_12.png, id=123, 596.2275pt x 325.215pt>
+<img/furykey2_12.png, id=127, 596.2275pt x 325.215pt>
 File: img/furykey2_12.png Graphic file (type png)
 
 <use img/furykey2_12.png>
-Package pdftex.def Info: img/furykey2_12.png used on input line 416.
-(pdftex.def)             Requested size: 398.33858pt x 217.27757pt.
+Package pdftex.def Info: img/furykey2_12.png used on input line 431.
+(pdftex.def)             Requested size: 198.02942pt x 108.016pt.
 
-<img/usporedba_ukupno.png, id=124, 602.25pt x 331.2375pt>
+Underfull \hbox (badness 10000) in paragraph at lines 432--432
+[]\T1/ptm/b/n/10.95 Figure 4.10: |\T1/ptm/m/n/10.95 Us-poredba za ko-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 432--432
+\T1/ptm/m/n/10.95 ri²tenje s jed-nim i s dva prsta
+ []
+
+<img/usporedba_ukupno.png, id=128, 602.25pt x 331.2375pt>
 File: img/usporedba_ukupno.png Graphic file (type png)
 
 <use img/usporedba_ukupno.png>
-Package pdftex.def Info: img/usporedba_ukupno.png used on input line 423.
-(pdftex.def)             Requested size: 398.33858pt x 219.09251pt.
- [20 <./img/furykey1_sve.png>] [21 <./img/furykey2_sve.png> <./img/furykey1_pro
-sjek.png> <./img/furykey2_prosjek.png>] [22 <./img/qwertz_sve.png> <./img/furyk
-ey1_sve_graf.png>] [23 <./img/furykey2_sve_graf.png> <./img/usporedba.png>] [24
- <./img/furykey1_HV.png> <./img/furykey2_HV.png>] [25 <./img/furykey1_12.png> <
-./img/furykey2_12.png>] [26 <./img/usporedba_ukupno.png>]
+Package pdftex.def Info: img/usporedba_ukupno.png used on input line 439.
+(pdftex.def)             Requested size: 341.43306pt x 187.79648pt.
+ [21] [22 <./img/furykey1_sve.png> <./img/furykey2_sve.png> <./img/furykey1_pro
+sjek.png> <./img/furykey2_prosjek.png>] [23 <./img/qwertz_sve.png> <./img/furyk
+ey1_sve_graf.png> <./img/furykey2_sve_graf.png> <./img/usporedba.png>] [24 <./i
+mg/furykey1_HV.png> <./img/furykey2_HV.png> <./img/furykey1_12.png> <./img/fury
+key2_12.png> <./img/usporedba_ukupno.png>]
 Chapter 5.
 No file zavrsni.bbl.
-[27
+[25
 
-] [28] (./zavrsni.aux) ) 
+] [26] (./zavrsni.aux) ) 
 Here is how much of TeX's memory you used:
- 6552 strings out of 494910
- 91630 string characters out of 6179837
- 164021 words of memory out of 5000000
- 9638 multiletter control sequences out of 15000+600000
- 67602 words of font info for 86 fonts, out of 8000000 for 9000
+ 6564 strings out of 494910
+ 91828 string characters out of 6179837
+ 165033 words of memory out of 5000000
+ 9649 multiletter control sequences out of 15000+600000
+ 69150 words of font info for 92 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  43i,8n,40p,1898b,597s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.
 enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/urw/courier/ucrro8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/h
-elvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr
-8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/urw/times/utmri8a.pfb>
-Output written on zavrsni.pdf (32 pages, 956880 bytes).
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/co
+urier/ucrro8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8
+a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/time
+s/utmri8a.pfb>
+Output written on zavrsni.pdf (30 pages, 1042324 bytes).
 PDF statistics:
- 198 PDF objects out of 1000 (max. 8388607)
- 113 compressed objects within 2 object streams
+ 200 PDF objects out of 1000 (max. 8388607)
+ 114 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 151 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 156 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -3,6 +3,7 @@
 \usepackage{algorithm}
 \usepackage{algorithmic}
 \usepackage{multirow}
+\usepackage{tabularx,ragged2e,booktabs,caption}
 \begin{document}
 
 % TODO: Navedite broj rada.
@@ -291,7 +292,7 @@ Kao što je već navedeno, kad se koristi \emph{unutar sudionika} oblik eksperim
 \end{figure}
 
 \section{Eksperimentalno vrednovanje tipkovnica}
-Cilj eksperimenta je vrednovati prethodno opisane tipkovnice \emph{FuryKey1} i \emph{FuryKey2} te ih usporediti s QWERTZ tipkovnicom. Nadalje, potrebno je ispitati na koji je način najbolje koristiti svaku od navedenih tipkovnica (horizontalno ili vertikalno, tipkanje s jednim ili dva prsta). 
+Cilj eksperimenta je vrednovati prethodno opisane tipkovnice \emph{FuryKey1} i \emph{FuryKey2} te ih usporediti s QWERTZ tipkovnicom. Nadalje, potrebno je ispitati na koji je način najbolje koristiti svaku od navedenih tipkovnica (horizontalno ili vertikalno, tipkanje s jednim ili dva prsta). Provedeni eksperiment oblikovan je na sljedeći način:
 \\\\\textbf{Varijable eksperimenta}
 \begin{itemize}
 \item Nezavisne varijable:
@@ -303,7 +304,7 @@ Cilj eksperimenta je vrednovati prethodno opisane tipkovnice \emph{FuryKey1} i \
 \end{itemize}
 \item Zavisne varijable:
 \begin{itemize}
-\item brzina unošenja teksta: broj riječi koje ispitanik prosječno unese u jednoj minuti, mjerna jedinica je stoga \emph{wpm} \engl{words per minute}
+\item brzina unošenja teksta: broj riječi koje ispitanik prosječno unese u jednoj minuti, mjerna jedinica je stoga $wpm$ \engl{words per minute}
 \item broj pogrešaka ER \engl{error rate}: broj pogrešaka koje ispitanik napravi tijekom unosa teksta
 \end{itemize}
 \item Zbunjujuće varijable
@@ -312,17 +313,116 @@ Cilj eksperimenta je vrednovati prethodno opisane tipkovnice \emph{FuryKey1} i \
 \end{itemize}
 \end{itemize}
 
-Eksperiment je oblikovan kao mješavina \emph{unutar sudionika} i \emph{između sudionika}. Osam ispitanika podijeljeno je u dvije grupe po četvero. Jedna je grupa koristila samo \emph{FuryKey1}, a druga samo \emph{FuryKey2}. Na taj način neće doći do nikakve međuovisnosti rezultata jedne i druge tipkovnice. Kako bi se smanjio učinak učenja napravljen je latinski kvadrat i prema njemu su svi ispitanici u jednoj grupi testirani različitim redoslijedom. On je prikazan na slici \ref{fig:lat} gdje slova \emph{H} i \emph{V} označavaju položaj pametnog uređaja (horizontalno, vertikalno), brojevi $1$ i $2$ označavaju broj prstiju koji se koristi pri unošenju teksta.
-
-\subsection{Prikaz i interpretacija rezultata}
-
-
+Eksperiment je oblikovan kao mješavina \emph{unutar sudionika} i \emph{između sudionika}. Osam ispitanika podijeljeno je u dvije grupe po četvero. Jedna je grupa koristila samo \emph{FuryKey1}, a druga samo \emph{FuryKey2}. Na taj način neće doći do nikakve međuovisnosti rezultata jedne i druge tipkovnice. Kako bi se smanjio učinak učenja napravljen je latinski kvadrat i prema njemu su svi ispitanici u jednoj grupi testirani različitim redoslijedom. On je prikazan na slici \ref{fig:lat} gdje slova \emph{H} i \emph{V} označavaju položaj pametnog uređaja (horizontalno, vertikalno), brojevi $1$ i $2$ označavaju broj prstiju koji se koristi pri unošenju teksta. Svi ispitanici su unosili 2 različita bloka teksta za svaki način korištenja.
 
 \begin{figure}[htb]
 \centering
 \includegraphics[width=10cm]{img/lat.png}
 \caption{Latinski kvadrat reda 4}
 \label{fig:lat}
+\end{figure}
+
+\subsection{Prikaz i interpretacija rezultata}
+Mjerna jedinica svih prikazanih rezultata je $wpm$. Rezultati su dobiveni prema izrazu \ref{eq:wpm} gdje $t$ predstavlja izmjereno vrijeme u sekundama, $n$ broj unešenih riječi, a $ER$ broj pogrešaka koje je korisnik pri unosu načinio.
+
+\begin{equation}
+\label{eq:wpm}
+wpm = \frac{60(n-ER)}{t}
+\end{equation}
+Tablica \ref{tab:furykey1_sve} predstavlja sve dobivene rezultate za \emph{FuryKey1}, tablica \ref{tab:furykey2_sve} za \emph{FuryKey2} dok su na tablicama \ref{tab:furykey1_avg} i \ref{tab:furykey2_avg} prikazani prosječni rezultati za oba bloka teksta. Tablica \ref{tab:qwertz_sve} prikazuje rezultate dobivene pri testiranju QWERTZ tipkovnice.
+Na slikama \ref{chart:furykey1_sve_graf} i \ref{chart:furykey2_sve_graf} grafički su prikazani rezultati iz prethodnih tablica. Kod oba grafa se može lako uočiti povećanje brzine pri unošenju drugog bloka teksta. Graf \ref{chart:usporedba} prikazuje usporedbu svih testiranih tipkovnica. Iz grafa se vidi kako se QWERTZ pokazao dosta učinkovitiji, ali to je i očekivano. Nadalje, može se vidjeti kako se kod nekih načina unošenja teksta boljom pokazala \emph{FuryKey1}, a kod nekih \emph{FuryKey2}. Te rezultate potrebno je još detaljnije ispitati. Na grafovima \ref{chart:furykey1_HV} i \ref{chart:furykey2_HV} prikazana je usporedba horizontalnog i vertikalnog načina držanja za obe tipkovnice. Vidi se kako je kod obe tipkovnice učinkovitiji vertikalni način. To je zbog toga što je tada međusobna udaljenost tipki manja nego kod horizontalnog načina. Grafovi \ref{chart:furykey1_12} i \ref{chart:furykey2_12} prikazuju usporedbu tipkanja s jednim i dva prsta. Tipkovnica \emph{FuryKey1} namijenjena je za korištenje s jednim prstom, a \emph{FuryKey2} za korištenje s dva prsta. To su rezultati i potvrdili. Konačno, graf \ref{chart:uk} prikazuje ukupnu usporedbu obe tipkovnice (cjelokupni prosjek svih položaja i načina unošenja pametnog uređaja). Rezultati eksperimenta pokazuju da je \emph{FuryKey2} učinkovitija.
+
+Bitno je napomenuti da su za provedbu eksperimenta tipkovnice testirane nad \emph{samo} 8 ispitanika. Zbog toga ovi podatci ne mogu biti stvarni pokazatelj učinkovitosti testiranih tipkovnica. Potrebno je eksperiment provesti s mnogo više ispitanika, ali to nije napravljeno zbog ograničenosti resursa i vremena. Bez obzira na to, prikazani rezultati i način mjerenja služi kao model koji bi poslužio za provođenje eksperimenta većeg razmjera.
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=14cm]{img/furykey1_sve.png}
+\captionof{table}{Rezultati mjerenja za FuryKey1}
+\label{tab:furykey1_sve}
+\end{figure}
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=14cm]{img/furykey2_sve.png}
+\captionof{table}{Rezultati mjerenja za FuryKey2}
+\label{tab:furykey2_sve}
+\end{figure}
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=14cm]{img/furykey1_prosjek.png}
+\captionof{table}{Prosječni rezultati za FuryKey1}
+\label{tab:furykey1_avg}
+\end{figure}
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=14cm]{img/furykey2_prosjek.png}
+\captionof{table}{Prosječni rezultati za FuryKey2}
+\label{tab:furykey2_avg}
+\end{figure}
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=14cm]{img/qwertz_sve.png}
+\captionof{table}{Rezultati mjerenja za QWERTZ}
+\label{tab:qwertz_sve}
+\end{figure}
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=14cm]{img/furykey1_sve_graf.png}
+\caption{Grafički prikaz rezultata za FuryKey1}
+\label{chart:furykey1_sve_graf}
+\end{figure}
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=14cm]{img/furykey2_sve_graf.png}
+\caption{Grafički prikaz rezultata za FuryKey2}
+\label{chart:furykey2_sve_graf}
+\end{figure}
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=14cm]{img/usporedba.png}
+\caption{Usporedba FuryKey1, FuryKey2 i QWERTZ}
+\label{chart:usporedba}
+\end{figure}
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=14cm]{img/furykey1_HV.png}
+\caption{Usporedba za horizontalni i vertikalni način držanja (H=7,52 V=7,71)}
+\label{chart:furykey1_HV}
+\end{figure}
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=14cm]{img/furykey2_HV.png}
+\caption{Usporedba za horizontalni i vertikalni način držanja (H=7,69 V=7,85)}
+\label{chart:furykey2_HV}
+\end{figure}
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=14cm]{img/furykey1_12.png}
+\caption{Usporedba za korištenje s jednim i s dva prsta (1 prst=7,93 2 prsta=7,31)}
+\label{chart:furykey1_12}
+\end{figure}
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=14cm]{img/furykey2_12.png}
+\caption{Usporedba za korištenje s jednim i s dva prsta (1 prst=7,46 2 prsta=8,08)}
+\label{chart:furykey2_12}
+\end{figure}
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=14cm]{img/usporedba_ukupno.png}
+\caption{Ukupna usporedba učinkovitosti (FuryKey1=7,62 FuryKey2=7,77)}
+\label{chart:uk}
 \end{figure}
 
 \chapter{Zaključak}

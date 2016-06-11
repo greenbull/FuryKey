@@ -16,8 +16,8 @@
 \contentsline {subsection}{\numberline {3.2.5}Primjena genetskog algoritma}{13}
 \contentsline {section}{\numberline {3.3}Rje\IeC {\v s}enja genetskog algoritma}{15}
 \contentsline {subsection}{\numberline {3.3.1}Implementacija tipkovnica za Android operacijski sustav}{15}
-\contentsline {chapter}{\numberline {4}Provedba eksperimenta i obrada rezultata}{17}
-\contentsline {section}{\numberline {4.1}Oblikovanje eksperimenta}{18}
-\contentsline {section}{\numberline {4.2}Eksperimentalno vrednovanje tipkovnica}{19}
-\contentsline {subsection}{\numberline {4.2.1}Prikaz i interpretacija rezultata}{20}
-\contentsline {chapter}{\numberline {5}Zaklju\IeC {\v c}ak}{25}
+\contentsline {chapter}{\numberline {4}Provedba eksperimenta i obrada rezultata}{18}
+\contentsline {section}{\numberline {4.1}Oblikovanje eksperimenta}{19}
+\contentsline {section}{\numberline {4.2}Eksperimentalno vrednovanje tipkovnica}{20}
+\contentsline {subsection}{\numberline {4.2.1}Prikaz i interpretacija rezultata}{21}
+\contentsline {chapter}{\numberline {5}Zaklju\IeC {\v c}ak}{26}

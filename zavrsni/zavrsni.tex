@@ -252,9 +252,8 @@ Jedinku u genetskom algoritmu predstavlja jedna tipkovnica sa svojim oblikom i r
 \clearpage
 
 \section{Rješenja genetskog algoritma}
-U ovom poglavlju će biti predstavljene najbolje tipkovnice koje su dobivene genetskim algoritmom te način njihove implementacije. Isprobano je nekoliko različith izgleda (engl. \emph{layout}) tipkovnica za korištenje pomoću jednog i pomoću dva prsta. Neke od njih prikazane su na sljedećim slikama //TODO ref bla bla
-
-Moguće je da postoje i neki izgledi koji bi se pokazali optimalniji prema Fittsovom zakonu ali zbog ograničenosti vremena testirani su samo pojedini. Tipkovnica namijenjena korištenju s jednim prstom prikazana je na slici \ref{fig:FuryKey1} i prema Fittsovom zakonu njena vremenska cijena iznosi $1.038$. Može se lako uočiti da se sva često korištena slova u hrvatskom jeziku nalaze u sredini dok se ona rijeđe korištena nalaze na rubovima. Takav razmještaj omogućuje brže unošenje teksta. Tipkovnica namijenjena korištenju s dva prsta prikazana je na slici \ref{fig:FuryKey2} i njena vremenska cijena iznosi $0.948$. Prema tome tipkovnica \emph{FuryKey2} se pokazala učinkovitijom za korištenje što je i logično jer se koristeći dva prsta tekst može brže unositi nego s jednim. Kako bi se provjerilo imaju li navedeni rezultati smisla i je li \emph{FuryKey1} zaista bolje koristiti s jednim prstom, a \emph{FuryKey2} s dva prsta, potrebno je provesti eksperiment pomoću kojeg će se nad grupom ispitanika evaluirati obe tipkovnice. Provedeni eksperiment je opisan u poglavlju \ref{ch:eksperiment}.
+U ovom poglavlju će biti predstavljene najbolje tipkovnice koje su dobivene genetskim algoritmom te način njihove implementacije. Isprobano je nekoliko različith izgleda (engl. \emph{layout}) tipkovnica za korištenje pomoću jednog i pomoću dva prsta. 
+Moguće je da postoje i neki drugi izgledi koji bi se pokazali optimalniji prema Fittsovom zakonu ali zbog ograničenosti vremena testirani su samo pojedini. Tipkovnica namijenjena korištenju s jednim prstom prikazana je na slici \ref{fig:FuryKey1} i prema Fittsovom zakonu njena vremenska cijena iznosi $1.038$. Može se lako uočiti da se sva često korištena slova u hrvatskom jeziku nalaze u sredini dok se ona rijeđe korištena nalaze na rubovima. Takav razmještaj omogućuje brže unošenje teksta. Tipkovnica namijenjena korištenju s dva prsta prikazana je na slici \ref{fig:FuryKey2} i njena vremenska cijena iznosi $0.948$. Prema tome tipkovnica \emph{FuryKey2} se pokazala učinkovitijom za korištenje što je i logično jer se koristeći dva prsta tekst može brže unositi nego s jednim. Kako bi se provjerilo imaju li navedeni rezultati smisla i je li \emph{FuryKey1} zaista bolje koristiti s jednim prstom, a \emph{FuryKey2} s dva prsta, potrebno je provesti eksperiment pomoću kojeg će se nad grupom ispitanika vrednovati obe tipkovnice. Provedeni eksperiment je opisan u poglavlju \ref{ch:eksperiment}.
 
 \begin{figure}[htb]
   \centering
@@ -272,7 +271,35 @@ Moguće je da postoje i neki izgledi koji bi se pokazali optimalniji prema Fitts
 \end{figure}
 
 \subsection{Implementacija tipkovnica za Android operacijski sustav}
-Obe tipkovnice implementirane su za pametne uređaje s \emph{Android} operacijskim sustavom. //TODO napisat što je to Android ? napisat ponešto o soft keyboardima i način implementacije soft keyboarda ? (pitat mentora)
+Obe tipkovnice implementirane su za pametne uređaje s \emph{Android} operacijskim sustavom. Većina Android uređaja nema fizičku tipkovnicu nego se oslanjaju na tipkovnicu na dodir \engl{soft keyboard}. To otvara velik raspon mogućnosti. Moguće je isprogramirati tipkovnice različitih izgleda i razmještaja tipki te je lako promjeniti tipkovnici i koristiti onu koja nam najviše odgovara. Koristeći \emph{Android SDK}\footnote{Software Development Kit} nova tipkovnica se može napraviti u nekoliko linija koda. \emph{SDK} se pobrine za mnogo stvari poput prepoznavanja pritisnute tipke i iscrtavanja tipkovnice. Za potrebe ovog rada korišten je \emph{Android Studio} kako bi se isprogramirale željene tipkovnice. Tipkovnice na dodir se svrstavaju u \emph{IME} (Input Method Editor). \emph{IME} je deklariran kao servis \engl{service} u datoteci \emph{AndroidManifest.xml} i koristi \emph{BIND\_INPUT\_METHOD} dozvolu kao što je prikazano na slici \ref{fig:manifest}. Sam izgled tipkovnice opisan je u XML datoteci. Primjer takve datoteke prikazan je na slici \ref{fig:keyboard_xml}. Svaka tipka može sadržavati sljedeće atribute:
+\begin{description}
+\item[keyLabel:] ovaj atribut sadrži tekst koji se prikazuje na tipki
+\item[codes:] ovaj atribut sadrži \emph{unicode} vrijednosti znaka koji tipka predstavlja
+\item[keyWidth:] ovim se atributom postavlja širina tipki, najčešće je zadan u postotcima
+\item[isRepeatable:] ako je ovaj atribut postavljen na \emph{true} onda se znak više puta ispisuje ukoliko se tipka drži pritisnuta
+\end{description}
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=12cm]{img/manifest.png}
+\caption{Datoteka \emph{AndroidManifest.xml}}
+\label{fig:manifest}
+\end{figure}
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=12cm]{img/keyboard_xml.png}
+\caption{Datoteka u kojoj se postavlja izgled tipkovnice}
+\label{fig:keyboard_xml}
+\end{figure}
+
+Potrebno je napraviti i klasu koja predstavlja \emph{IME} servis. Takva klasa nasljeđuje \emph{InputMethodService} i u njoj se može definirati što se događa pritiskom na tipku i ostale stvari kao što je prikazano na slici \ref{fig:klasa}. Konačno, potrebno je instalirati tipkovnicu na pametni uređaj te je u postavka odabrati.
+\begin{figure}[htb]
+\centering
+\includegraphics[width=12cm]{img/klasa.png}
+\caption{Klasa koja predstavlja IME servis}
+\label{fig:klasa}
+\end{figure}
 
 \chapter{Provedba eksperimenta i obrada rezultata}
 \label{ch:eksperiment}
@@ -304,7 +331,7 @@ Kao što je već navedeno, kad se koristi \emph{unutar sudionika} oblik eksperim
 \end{figure}
 
 \section{Eksperimentalno vrednovanje tipkovnica}
-Cilj eksperimenta je vrednovati prethodno opisane tipkovnice \emph{FuryKey1} i \emph{FuryKey2} te ih usporediti s QWERTZ tipkovnicom. Nadalje, potrebno je ispitati na koji je način najbolje koristiti svaku od navedenih tipkovnica (horizontalno ili vertikalno, tipkanje s jednim ili dva prsta). \\TODO očekivanja \\
+Cilj eksperimenta je vrednovati prethodno opisane tipkovnice \emph{FuryKey1} i \emph{FuryKey2} te ih usporediti s QWERTZ tipkovnicom. Nadalje, potrebno je ispitati na koji je način najbolje koristiti svaku od navedenih tipkovnica (horizontalno ili vertikalno, tipkanje s jednim ili dva prsta). \\
 Provedeni eksperiment oblikovan je na sljedeći način:
 \\\\\textbf{Varijable eksperimenta}
 \begin{itemize}
@@ -326,7 +353,7 @@ Provedeni eksperiment oblikovan je na sljedeći način:
 \end{itemize}
 \end{itemize}
 
-Eksperiment je oblikovan kao mješavina \emph{unutar sudionika} i \emph{između sudionika}. Osam ispitanika podijeljeno je u dvije grupe po četvero. Jedna je grupa koristila samo \emph{FuryKey1}, a druga samo \emph{FuryKey2}. Na taj način neće doći do nikakve međuovisnosti rezultata jedne i druge tipkovnice. Kako bi se smanjio učinak učenja napravljen je latinski kvadrat i prema njemu su svi ispitanici u jednoj grupi testirani različitim redoslijedom. On je prikazan na slici \ref{fig:lat} gdje slova \emph{H} i \emph{V} označavaju položaj pametnog uređaja (horizontalno, vertikalno), brojevi $1$ i $2$ označavaju broj prstiju koji se koristi pri unošenju teksta. Svi ispitanici su unosili 2 različita bloka teksta za svaki način korištenja.
+Eksperiment je oblikovan kao mješavina \emph{unutar sudionika} i \emph{između sudionika}. Osam ispitanika podijeljeno je u dvije grupe po četvero. Jedna je grupa koristila samo \emph{FuryKey1}, a druga samo \emph{FuryKey2}. Na taj način neće doći do nikakve međuovisnosti rezultata jedne i druge tipkovnice. Kako bi se smanjio učinak učenja napravljen je latinski kvadrat i prema njemu su svi ispitanici u jednoj grupi testirani različitim redoslijedom. On je prikazan na slici \ref{fig:lat} gdje slova \emph{H} i \emph{V} označavaju položaj pametnog uređaja (horizontalno, vertikalno), brojevi $1$ i $2$ označavaju broj prstiju koji se koristi pri unošenju teksta. Svi ispitanici su unosili 2 različita bloka teksta za svaki način korištenja. Sve tipkovnice testirane su na pametnim uređajima veličina 7" i 10".
 
 \begin{figure}[htb]
 \centering
@@ -342,6 +369,7 @@ Mjerna jedinica svih prikazanih rezultata je $wpm$. Rezultati su dobiveni prema 
 \label{eq:wpm}
 wpm = \frac{60(n-ER)}{t}
 \end{equation}
+
 Tablica \ref{tab:furykey1_sve} predstavlja sve dobivene rezultate za \emph{FuryKey1}, tablica \ref{tab:furykey2_sve} za \emph{FuryKey2} dok su na tablicama \ref{tab:furykey1_avg} i \ref{tab:furykey2_avg} prikazani prosječni rezultati za oba bloka teksta. Tablica \ref{tab:qwertz_sve} prikazuje rezultate dobivene pri testiranju QWERTZ tipkovnice.
 Na slikama \ref{chart:furykey1_sve_graf} i \ref{chart:furykey2_sve_graf} grafički su prikazani rezultati iz prethodnih tablica. Kod oba grafa se može lako uočiti povećanje brzine pri unošenju drugog bloka teksta. Graf \ref{chart:usporedba} prikazuje usporedbu svih testiranih tipkovnica. Iz grafa se vidi kako se QWERTZ pokazao dosta učinkovitiji, ali to je i očekivano. Nadalje, može se vidjeti kako se kod nekih načina unošenja teksta boljom pokazala \emph{FuryKey1}, a kod nekih \emph{FuryKey2}. Te rezultate potrebno je još detaljnije ispitati. Na grafovima \ref{chart:furykey1_HV} i \ref{chart:furykey2_HV} prikazana je usporedba horizontalnog i vertikalnog načina držanja za obe tipkovnice. Vidi se kako je kod obe tipkovnice učinkovitiji vertikalni način. To je zbog toga što je tada međusobna udaljenost tipki manja nego kod horizontalnog načina. Grafovi \ref{chart:furykey1_12} i \ref{chart:furykey2_12} prikazuju usporedbu tipkanja s jednim i dva prsta. Tipkovnica \emph{FuryKey1} namijenjena je za korištenje s jednim prstom, a \emph{FuryKey2} za korištenje s dva prsta. To su rezultati i potvrdili. Konačno, graf \ref{chart:uk} prikazuje ukupnu usporedbu obe tipkovnice (cjelokupni prosjek svih položaja i načina unošenja pametnog uređaja). Rezultati eksperimenta pokazuju da je \emph{FuryKey2} učinkovitija.
 

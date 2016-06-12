@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.5.9)  11 JUN 2016 16:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.5.9)  12 JUN 2016 18:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -590,63 +590,22 @@ Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
 )
 (/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
 \bigstrutjot=\dimen145
-)
-(/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
-Package: tabularx 2014/10/28 v2.10 `tabularx' package (DPC)
-
-(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
-Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
-\col@sep=\dimen146
-\extrarowheight=\dimen147
-\NC@list=\toks28
-\extratabsurround=\skip51
-\backup@length=\skip52
-)
-\TX@col@width=\dimen148
-\TX@old@table=\dimen149
-\TX@old@col=\dimen150
-\TX@target=\dimen151
-\TX@delta=\dimen152
-\TX@cols=\count118
-\TX@ftn=\toks29
-)
-(/usr/share/texlive/texmf-dist/tex/latex/ms/ragged2e.sty
-Package: ragged2e 2009/05/21 v2.1 ragged2e Package (MS)
-
-(/usr/share/texlive/texmf-dist/tex/latex/ms/everysel.sty
-Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
-)
-\CenteringLeftskip=\skip53
-\RaggedLeftLeftskip=\skip54
-\RaggedRightLeftskip=\skip55
-\CenteringRightskip=\skip56
-\RaggedLeftRightskip=\skip57
-\RaggedRightRightskip=\skip58
-\CenteringParfillskip=\skip59
-\RaggedLeftParfillskip=\skip60
-\RaggedRightParfillskip=\skip61
-\JustifyingParfillskip=\skip62
-\CenteringParindent=\skip63
-\RaggedLeftParindent=\skip64
-\RaggedRightParindent=\skip65
-\JustifyingParindent=\skip66
 ) (./zavrsni.aux)
 \openout1 = `zavrsni.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 7.
-
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 6.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
@@ -686,17 +645,17 @@ File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count119
-\scratchdimen=\dimen153
+\scratchcounter=\count118
+\scratchdimen=\dimen146
 \scratchbox=\box31
-\nofMPsegments=\count120
-\nofMParguments=\count121
-\everyMPshowfont=\toks30
-\MPscratchCnt=\count122
-\MPscratchDim=\dimen154
-\MPnumerator=\count123
-\makeMPintoPDFobject=\count124
-\everyMPtoPDFconversion=\toks31
+\nofMPsegments=\count119
+\nofMParguments=\count120
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count121
+\MPscratchDim=\dimen147
+\MPnumerator=\count122
+\makeMPintoPDFobject=\count123
+\everyMPtoPDFconversion=\toks29
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -744,35 +703,32 @@ e
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
-
-ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 7.
-LaTeX Font Info:    Try loading font information for T1+phv on input line 18.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 17.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 18.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 17.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 18.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 17.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 18.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 17.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 18.
-LaTeX Font Info:    Try loading font information for U+msa on input line 18.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 17.
+LaTeX Font Info:    Try loading font information for U+msa on input line 17.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 18.
+LaTeX Font Info:    Try loading font information for U+msb on input line 17.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 21.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 20.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
@@ -793,11 +749,11 @@ Chapter 1.
 ] [2]
 Chapter 2.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 42.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 41.
 [3
 
 ]
-Overfull \hbox (3.68777pt too wide) in paragraph at lines 63--64
+Overfull \hbox (3.68777pt too wide) in paragraph at lines 61--62
 \T1/ptm/m/n/12 Colemak tip-kovnica (slika 2.4[]) nudi male prom-jene u odnosu n
 a QW-ERTY uz pove¢anu
  []
@@ -805,27 +761,27 @@ a QW-ERTY uz pove¢anu
 [4] <img/dvorak.png, id=36, 401.5pt x 133.49875pt>
 File: img/dvorak.png Graphic file (type png)
  <use img/dvorak.png>
-Package pdftex.def Info: img/dvorak.png used on input line 68.
+Package pdftex.def Info: img/dvorak.png used on input line 66.
 (pdftex.def)             Requested size: 185.65297pt x 61.72997pt.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 69.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 67.
 
 <img/atomik.png, id=38, 321.2pt x 127.47626pt>
 File: img/atomik.png Graphic file (type png)
  <use img/atomik.png>
-Package pdftex.def Info: img/atomik.png used on input line 74.
+Package pdftex.def Info: img/atomik.png used on input line 72.
 (pdftex.def)             Requested size: 185.65297pt x 73.6834pt.
 
 <img/fitaly.png, id=39, 372.39125pt x 332.24126pt>
 File: img/fitaly.png Graphic file (type png)
  <use img/fitaly.png>
-Package pdftex.def Info: img/fitaly.png used on input line 83.
+Package pdftex.def Info: img/fitaly.png used on input line 81.
 (pdftex.def)             Requested size: 185.65297pt x 165.6386pt.
 
 <img/colemak.png, id=40, 803.0pt x 268.00125pt>
 File: img/colemak.png Graphic file (type png)
  <use img/colemak.png>
-Package pdftex.def Info: img/colemak.png used on input line 89.
+Package pdftex.def Info: img/colemak.png used on input line 87.
 (pdftex.def)             Requested size: 185.65297pt x 61.96204pt.
  [5 <./img/dvorak.png> <./img/atomik.png> <./img/fitaly.png> <./img/colemak.png
 >]
@@ -835,42 +791,42 @@ Chapter 3.
 ] [7] <img/fitts.png, id=56, 602.25pt x 514.92375pt>
 File: img/fitts.png Graphic file (type png)
  <use img/fitts.png>
-Package pdftex.def Info: img/fitts.png used on input line 126.
+Package pdftex.def Info: img/fitts.png used on input line 124.
 (pdftex.def)             Requested size: 185.65297pt x 158.73685pt.
 
 <img/scroll.png, id=57, 602.25pt x 301.125pt>
 File: img/scroll.png Graphic file (type png)
  <use img/scroll.png>
-Package pdftex.def Info: img/scroll.png used on input line 132.
+Package pdftex.def Info: img/scroll.png used on input line 130.
 (pdftex.def)             Requested size: 185.65297pt x 92.82857pt.
  [8 <./img/fitts.png (PNG copy)> <./img/scroll.png (PNG copy)>]
 <img/primjer.png, id=63, 270.00874pt x 186.6975pt>
 File: img/primjer.png Graphic file (type png)
  <use img/primjer.png>
-Package pdftex.def Info: img/primjer.png used on input line 163.
+Package pdftex.def Info: img/primjer.png used on input line 161.
 (pdftex.def)             Requested size: 198.02942pt x 136.929pt.
 
 <img/2hand_primjer.png, id=64, 337.26pt x 148.555pt>
 File: img/2hand_primjer.png Graphic file (type png)
 
 <use img/2hand_primjer.png>
-Package pdftex.def Info: img/2hand_primjer.png used on input line 169.
+Package pdftex.def Info: img/2hand_primjer.png used on input line 167.
 (pdftex.def)             Requested size: 198.02942pt x 87.2296pt.
  [9]
 <img/krizanje.png, id=69, 597.23125pt x 123.46124pt>
 File: img/krizanje.png Graphic file (type png)
  <use img/krizanje.png>
-Package pdftex.def Info: img/krizanje.png used on input line 184.
+Package pdftex.def Info: img/krizanje.png used on input line 182.
 (pdftex.def)             Requested size: 341.43306pt x 70.58273pt.
 
 [10 <./img/primjer.png> <./img/2hand_primjer.png>]
 <img/mutacija.png, id=74, 564.1075pt x 111.41624pt>
 File: img/mutacija.png Graphic file (type png)
  <use img/mutacija.png>
-Package pdftex.def Info: img/mutacija.png used on input line 194.
+Package pdftex.def Info: img/mutacija.png used on input line 192.
 (pdftex.def)             Requested size: 341.43306pt x 67.43678pt.
 
-Overfull \hbox (13.18019pt too wide) in paragraph at lines 202--203
+Overfull \hbox (13.18019pt too wide) in paragraph at lines 200--201
 \T1/ptm/m/n/12 sve jedinke postavimo na kolo, tako da bolja jedinka ima ve¢u po
 vr²inu na kolu (prikazano
  []
@@ -878,7 +834,7 @@ vr²inu na kolu (prikazano
 <img/selekcija.png, id=75, 249.93375pt x 213.79875pt>
 File: img/selekcija.png Graphic file (type png)
  <use img/selekcija.png>
-Package pdftex.def Info: img/selekcija.png used on input line 206.
+Package pdftex.def Info: img/selekcija.png used on input line 204.
 (pdftex.def)             Requested size: 170.71652pt x 146.0402pt.
 
 [11 <./img/krizanje.png> <./img/mutacija.png>]
@@ -886,16 +842,16 @@ Package pdftex.def Info: img/selekcija.png used on input line 206.
 File: img/genetski_shema.png Graphic file (type png)
 
 <use img/genetski_shema.png>
-Package pdftex.def Info: img/genetski_shema.png used on input line 237.
+Package pdftex.def Info: img/genetski_shema.png used on input line 235.
 (pdftex.def)             Requested size: 341.43306pt x 158.44948pt.
  [12 <./img/selekcija.png>]
 <img/krizanje_tip.png, id=83, 666.49pt x 863.225pt>
 File: img/krizanje_tip.png Graphic file (type png)
  <use img/krizanje_tip.png>
-Package pdftex.def Info: img/krizanje_tip.png used on input line 247.
+Package pdftex.def Info: img/krizanje_tip.png used on input line 245.
 (pdftex.def)             Requested size: 455.24408pt x 589.63277pt.
 
-Overfull \hbox (42.67911pt too wide) in paragraph at lines 247--248
+Overfull \hbox (42.67911pt too wide) in paragraph at lines 245--246
  [][] 
  []
 
@@ -903,16 +859,20 @@ Overfull \hbox (42.67911pt too wide) in paragraph at lines 247--248
 <img/FuryKey1.PNG, id=90, 334.24875pt x 526.3665pt>
 File: img/FuryKey1.PNG Graphic file (type png)
  <use img/FuryKey1.PNG>
-Package pdftex.def Info: img/FuryKey1.PNG used on input line 261.
-(pdftex.def)             Requested size: 198.02942pt x 311.86272pt.
+Package pdftex.def Info: img/FuryKey1.PNG used on input line 259.
+(pdftex.def)             Requested size: 165.02347pt x 259.88158pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 260--260
+\T1/ptm/m/n/10.95 nami-jen-jena za tip-kanje jed-nim
+ []
 
 <img/FuryKey2.PNG, id=91, 333.6465pt x 524.55975pt>
 File: img/FuryKey2.PNG Graphic file (type png)
  <use img/FuryKey2.PNG>
-Package pdftex.def Info: img/FuryKey2.PNG used on input line 267.
-(pdftex.def)             Requested size: 198.02942pt x 311.34451pt.
+Package pdftex.def Info: img/FuryKey2.PNG used on input line 265.
+(pdftex.def)             Requested size: 165.02347pt x 259.45377pt.
 
-Overfull \hbox (13.40628pt too wide) in paragraph at lines 274--276
+Overfull \hbox (13.40628pt too wide) in paragraph at lines 272--274
 \T1/ptm/m/n/12 (engl. \T1/ptm/m/it/12 ser-vice\T1/ptm/m/n/12 ) u da-toteci \T1/
 ptm/m/it/12 An-droid-Man-i-fest.xml \T1/ptm/m/n/12 i ko-risti \T1/ptm/m/it/12 B
 IND_INPUT_METHOD \T1/ptm/m/n/12 dozvolu
@@ -920,30 +880,29 @@ IND_INPUT_METHOD \T1/ptm/m/n/12 dozvolu
 
 [15
 
-] <img/manifest.png, id=96, 585.18625pt x 119.44624pt>
+ <./img/FuryKey1.PNG> <./img/FuryKey2.PNG>]
+<img/manifest.png, id=98, 585.18625pt x 119.44624pt>
 File: img/manifest.png Graphic file (type png)
-
-<use img/manifest.png>
-Package pdftex.def Info: img/manifest.png used on input line 284.
+ <use img/manifest.png>
+Package pdftex.def Info: img/manifest.png used on input line 282.
 (pdftex.def)             Requested size: 341.43306pt x 69.69441pt.
 
-<img/keyboard_xml.png, id=97, 585.18625pt x 255.95625pt>
+<img/keyboard_xml.png, id=99, 585.18625pt x 255.95625pt>
 File: img/keyboard_xml.png Graphic file (type png)
 
 <use img/keyboard_xml.png>
-Package pdftex.def Info: img/keyboard_xml.png used on input line 291.
+Package pdftex.def Info: img/keyboard_xml.png used on input line 289.
 (pdftex.def)             Requested size: 341.43306pt x 149.34518pt.
- <img/klasa.png, id=98, 588.1975pt x 258.9675pt>
+ <img/klasa.png, id=100, 588.1975pt x 258.9675pt>
 File: img/klasa.png Graphic file (type png)
 
 <use img/klasa.png>
-Package pdftex.def Info: img/klasa.png used on input line 299.
+Package pdftex.def Info: img/klasa.png used on input line 297.
 (pdftex.def)             Requested size: 341.43306pt x 150.32373pt.
- [16 <./img/FuryKey1.PNG> <./img/FuryKey2.PNG> <./img/manifest.png>] [17 <./img
-/keyboard_xml.png> <./img/klasa.png>]
+ [16 <./img/manifest.png>] [17 <./img/keyboard_xml.png> <./img/klasa.png>]
 Chapter 4.
 
-Overfull \hbox (0.83038pt too wide) in paragraph at lines 311--312
+Overfull \hbox (0.83038pt too wide) in paragraph at lines 309--310
 \T1/ptm/m/n/12 Jedan na£in razmi²l-janja o ob-liko-vanju eksper-i-me-nata je ko
 -ris-te¢i signal-²um metaforu.
  []
@@ -953,11 +912,11 @@ Overfull \hbox (0.83038pt too wide) in paragraph at lines 311--312
 ] <img/signal.png, id=110, 596.2275pt x 195.73125pt>
 File: img/signal.png Graphic file (type png)
  <use img/signal.png>
-Package pdftex.def Info: img/signal.png used on input line 315.
+Package pdftex.def Info: img/signal.png used on input line 313.
 (pdftex.def)             Requested size: 284.52756pt x 93.40636pt.
 
 [19 <./img/signal.png>]
-Overfull \hbox (2.18481pt too wide) in paragraph at lines 324--325
+Overfull \hbox (2.18481pt too wide) in paragraph at lines 322--323
 []\T1/ptm/m/n/12 Kao ²to je ve¢ nave-deno, kad se ko-risti \T1/ptm/m/it/12 un-u
 tar su-dionika \T1/ptm/m/n/12 ob-lik eksper-i-menta, svakog
  []
@@ -966,69 +925,69 @@ tar su-dionika \T1/ptm/m/n/12 ob-lik eksper-i-menta, svakog
 File: img/latinski_kvadrat.png Graphic file (type png)
 
 <use img/latinski_kvadrat.png>
-Package pdftex.def Info: img/latinski_kvadrat.png used on input line 328.
+Package pdftex.def Info: img/latinski_kvadrat.png used on input line 326.
 (pdftex.def)             Requested size: 113.81102pt x 94.25188pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 334--337
+Underfull \hbox (badness 10000) in paragraph at lines 332--335
 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 340.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 338.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 340.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 338.
  [20 <./img/latinski_kvadrat.png>] <img/lat.png, id=118, 377.41pt x 106.3975pt>
 File: img/lat.png Graphic file (type png)
  <use img/lat.png>
-Package pdftex.def Info: img/lat.png used on input line 360.
+Package pdftex.def Info: img/lat.png used on input line 358.
 (pdftex.def)             Requested size: 284.52756pt x 80.21191pt.
 
 [21 <./img/lat.png>] <img/furykey1_sve.png, id=123, 1370.11874pt x 662.475pt>
 File: img/furykey1_sve.png Graphic file (type png)
 
 <use img/furykey1_sve.png>
-Package pdftex.def Info: img/furykey1_sve.png used on input line 380.
+Package pdftex.def Info: img/furykey1_sve.png used on input line 378.
 (pdftex.def)             Requested size: 341.43306pt x 165.08258pt.
 
 <img/furykey2_sve.png, id=124, 1372.12625pt x 665.48625pt>
 File: img/furykey2_sve.png Graphic file (type png)
 
 <use img/furykey2_sve.png>
-Package pdftex.def Info: img/furykey2_sve.png used on input line 387.
+Package pdftex.def Info: img/furykey2_sve.png used on input line 385.
 (pdftex.def)             Requested size: 341.43306pt x 165.59941pt.
 
 <img/furykey1_prosjek.png, id=125, 1365.1pt x 389.455pt>
 File: img/furykey1_prosjek.png Graphic file (type png)
 
 <use img/furykey1_prosjek.png>
-Package pdftex.def Info: img/furykey1_prosjek.png used on input line 394.
+Package pdftex.def Info: img/furykey1_prosjek.png used on input line 392.
 (pdftex.def)             Requested size: 341.43306pt x 97.4051pt.
 
 <img/furykey2_prosjek.png, id=126, 1372.12625pt x 396.48125pt>
 File: img/furykey2_prosjek.png Graphic file (type png)
 
 <use img/furykey2_prosjek.png>
-Package pdftex.def Info: img/furykey2_prosjek.png used on input line 401.
+Package pdftex.def Info: img/furykey2_prosjek.png used on input line 399.
 (pdftex.def)             Requested size: 341.43306pt x 98.66028pt.
 
 <img/qwertz_sve.png, id=127, 1367.1075pt x 609.27625pt>
 File: img/qwertz_sve.png Graphic file (type png)
 
 <use img/qwertz_sve.png>
-Package pdftex.def Info: img/qwertz_sve.png used on input line 408.
+Package pdftex.def Info: img/qwertz_sve.png used on input line 406.
 (pdftex.def)             Requested size: 341.43306pt x 152.16063pt.
 
 <img/furykey1_sve_graf.png, id=128, 617.30624pt x 338.26375pt>
 File: img/furykey1_sve_graf.png Graphic file (type png)
 
 <use img/furykey1_sve_graf.png>
-Package pdftex.def Info: img/furykey1_sve_graf.png used on input line 416.
+Package pdftex.def Info: img/furykey1_sve_graf.png used on input line 414.
 (pdftex.def)             Requested size: 198.02942pt x 108.515pt.
 
-Underfull \hbox (badness 1603) in paragraph at lines 417--417
+Underfull \hbox (badness 1603) in paragraph at lines 415--415
 []\T1/ptm/b/n/10.95 Figure 4.4: |\T1/ptm/m/n/10.95 Grafi£ki prikaz rezul-tata z
 a
  []
@@ -1037,10 +996,10 @@ a
 File: img/furykey2_sve_graf.png Graphic file (type png)
 
 <use img/furykey2_sve_graf.png>
-Package pdftex.def Info: img/furykey2_sve_graf.png used on input line 422.
+Package pdftex.def Info: img/furykey2_sve_graf.png used on input line 420.
 (pdftex.def)             Requested size: 198.02942pt x 107.33476pt.
 
-Underfull \hbox (badness 1603) in paragraph at lines 423--423
+Underfull \hbox (badness 1603) in paragraph at lines 421--421
 []\T1/ptm/b/n/10.95 Figure 4.5: |\T1/ptm/m/n/10.95 Grafi£ki prikaz rezul-tata z
 a
  []
@@ -1048,42 +1007,42 @@ a
 <img/usporedba.png, id=130, 609.27625pt x 333.245pt>
 File: img/usporedba.png Graphic file (type png)
  <use img/usporedba.png>
-Package pdftex.def Info: img/usporedba.png used on input line 430.
+Package pdftex.def Info: img/usporedba.png used on input line 428.
 (pdftex.def)             Requested size: 341.43306pt x 186.7532pt.
 
 <img/furykey1_HV.png, id=131, 619.31375pt x 340.27126pt>
 File: img/furykey1_HV.png Graphic file (type png)
 
 <use img/furykey1_HV.png>
-Package pdftex.def Info: img/furykey1_HV.png used on input line 438.
+Package pdftex.def Info: img/furykey1_HV.png used on input line 436.
 (pdftex.def)             Requested size: 198.02942pt x 108.80594pt.
  <img/furykey2_HV.png, id=132, 610.28pt x 331.2375pt>
 File: img/furykey2_HV.png Graphic file (type png)
 
 <use img/furykey2_HV.png>
-Package pdftex.def Info: img/furykey2_HV.png used on input line 444.
+Package pdftex.def Info: img/furykey2_HV.png used on input line 442.
 (pdftex.def)             Requested size: 198.02942pt x 107.48412pt.
 
 <img/furykey1_12.png, id=133, 608.2725pt x 323.2075pt>
 File: img/furykey1_12.png Graphic file (type png)
 
 <use img/furykey1_12.png>
-Package pdftex.def Info: img/furykey1_12.png used on input line 453.
+Package pdftex.def Info: img/furykey1_12.png used on input line 451.
 (pdftex.def)             Requested size: 198.02942pt x 105.22366pt.
 
 <img/furykey2_12.png, id=134, 596.2275pt x 325.215pt>
 File: img/furykey2_12.png Graphic file (type png)
 
 <use img/furykey2_12.png>
-Package pdftex.def Info: img/furykey2_12.png used on input line 459.
+Package pdftex.def Info: img/furykey2_12.png used on input line 457.
 (pdftex.def)             Requested size: 198.02942pt x 108.016pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 460--460
+Underfull \hbox (badness 10000) in paragraph at lines 458--458
 []\T1/ptm/b/n/10.95 Figure 4.10: |\T1/ptm/m/n/10.95 Us-poredba za ko-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 460--460
+Underfull \hbox (badness 10000) in paragraph at lines 458--458
 \T1/ptm/m/n/10.95 ri²tenje s jed-nim i s dva prsta
  []
 
@@ -1091,7 +1050,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 460--460
 File: img/usporedba_ukupno.png Graphic file (type png)
 
 <use img/usporedba_ukupno.png>
-Package pdftex.def Info: img/usporedba_ukupno.png used on input line 467.
+Package pdftex.def Info: img/usporedba_ukupno.png used on input line 465.
 (pdftex.def)             Requested size: 341.43306pt x 187.79648pt.
  [22] [23 <./img/furykey1_sve.png> <./img/furykey2_sve.png> <./img/furykey1_pro
 sjek.png> <./img/furykey2_prosjek.png>] [24 <./img/qwertz_sve.png> <./img/furyk
@@ -1102,31 +1061,37 @@ Chapter 5.
 No file zavrsni.bbl.
 [26
 
-] [27] (./zavrsni.aux) ) 
+]
+Overfull \hbox (0.19182pt too wide) in paragraph at lines 479--480
+[]\T1/ptm/m/n/12 Predstavlja se prob-lem pronalaska ide-alne tip-kovnice za po-
+je-dini jezik te se ukazuju
+ []
+
+[27] (./zavrsni.aux) ) 
 Here is how much of TeX's memory you used:
- 6589 strings out of 494910
- 92268 string characters out of 6179837
- 165069 words of memory out of 5000000
- 9670 multiletter control sequences out of 15000+600000
- 71998 words of font info for 94 fonts, out of 8000000 for 9000
+ 6426 strings out of 494910
+ 89590 string characters out of 6179837
+ 162356 words of memory out of 5000000
+ 9519 multiletter control sequences out of 15000+600000
+ 74846 words of font info for 96 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  43i,8n,40p,1898b,597s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.
-enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/co
-urier/ucrro8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8
-a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/time
-s/utmri8a.pfb>
-Output written on zavrsni.pdf (31 pages, 1094628 bytes).
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.en
+c}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/cour
+ier/ucrro8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/
+utmri8a.pfb>
+Output written on zavrsni.pdf (31 pages, 1096951 bytes).
 PDF statistics:
  207 PDF objects out of 1000 (max. 8388607)
  117 compressed objects within 2 object streams

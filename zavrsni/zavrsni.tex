@@ -3,7 +3,6 @@
 \usepackage{algorithm}
 \usepackage{algorithmic}
 \usepackage{multirow}
-\usepackage{tabularx,ragged2e,booktabs,caption}
 \begin{document}
 
 % TODO: Navedite broj rada.
@@ -51,7 +50,6 @@ Dvorak tipkovnica (prikazana na slici \ref{fig:dvorak}) patentirana je 1936. god
 \end{itemize}
 
 Dvorak je proučavao učestalost pojavljivanja slova i fiziologiju ljudske šake kako bi rješio sve probleme QWERTY tipkovnice. Težio je prema tome da unošenje teksta bude ritmično, da se izmjenjuju ruke što više moguće te da se smanji broj pogrešaka. Svi samoglasnici se nalaze u srednjem retku, najčešće korišteni simboli su na lijevoj strani dok su najčešće korišteni suglasnici na desnoj strani tipkovnice. Takav razmještaj rezultira sljedećom statistikom: $70\%$ tipkanja obavlja se u srednjem retku, $22\%$ u gornjem i $8\%$ u donjem.  Dvorak tipkovnica namijenjena je engleskom jeziku. Drugi jezici imaju različite frekvencije pojavljivanja slova pa čak i različita slova, zbog toga se dovodi u pitanje prednost njena prednost kada se ne koristi za engleski jezik. Bitno je naglasiti da je Dvorak definirao principe koji se mogu primjeniti za oblikovanje tipkovnica i za ostale jezike.
-\\TODO dodat još o dvorak tipkovnici (bookmarkano)
 
 \section{ATOMIK}
 Ova raspodijela napravljena je za korištenje stilus-a (engl. stylus) na zaslonima osjetljivim na dodir. Razvio ga je IBM koristeći Metropolis algoritam kako bi matematički minimizirali pokrete potrebne za napisati riječi na engleskom jeziku. Tipkovnica je prikazana na slici \ref{fig:atomik}.
@@ -99,14 +97,14 @@ Kako bi se pronašao raspored tipki koji će prema Fittsovom zakonu imati najkra
 
 \section{Fittsov zakon}
 \label{sec:fitts}
-Fittsov zakon je opisni model ljudskog pokreta koji se primarno koristi u \emph{HCI-u}\footnote{Interakcija čovjeka i računala.} i \emph{ergonomiji}\footnote{Znanstvena disciplina koja istražuje ljudski organizam i ponašanje, te pruža podatke o prilagođenošću predmeta s kojima čovjek dolazi u kontakt.}. Kao što je već navedeno, Fittsov zakon predviđa vrijeme brzog pokreta do odredišne lokacije, to je funkcija udaljenosti do odredišta i širine tog odredišta. Ovaj zakon modelira čin pokazivanja (engl. \emph{act of pointing}), to može biti fizičko dodirivanje nekog objekta, primjerice rukom i prstom, a može biti i virtualno kao što je strelicom miša na računalu. Fittsov zakon se pokazao učinkovit u mnogo različitih slučajeva, koristeći razne dijelove tijela (ruke, noge, usne, kretanje oka...), u raznim okolinama (čak i pod vodom) i u raznim društvenim skupinama (mladi, stariji, ljudi s posebnim potrebama...). 
+Fittsov zakon je opisni model ljudskog pokreta koji se prvenstveno koristi u \emph{HCI-u}\footnote{Interakcija čovjeka i računala \engl{Human Computer Interaction}} i \emph{ergonomiji}\footnote{Znanstvena disciplina koja istražuje ljudski organizam i ponašanje, te pruža podatke o prilagođenošću predmeta s kojima čovjek dolazi u kontakt.}. Kao što je već navedeno, Fittsov zakon predviđa vrijeme brzog pokreta do odredišne lokacije, to je funkcija udaljenosti do odredišta i širine tog odredišta. Ovaj zakon modelira čin pokazivanja (engl. \emph{act of pointing}), to može biti fizičko dodirivanje nekog objekta, primjerice rukom i prstom, a može biti i virtualno kao što je strelicom miša na računalu. Fittsov zakon se pokazao učinkovit u mnogo različitih slučajeva, koristeći razne dijelove tijela (ruke, noge, usne, kretanje oka...), u raznim okolinama (čak i pod vodom) i u raznim društvenim skupinama (mladi, stariji, ljudi s posebnim potrebama...). 
 
 Ideja Fittsovog zakona prikazana je na slici \ref{fig:fitts} gdje se kao udaljenost do odredišta gleda udaljenost od dvije istaknute lokacije, a širina odredišta je širina "Take the Tour" gumba. Na slici \ref{fig:scroll} vidi se razlika između klizne trake (engl. \emph{scroll-bar}) kod OSX-a i Windows-a. Kod Windows-a su strelice za pomicanje klizne trake krajnje lijevo i krajnje desno, što više prati mentalni model osobe kojoj je to intuitivnije. S druge strane kod OSX-a su obe strelice jednu uz drugu kako bi se smanjilo vrijeme pomicanja strelice miša s jedne na drugu, što je konkretno ono čega se Fittsov zakon dotiče.
 
 Paul Fitts je 1954. godine predložio metriku pomoću koje se vrednuje težina zadatka pokazivanja (brzog pomicanja na odredišnu lokaciju). Ta metrika se temelji na informacijskoj analogiji, gdje je $D$ udaljenost do odredišta i gleda se na njega kao na signal, a $W$ je širina ili tolerancija koja se ponaša kao šum. $ID$ predstavlja indeks težine (engl. \emph{index of difficulty}) i mjeri se u bitovima. Formula je dana izrazom \ref{eq:fitts}.
 \begin{equation}
 \label{eq:fitts}
-ID = log_2(2D/W)
+ID = log_2(\frac{2D}{W})
 \end{equation}
 
 Fitts je također predložio indeks izvedbe (engl. \emph{index of performance}) kao mjerilo ljudske izvedbe . Ova metrika kombinira $ID$ (\emph{index of difficulty}) s vremenom pomicanja $MT$ (\emph{movement time}) na odredišnu lokaciju. Prosječna stopa informacije koja je dobivena serijom pokreta jest prosječna informacija po pomicanju podijeljena s vremenom pomicanja. Formula je dana izrazom \ref{eq:fitts2}.
@@ -240,7 +238,7 @@ Reprodukcijom se jednostavno jedinka prenosi iz jedne generacije u drugu. Ta jed
 \end{figure}
 
 \subsection{Primjena genetskog algoritma}
-Jedinku u genetskom algoritmu predstavlja jedna tipkovnica sa svojim oblikom i rasporedom tipki. Jedna generacija sadrži $500$ jedinki, a $1000$ je postavljen za maksimalan broj generacija (uvjet zaustavljanja algoritma). Algoritam koristi operatore križanja, selekcije, mutacije i reprodukcije kako bi pronašao optimalno rješenje. Tip selekcije koji se koristio jest \emph{k-turnirska selekcija} gdje je \emph{k} postavljen na $24$. Mutacija je implementirana na način da su slučajnom odabirom zamijenjene pozicije od $p\%$ znakova na tipkovnici. $p$ je postavljen na $0.3$. Križanje je napravljeno tako da su svi znakovi s pojedine tipkovnice po redu nanizani u polje. Točka prekida polja je središnji element. Nakon prekida dvije polovice se zamijene i tada nastaju 2 nova polja. Svako polje može sadržavati duple znakove. Taj problem je rješen tako da su u svakom pronađeni znakovi koji nedostaju i stavljeni umjesto duplikata. Proces križanja prikazan je na slici \ref{fig:krizanje_primjer}. \\TODO opisat detaljnije ? 
+Jedinku u genetskom algoritmu predstavlja jedna tipkovnica sa svojim oblikom i rasporedom tipki. Jedna generacija sadrži $500$ jedinki, a $1000$ je postavljen za maksimalan broj generacija (uvjet zaustavljanja algoritma). Algoritam koristi operatore križanja, selekcije, mutacije i reprodukcije kako bi pronašao optimalno rješenje. Tip selekcije koji se koristio jest \emph{k-turnirska selekcija} gdje je \emph{k} postavljen na $24$. Mutacija je implementirana na način da su slučajnom odabirom zamijenjene pozicije od $p\%$ znakova na tipkovnici. $p$ je postavljen na $0.3$. Križanje je napravljeno tako da su svi znakovi s pojedine tipkovnice po redu nanizani u polje. Točka prekida polja je središnji element. Nakon prekida dvije polovice se zamijene i tada nastaju 2 nova polja. Svako polje može sadržavati dvostruke znakove. Taj problem je rješen tako da su u svakom pronađeni znakovi koji nedostaju i stavljeni umjesto duplikata. Proces križanja prikazan je na slici \ref{fig:krizanje_primjer}.
 
 \begin{figure}[htb]
 \centering
@@ -257,15 +255,15 @@ Moguće je da postoje i neki drugi izgledi koji bi se pokazali optimalniji prema
 
 \begin{figure}[htb]
   \centering
-  \begin{minipage}[b]{0.48\textwidth}
+  \begin{minipage}[b]{0.40\textwidth}
     \includegraphics[width=\textwidth]{img/FuryKey1.PNG}
     \caption{FuryKey1 - tipkovnica namijenjena za tipkanje jednim prstom ili stilusom}
     \label{fig:FuryKey1}
   \end{minipage}
   \hfill
-  \begin{minipage}[b]{0.48\textwidth}
+  \begin{minipage}[b]{0.40\textwidth}
     \includegraphics[width=\textwidth]{img/FuryKey2.PNG}
-    \caption{FuryKey2 - tipkovnica namijenjena za tipkanje s dva prsta}
+    \caption{FuryKey2 - tipkovnica namijenjena za tipkanje pomoću dva prsta}
     \label{fig:FuryKey2}
   \end{minipage}
 \end{figure}
@@ -470,23 +468,25 @@ Bitno je napomenuti da su za provedbu eksperimenta tipkovnice testirane nad \emp
 \end{figure}
 
 \chapter{Zaključak}
-Zaključak.
+Pronalazak idealnog razmještaja znakova na tipkovnici predstavlja velik problem. Kao što je već opisano, standardna QWERTY tipkovnica ima mnogo mana, a postoji još i mnogo drugih tipkovnica koje je nastoje zamijeniti. Nadalje, tipkovnicama je često potrebna lokalizacija te će krajnji korisnici težiti uređajima s boljom lokalnom podrškom ukoliko krivulja učenja \engl{learning curve} nije prevelika. Zbog toga je potrebno proučiti statistiku za ciljani jezik i iz toga pokušati oblikovati što kvalitetniju tipkovnicu. U ovom radu je hrvatski jezik uzet kao primjer. Fittsov model predstavlja jednostavan ali učinkovit model pomoću kojeg se mogu popboljšati razna korisnička sučelja. Osim njega mogu se koristiti još mnogi drugi koji nisu navedeni u ovom radu. Provođenje eksperimenata se također pokazao kako jedan od ključnih čimbenika u oblikovanju bilo kakvog korisničkog sučelja. Ipak su takva sučelja namijenjena samim korisnicima pa se ispitivanjem mora provjeriti njihova kvaliteta.
+
+Ovaj rad se može proširiti na dosta načina. Potrebno je pokrenuti genetski algoritam s još mnogo različitih parametara kako bi se pronašli oni najoptimalniji. Nadalje, moguće je implementirati još više vrsta selekcije, mutacije i križanja. Što se tiče internacionalizacije, u algoritam bi se vrlo lako dali uvesti bigrami za neki drugi jezik pa vidjeti kakva bi bila "najbolja" tipkovnica za primjerice njemački ili španjolski jezik. Osim toga, za budući rad se predviđa provođenje opsežnijeg eksperimenta kako bi se tipkovnice što kvalitetnije vrednovale.
 
 \bibliography{literatura}
 \bibliographystyle{fer}
 
 \begin{sazetak}
-Sažetak na hrvatskom jeziku.
+Predstavlja se problem pronalaska idealne tipkovnice za pojedini jezik te se ukazuju mane standardne QWERTY tipkovnice. Kako bi se pronašlo rješenje problema koristi se jednostavan Fittsov zakon pomoću kojeg se brojčano vrednuje svaka tipkovnica. Zbog velikog broja mogućih rješenja koristi se genetski algoritam u svrhu optimizacije i pronalaska tipkovnice s optimalnim razmještajem. Navodi se važnost eksperimentalne metode u potvrđivanju hipoteza.
 
-\kljucnerijeci{Ključne riječi, odvojene zarezima.}
+\kljucnerijeci{tipkovnica, QWERTY, eksperiment, Fittsov zakon, genetski algoritam, jezik}
 \end{sazetak}
 
 % TODO: Navedite naslov na engleskom jeziku.
 \engtitle{Alternative Touchscreen Keyboard Based on Fitts Law}
 \begin{abstract}
-Abstract.	
+Problem of finding ideal keyboard for specific language is introduces, also a lots of disadvantages of standard QWERTY keyboard are mentioned. Fitts' Law is used in order to evaluate each keyboard. Because of many possible solutions, genetic algorithm is used to find keyboard with optimal layout and arrangement of keys. Furthermore, significance of experimental method is mentioned in order to test differend hypothesis.
 
-\keywords{Keywords.}
+\keywords{keyboard, QWERTY, experiment, Fitts' law, genetic algorithm, language}
 \end{abstract}
 
 \end{document}

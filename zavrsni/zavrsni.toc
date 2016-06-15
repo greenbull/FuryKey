@@ -1,10 +1,10 @@
 \select@language {english}
 \contentsline {chapter}{\numberline {1}Uvod}{1}
-\contentsline {chapter}{\numberline {2}Alternativne tipkovnice}{3}
-\contentsline {section}{\numberline {2.1}Dvorak}{3}
-\contentsline {section}{\numberline {2.2}ATOMIK}{4}
-\contentsline {section}{\numberline {2.3}FITALY}{4}
-\contentsline {section}{\numberline {2.4}Colemak}{4}
+\contentsline {chapter}{\numberline {2}Tipkovnice kroz povijest}{2}
+\contentsline {section}{\numberline {2.1}Dvorakova tipkovnica}{3}
+\contentsline {section}{\numberline {2.2}Tipkovnica ATOMIK}{4}
+\contentsline {section}{\numberline {2.3}Tipkovniac FITALY}{4}
+\contentsline {section}{\numberline {2.4}Tipkovnica Colemak}{5}
 \contentsline {chapter}{\numberline {3}Oblikovanje alternativne tipkovnice}{6}
 \contentsline {section}{\numberline {3.1}Fittsov zakon}{7}
 \contentsline {subsection}{\numberline {3.1.1}Vrednovanje razmje\IeC {\v s}taja tipki}{8}
@@ -13,11 +13,12 @@
 \contentsline {subsection}{\numberline {3.2.2}Operator mutacije}{11}
 \contentsline {subsection}{\numberline {3.2.3}Operator selekcije}{11}
 \contentsline {subsection}{\numberline {3.2.4}Operator reprodukcije}{12}
-\contentsline {subsection}{\numberline {3.2.5}Primjena genetskog algoritma}{13}
-\contentsline {section}{\numberline {3.3}Rje\IeC {\v s}enja genetskog algoritma}{15}
-\contentsline {subsection}{\numberline {3.3.1}Implementacija tipkovnica za Android operacijski sustav}{16}
-\contentsline {chapter}{\numberline {4}Provedba eksperimenta i obrada rezultata}{18}
-\contentsline {section}{\numberline {4.1}Oblikovanje eksperimenta}{19}
-\contentsline {section}{\numberline {4.2}Eksperimentalno vrednovanje tipkovnica}{20}
-\contentsline {subsection}{\numberline {4.2.1}Prikaz i interpretacija rezultata}{21}
-\contentsline {chapter}{\numberline {5}Zaklju\IeC {\v c}ak}{26}
+\contentsline {subsection}{\numberline {3.2.5}Primjena genetskog algoritma u svrhu pronala\IeC {\v z}enja optimalne tipkovnice}{13}
+\contentsline {section}{\numberline {3.3}Rje\IeC {\v s}enja genetskog algoritma}{13}
+\contentsline {chapter}{\numberline {4}Provedba eksperimenta i obrada rezultata}{15}
+\contentsline {section}{\numberline {4.1}Oblikovanje eksperimenta}{16}
+\contentsline {section}{\numberline {4.2}Eksperimentalno vrednovanje tipkovnica}{17}
+\contentsline {subsection}{\numberline {4.2.1}Prikaz i interpretacija rezultata}{19}
+\contentsline {chapter}{\numberline {5}Zaklju\IeC {\v c}ak}{20}
+\contentsline {chapter}{Literatura}{21}
+\contentsline {chapter}{Dodatak \numberline {A}Rezultati provedenog eksperimenta}{23}

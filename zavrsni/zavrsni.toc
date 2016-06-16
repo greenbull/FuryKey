@@ -1,9 +1,9 @@
 \select@language {english}
 \contentsline {chapter}{\numberline {1}Uvod}{1}
-\contentsline {chapter}{\numberline {2}Tipkovnice kroz povijest}{2}
+\contentsline {chapter}{\numberline {2}Razli\IeC {\v c}iti na\IeC {\v c}ini uno\IeC {\v s}enja teksta}{2}
 \contentsline {section}{\numberline {2.1}Dvorakova tipkovnica}{3}
 \contentsline {section}{\numberline {2.2}Tipkovnica ATOMIK}{4}
-\contentsline {section}{\numberline {2.3}Tipkovniac FITALY}{4}
+\contentsline {section}{\numberline {2.3}Tipkovnica FITALY}{4}
 \contentsline {section}{\numberline {2.4}Tipkovnica Colemak}{5}
 \contentsline {chapter}{\numberline {3}Oblikovanje alternativne tipkovnice}{6}
 \contentsline {section}{\numberline {3.1}Fittsov zakon}{7}
